@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>CSS Blog</title>
 </head>
 <body>
     <header>
-        <img src="images/codificacao-de-programa-de-computador-na-tela.jpg" alt="Vista aérea de homem trabalhando no computador com seu caderno e um copo de café." class="imagem_header">
+        <img src="images/codificacao-de-programa-de-computador-na-tela.jpg" alt="Imagem com várias linhas de códigos html e css escritas em um fundo preto." class="imagem_header">
         <h1>CSS Blog</h1>
         <p>Um blog com conteúdo didático sobre CSS</p>
         <nav>
             <ul class="barra_nav">
                 <li><a href="/index.html">CSS Básico</a></li>
-                <li>Display, position e z-index <span class="em_breve">Em breve</span></li>
-                <li>Animações, transition e variáveis <span class="em_breve">Em breve</span></li>
-                <li>Responsividade e media queries <span class="em_breve">Em breve</span></li>
-                <li>Flexbox <span class="em_breve">Em breve</span></li>
-                <li>Grid <span class="em_breve">Em breve</span></li>
+                <li class="artigo_em_breve">Display, position e z-index <span class="em_breve">Em breve</span></li>
+                <li class="artigo_em_breve">Animações, transition e variáveis <span class="em_breve">Em breve</span></li>
+                <li class="artigo_em_breve">Responsividade e media queries <span class="em_breve">Em breve</span></li>
+                <li class="artigo_em_breve">Flexbox <span class="em_breve">Em breve</span></li>
+                <li class="artigo_em_breve">Grid <span class="em_breve">Em breve</span></li>
             </ul>
         </nav>
         <hr>
@@ -28,7 +28,16 @@
             <article class="artigo">
                 <h2 class="artigo_titulo">CSS inline, interno e externo</h2>
                 <span class="artigo_tag">CSS BÁSICO</span>
-                <p class="artigo_texto">Esse é o texto teste do artigo só para que eu possa testar os espaçamentos e verificar se a data não fica tão solta do lado direito, ou se é só porque o texto tá pouco, então fica a sensação de que só ela fica na direita</p>
+                <p class="artigo_texto">O <abbr title="Cascading Style Sheets">CSS</abbr> é uma linguagem de estilo por meio da qual documentos em HTML ou XML tem sua apresentação para o usuário descrita. Existem 3 formas de adicionar a estilização à um documento HTML: de forma inline, interna ou externa. 
+                    <figure class="figura_codigo">
+                        <img src="images/css-inline.png" alt="Linha de código CSS que reduz o comprimento de uma tag hr para 50% do comprimento da tag pai">
+                        <figcaption>O atributo <code>style</code> na tag <code>hr</code> atribui uma estilização à tag, neste caso, de reduzir seu comprimento para 50% do comprimento da tag pai.</figcaption>
+                    </figure>
+                </p>
+                <p class="artigo_texto">No CSS inline, a estilização a ser aplicada é descrita dentro da própria tag HTML que será estilizada, dentro do documento HTML, por meio do atributo <code>style</code>.</p> 
+                <p class="artigo_texto">No CSS interno, a estilização a ser aplicada é descrita dentro de uma tag <code>style</code>, posicionada entre as tags <code>head</code> e <code>body</code> do documento HTML. Para identificação das tags nas quais cada estilo será aplicado, são utilizados os seletores, classes ou ids utilizados no código HTML.</p> 
+                <p class="artigo_texto">No CSS externo, a estilização a ser aplicada é descrita dentro de um documento com extensão <code>.css</code>, que fica à parte do documento HTML. Já que a descrição da estilização não fica inserida no documento HTML, é necessário que os documentos <code>.html</code> e <code>.css</code> sejam relacionados por meio de uma tag <code>link</code>, a ser inclusa dentro da tag <code>head</code> do documento HTML. Para identificação das tags a serem estilizadas, assim como no CSS interno, são utilizados seletores, classes e ids.</p>
+                <p class="artigo_texto">Atualmente, a melhor prática é utilizar o CSS externo, visto que mantém o código organizado para cada função (marcação e estilização) e permite a reutilização de código, em que uma folha de estilo (documento <code>.css</code>) pode ser aplicado para vários documentos HTML.</p>
                 <div class="artigo_info">
                     <div class="artigo_autor">
                         <img src="images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
@@ -62,7 +71,7 @@
             </article>
             <div class="separacao_artigo"></div>
             <article class="artigo">
-                <h2 class="artigo_titulo">CSS inline, interno e externo</h2>
+                <h2 class="artigo_titulo">Box model e medidas em CSS</h2>
                 <span class="artigo_tag">CSS BÁSICO</span>
                 <p class="artigo_texto"></p>
                 <div class="artigo_info">
@@ -80,8 +89,8 @@
             </article>
         </section>
     </main>
+    <hr>
     <footer>
-
-    </footer>
+        <a href="https://br.freepik.com/fotos-gratis/codificacao-de-programa-de-computador-na-tela_18415585.htm#query=codificacao-de-programa-de-computador-na-tela&position=1&from_view=search&track=sph&uuid=1d68b074-2878-4d58-b3e7-f17f95714177">Imagem de rawpixel.com no Freepik</a>  
 </body>
 </html>

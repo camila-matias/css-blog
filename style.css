@@ -23,8 +23,8 @@
 }
 
 .imagem_header{
-    width: 100vw;
-    height: 30vh;
+    width: 100%;
+    max-height: 30vh;
     border-radius: 0 0 2rem 2rem;
     margin-bottom: 2rem;
 }
@@ -43,7 +43,7 @@ header p {
 }
 
 nav{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .barra_nav {
@@ -62,6 +62,10 @@ a:hover{
     font-weight: 600;
 }
 
+.artigo_em_breve{
+    color: var(--cor-fonte-sec);
+}
+
 .em_breve{
     position: relative;
     bottom: 1rem;
@@ -76,7 +80,7 @@ a:hover{
 }
 
 hr {
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .pagina_blog{
@@ -112,6 +116,11 @@ hr {
     font-size: 1.6rem;
     color: var(--cor-fonte-sec);
     margin-bottom: 2rem;
+}
+
+.figura_codigo{
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .artigo_info{
@@ -156,4 +165,10 @@ hr {
     border-bottom: 1px solid var(--cor-fundo-sec);
     width: 50vw;
     align-self: center;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
