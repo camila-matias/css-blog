@@ -8,36 +8,50 @@
 </head>
 <body>
     <header>
-        <img src="images/codificacao-de-programa-de-computador-na-tela.jpg" alt="Imagem com várias linhas de códigos html e css escritas em um fundo preto." class="imagem_header">
         <h1>CSS Blog</h1>
-        <p>Um blog com conteúdo didático sobre CSS</p>
         <nav>
             <ul class="barra_nav">
-                <li><a href="/index.html">CSS Básico</a></li>
-                <li class="artigo_em_breve">Display, position e z-index <span class="em_breve">Em breve</span></li>
-                <li class="artigo_em_breve">Animações, transition e variáveis <span class="em_breve">Em breve</span></li>
-                <li class="artigo_em_breve">Responsividade e media queries <span class="em_breve">Em breve</span></li>
-                <li class="artigo_em_breve">Flexbox <span class="em_breve">Em breve</span></li>
-                <li class="artigo_em_breve">Grid <span class="em_breve">Em breve</span></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="/pages/css-basico.html">CSS Básico</a></li>
+                <li>Posicionamento</li>
+                <li>Animações</li>
+                <li>Responsividade</li>
             </ul>
         </nav>
-        <hr>
+        <div class="pesquisa">
+            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <img src="/images/search-outline.png" alt="Imagem de uma lupa">
+        </div>
     </header>
-    <main>
-        <section class="pagina_blog">
-            <article class="artigo">
-                <h2 class="artigo_titulo">CSS inline, interno e externo</h2>
-                <span class="artigo_tag">CSS BÁSICO</span>
-                <p class="artigo_texto">O <abbr title="Cascading Style Sheets">CSS</abbr> é uma linguagem de estilo por meio da qual documentos em HTML ou XML tem sua apresentação para o usuário descrita. Existem 3 formas de adicionar a estilização à um documento HTML: de forma inline, interna ou externa. 
-                    <figure class="figura_codigo">
-                        <img src="images/css-inline.png" alt="Linha de código CSS que reduz o comprimento de uma tag hr para 50% do comprimento da tag pai">
-                        <figcaption>O atributo <code>style</code> na tag <code>hr</code> atribui uma estilização à tag, neste caso, de reduzir seu comprimento para 50% do comprimento da tag pai.</figcaption>
-                    </figure>
-                </p>
-                <p class="artigo_texto">No CSS inline, a estilização a ser aplicada é descrita dentro da própria tag HTML que será estilizada, dentro do documento HTML, por meio do atributo <code>style</code>.</p> 
-                <p class="artigo_texto">No CSS interno, a estilização a ser aplicada é descrita dentro de uma tag <code>style</code>, posicionada entre as tags <code>head</code> e <code>body</code> do documento HTML. Para identificação das tags nas quais cada estilo será aplicado, são utilizados os seletores, classes ou ids utilizados no código HTML.</p> 
-                <p class="artigo_texto">No CSS externo, a estilização a ser aplicada é descrita dentro de um documento com extensão <code>.css</code>, que fica à parte do documento HTML. Já que a descrição da estilização não fica inserida no documento HTML, é necessário que os documentos <code>.html</code> e <code>.css</code> sejam relacionados por meio de uma tag <code>link</code>, a ser inclusa dentro da tag <code>head</code> do documento HTML. Para identificação das tags a serem estilizadas, assim como no CSS interno, são utilizados seletores, classes e ids.</p>
-                <p class="artigo_texto">Atualmente, a melhor prática é utilizar o CSS externo, visto que mantém o código organizado para cada função (marcação e estilização) e permite a reutilização de código, em que uma folha de estilo (documento <code>.css</code>) pode ser aplicado para vários documentos HTML.</p>
+    <main class="pagina_blog">
+        <section class="top_artigo">
+            <img src="/images/codigo.jpg" alt="Imagem com várias linhas de código HTML e CSS em um fundo preto">
+            <div class="top_artigo_card">
+                <span class="artigo_tag css_basico">CSS BÁSICO</span>
+                <h2><a href="/articles/inline-interno-externo.html">CSS inline, interno e externo</a></h2>
+                <div class="artigo_info">
+                    <div class="artigo_autor">
+                        <img src="images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
+                        <div class="artigo_autor_info">
+                            <p>Camila Matias</p>
+                            <span>Desenvolvedora Front End</span>
+                        </div>
+                    </div>
+                    <div class="artigo_data">
+                        <p>14 Fev</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2>Últimos posts</h2>
+    
+        <section class="artigos_todos">
+            <article class="artigo_card">
+                <img src="/images/css.png" alt="Imagem da logo do CSS em um fundo azul com linhas de código CSS escritas ao redor.">
+                <span class="artigo_tag css_basico">CSS BÁSICO</span>
+                <h2>Seletores, propriedades de texto e shorthands</h2>
+                <p></p>
                 <div class="artigo_info">
                     <div class="artigo_autor">
                         <img src="images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
@@ -51,11 +65,12 @@
                     </div>
                 </div>
             </article>
-            <div class="separacao_artigo"></div>
-            <article class="artigo">
-                <h2 class="artigo_titulo">Seletores, propriedades de texto e shorthands</h2>
-                <span class="artigo_tag">CSS BÁSICO</span>
-                <p class="artigo_texto"></p>
+
+            <article class="artigo_card">
+                <img src="/images/css.png" alt="Imagem da logo do CSS em um fundo azul com linhas de código CSS escritas ao redor.">
+                <span class="artigo_tag css_basico">CSS BÁSICO</span>
+                <h2>Box model e medidas em CSS</h2>
+                <p></p>
                 <div class="artigo_info">
                     <div class="artigo_autor">
                         <img src="images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
@@ -69,28 +84,12 @@
                     </div>
                 </div>
             </article>
-            <div class="separacao_artigo"></div>
-            <article class="artigo">
-                <h2 class="artigo_titulo">Box model e medidas em CSS</h2>
-                <span class="artigo_tag">CSS BÁSICO</span>
-                <p class="artigo_texto"></p>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
-                            <p>Camila Matias</p>
-                            <span>Desenvolvedora Front End</span>
-                        </div>
-                    </div>
-                    <div class="artigo_data">
-                        <p>14 Fev</p>
-                    </div>
-                </div>
-            </article>
+
         </section>
     </main>
-    <hr>
+    
     <footer>
-        <a href="https://br.freepik.com/fotos-gratis/codificacao-de-programa-de-computador-na-tela_18415585.htm#query=codificacao-de-programa-de-computador-na-tela&position=1&from_view=search&track=sph&uuid=1d68b074-2878-4d58-b3e7-f17f95714177">Imagem de rawpixel.com no Freepik</a>  
+        <a href="https://br.freepik.com/fotos-gratis/codificacao-de-programa-de-computador-na-tela_18415585.htm#query=code&position=0&from_view=search&track=sph&uuid=3532cf41-6c2d-4b1e-acdf-7774847b552f">Imagem de rawpixel.com no Freepik</a> 
+    </footer>
 </body>
 </html>
