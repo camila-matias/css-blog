@@ -1,0 +1,13 @@
+@import "/styles/style.css";
+
+.titulo_pagina{
+    font-size: 4rem;
+    font-family: var(--fonte-titulos);
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.artigos_pagina{
+    display: flex;
+    gap: 3rem;
+}

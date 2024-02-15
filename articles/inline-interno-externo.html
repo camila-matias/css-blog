@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/article_style.css">
     <title>CSS Inline, Interno e Externo</title>
-    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
@@ -24,27 +25,34 @@
         </div>
     </header>
     
-    <article class="artigo">
+    <article class="artigo pagina_blog">
         <h2 class="artigo_titulo">CSS inline, interno e externo</h2>
-        <span class="artigo_tag">CSS BÁSICO</span>
-        <p class="artigo_texto">O <abbr title="Cascading Style Sheets">CSS</abbr> é uma linguagem de estilo por meio da qual documentos em HTML ou XML tem sua apresentação para o usuário descrita. Existem 3 formas de adicionar a estilização à um documento HTML: de forma inline, interna ou externa. 
-            <figure class="figura_codigo">
-                <img src="/images/css-inline.png" alt="Linha de código CSS que reduz o comprimento de uma tag hr para 50% do comprimento da tag pai">
-                <figcaption>O atributo <code>style</code> na tag <code>hr</code> atribui uma estilização à tag, neste caso, de reduzir seu comprimento para 50% do comprimento da tag pai.</figcaption>
-            </figure>
-        </p>
-        
-        <p class="artigo_texto">No CSS inline, a estilização a ser aplicada é descrita dentro da própria tag HTML que será estilizada, dentro do documento HTML, por meio do atributo <code>style</code>.</p> 
-        
-        <p class="artigo_texto">No CSS interno, a estilização a ser aplicada é descrita dentro de uma tag <code>style</code>, posicionada entre as tags <code>head</code> e <code>body</code> do documento HTML. Para identificação das tags nas quais cada estilo será aplicado, são utilizados os seletores, classes ou ids utilizados no código HTML.</p> 
+        <span class="artigo_tag css_basico">CSS BÁSICO</span>
+        <p class="artigo_texto">O <abbr title="Cascading Style Sheets">CSS</abbr> é uma linguagem de estilo por meio da qual documentos em HTML ou XML tem sua apresentação para o usuário descrita. Existem 3 formas de adicionar a estilização à um documento HTML: de forma inline, interna ou externa.</p>
+               
+        <p class="artigo_texto">No CSS inline, a estilização a ser aplicada é descrita dentro da própria tag HTML que será estilizada, dentro do documento HTML, por meio do atributo <code>style</code>.</p>
+        <figure class="figura_codigo">
+            <img src="/images/css-inline.png" alt="Linha de código CSS que reduz o comprimento de uma tag hr para 50% do comprimento da tag pai">
+            <figcaption>O atributo <code>style</code> na tag <code>hr</code> atribui uma estilização à tag, neste caso, de reduzir seu comprimento para 50% do comprimento da tag pai.</figcaption>
+        </figure>    
+
+        <p class="artigo_texto">No CSS interno, a estilização a ser aplicada é descrita dentro de uma tag <code>style</code>, posicionada entre as tags <code>head</code> e <code>body</code> do documento HTML. Para identificação das tags nas quais cada estilo será aplicado, são utilizados os seletores, classes ou ids utilizados no código HTML.</p>
+        <figure class="figura_codigo">
+            <img src="/images/css-interno.png" alt="Bloco de código css que altera o peso da fonte de títulos em lista de descrições para negrito.">
+            <figcaption>No bloco de código inserido dentro da tag <code>style</code>, o peso da fonte de um título em lista de descrições é alterado para negrito.</figcaption>
+        </figure> 
         
         <p class="artigo_texto">No CSS externo, a estilização a ser aplicada é descrita dentro de um documento com extensão <code>.css</code>, que fica à parte do documento HTML. Já que a descrição da estilização não fica inserida no documento HTML, é necessário que os documentos <code>.html</code> e <code>.css</code> sejam relacionados por meio de uma tag <code>link</code>, a ser inclusa dentro da tag <code>head</code> do documento HTML. Para identificação das tags a serem estilizadas, assim como no CSS interno, são utilizados seletores, classes e ids.</p>
+        <figure class="figura_codigo">
+            <img src="/images/link-css-externo.png" alt="Tag link com a referenciação para o documento .css">
+            <figcaption>A tag <code>link</code> é a responsável por indicar o relacionamento entre uma folha de estilo e um documento html.</figcaption>
+        </figure>
         
-        <p class="artigo_texto">Atualmente, a melhor prática é utilizar o CSS externo, visto que mantém o código organizado para cada função (marcação e estilização) e permite a reutilização de código, em que uma folha de estilo (documento <code>.css</code>) pode ser aplicado para vários documentos HTML.</p>
+        <p class="artigo_texto">Atualmente, a melhor prática é utilizar o CSS externo, visto que mantém o código organizado para cada função (marcação e estilização) e permite a reutilização de código, em que uma folha de estilo (documento <code>.css</code>) pode ser aplicado para vários documentos HTML. A prática do CSS externo também traz vantagens para a manutenção do código, pois, ao necessitar de uma alteração, esta será feita em apenas um ponto do código, e não em vários, como aconteceria no CSS inline e no CSS interno.</p>
         
         <div class="artigo_info">
             <div class="artigo_autor">
-                <img src="images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
+                <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
                 <div class="artigo_autor_info">
                     <p>Camila Matias</p>
                     <span>Desenvolvedora Front End</span>
