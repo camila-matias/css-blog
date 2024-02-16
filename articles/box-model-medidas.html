@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/article_style.css">
     <title>Box Model e Medidas em CSS</title>
 </head>
 <body>
@@ -24,11 +25,44 @@
         </div>
     </header>
     
-    <article class="artigo pagina_blog">
+    <section class="artigo pagina_blog">
         <h2 class="artigo_titulo">Box model e medidas em CSS</h2>
         <span class="artigo_tag css_basico">CSS BÁSICO</span>
         
-        <p class="artigo_texto">Texto aqui</p>
+        <article>
+            <h3>Box model</h3>
+            <p class="artigo_texto">O box model é o modelo pelo qual elementos HTML possuem sua altura e largura total definidas, assemelhando-se a uma caixa. Ele é composto de 4 elementos, o content, que é o conteúdo do elemento; o padding, que é uma área ao redor do conteúdo; a border, que é uma borda que circunda o conteúdo e a margin, que é uma área exterior à borda.</p>
+
+            <figure>
+                <img src="/images/box-model.png" alt="Imagem de 4 caixas uma mais interior à outra, representando o box model, com, da mais interna para mais externa, content, padding, border e margin.">
+                <figcaption>Elementos do box model.</figcaption>
+            </figure>
+
+            <p class="artigo_texto">A propriedade <code>box-sizing</code> pode definir como a altura e largura de elementos são calculadas. O valor default é <code>content-box</code>, em que espessuras de padding e border não são consideradas no cálculo de dimensões, apenas o conteúdo. Já com o valor <code>border-box</code>, as espessuras de padding e são consideradas no cálculo, além das dimensões do próprio conteúdo. Outros valores possíveis para esta propriedade são <code>initial</code>, que retorna ao valor default e <code>inherit</code>, em que o elemento herda o valor de box-sizing do elemento pai.</p>
+        </article>
+
+        <article>
+            <h3>Medidas em CSS</h3>
+            <p class="artigo_texto">As medidas em CSS possuem valores absolutos e relativos. Em geral, valores absolutos são recomendados para casos em que o meio final é fixo e conhecido, visto que valores absolutos podem ser apresentados de modo diferente em cada tamanho de tela disponível. </p>
+            
+            <p class="artigo_texto">Os valores absolutos de medidas podem ser expressos em cm, mm, in, px, pt e pc. A medida absoluta em px é a mais utilizada.</p>
+            
+            <p class="artigo_texto">Medidas relativas são mais comumente utilizadas para garantir a adaptabilidade das medidas às diferentes tipos de meios finais (mobile, desktop, tablets, entre outros). As medidas relativas mais utilizadas são:</p>
+            
+            <ul class="artigo_texto">
+                <li><span>em:</span> esta medida é relativa ao tamanho da fonte sendo utilizada no elementos. Caso não seja alterada, por default, 1em equivale à 16px.</li>
+                
+                <li><span>rem:</span>esta medida é relativa ao tamanho de fonte definido no elemento <code>:root</code> na folha de estilo. Um artifício bastante utilizado para evitar conversões dificultosas entre em e px, é de adicionar <code>font-size: 62.5%</code> ao elemento root, de modo que 1rem será equivalente à 10px. Desta forma, 1.7rem equivale à 17px, o que é mais facilmente lembrado e escrito do que 1.0625em.</li>
+                
+                <li><span>vw:</span> esta medida é relativa à largura do viewport (largura da tela do dispositivo), em que 1vw equivale a 1% da largura do viewport. Amplamente utilizada para garantir a responsividade de aplicações web.</li>
+                
+                <li><span>vh:</span> esta medida é relativa à altura do viewport (altura da tela do dispositivo), em que 1vh equivale a 1% da alltura do viewport. Amplamente utilizada para garantir a responsividade de aplicações web.</li>
+                
+                <li><span>%:</span> esta medida é relativa ao tamanho do elemento pai. Desta forma, se temos um elemento pai com largura de 500px, e um elemento filho com largura de 50%, a largura absoluta do elemento filho será 250px.</li>
+            </ul>
+            
+            <p class="artigo_texto">Além das unidades supracitadas, também existem ex, ch, vmin e vmax. </p>
+        </article>
 
         <div class="artigo_info">
             <div class="artigo_autor">
@@ -42,6 +76,6 @@
                 <p>14 Fev</p>
             </div>
         </div>
-    </article>
+    </section>
 </body>
 </html>
