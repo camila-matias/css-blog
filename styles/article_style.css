@@ -29,6 +29,13 @@ p, li {
     justify-content: center;
     align-items: center;
     gap: 3rem;
-
 }
+
+.figuras_coluna{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
 

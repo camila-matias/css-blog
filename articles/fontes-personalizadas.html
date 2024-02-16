@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/article_style.css">
+    <title>Fontes Personalizadas</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Blog</h1>
+        <nav>
+            <ul class="barra_nav">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/pages/css-basico.html">CSS Básico</a></li>
+                <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
+                <li>Animações</li>
+                <li>Responsividade</li>
+            </ul>
+        </nav>
+        <div class="pesquisa">
+            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <img src="/images/search-outline.png" alt="Imagem de uma lupa">
+        </div>
+    </header>
+
+    <section class="artigo pagina_blog">
+        <h2 class="artigo_titulo">Fontes personalizadas</h2>
+        <span class="artigo_tag css_basico">CSS BÁSICO</span>
+        
+        <p class="artigo_texto">Nem sempre as fontes padrão do sistema operacional irão preencher os requisitos do layout, de modo que é possível inserir novas fontes por meio do CSS. As fontes podem ser importadas por meio de <code>link</code> no documento HTML e <code>@import</code> ou <code>@font-face</code> no documento CSS. Nos dois primeiros casos, sites como o Google Fonts já facilitam o processo ao ter o código a ser inserido já disponibilizado à medida que você escolhe as fontes que deseja. No último caso, as fontes são baixadas em formatos como .ttf ou .woff e referenciadas no código.</p>
+
+        <figure class="figuras_coluna">
+            <div>
+                <img src="/images/link.png" alt="Código para importar uma fonte utilizando as tags link do HTML.">
+                <figcaption>Para importar uma fonte por meio do HTML, deve-se inserir as tags <code>link</code> adequadas no <code>head</code> do documento.</figcaption>
+            </div>
+                
+            <div>
+                <img src="/images/import.png" alt="Código para importar uma fonte utilizando o import do CSS">
+                <figcaption> Com o mesmo efeito, é possível importar a fonte pelo <code>@import</code>, adicionando-o à folha de estilo.</figcaption>
+            </div>
+
+            <div>
+                <img src="/images/font-face.png" alt="Código para importar uma fonte utilizando o font-face do CSS">
+                <figcaption>Da mesma forma, é possível utilizar o <code>@font-face</code> na folha de estilo e inserir uma fonte que foi baixada com o formato compatível.</figcaption>                
+            </div>
+        </figure>
+        
+        <p class="artigo_texto">Notar que, se uma fonte baixada possui vários pesos, ou seja, vários arquivos dentro de uma mesma família de fontes, é necessário que se faça um <code>@font-face</code> para cada peso.</p>
+
+        <div class="artigo_info">
+            <div class="artigo_autor">
+                <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
+                <div class="artigo_autor_info">
+                    <p>Camila Matias</p>
+                    <span>Desenvolvedora Front End</span>
+                </div>
+            </div>
+            <div class="artigo_data">
+                <p>14 Fev</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
