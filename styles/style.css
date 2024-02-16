@@ -68,6 +68,18 @@ a:hover{
     font-weight: 700;
 }
 
+.barra_busca {
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid var(--cor-fonte-sec);
+    border-radius: 0.5rem;
+}
+
+.pesquisa img{
+    position: relative;
+    right: 11%;
+    top: 0.3rem;
+}
+
 .pagina_blog{
     width: 80vw;
     margin: 5rem auto;
@@ -173,7 +185,6 @@ a:hover{
 .artigo_texto {
     font-size: 1.6rem;
     color: var(--cor-fonte-sec);
-    
 }
 
 .artigo_info{

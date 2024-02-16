@@ -5,3 +5,30 @@ figure{
     font-size: 1.3rem;
     margin: 1rem 0;
 }
+
+h3{
+    font-size: 2rem;
+}
+
+ul {
+    list-style: none;
+    & li {
+        color: var(--cor-fonte-sec);
+        & span {
+            font-weight: 500;
+        }
+    }
+}
+
+p, li {
+    margin: 1rem 0;
+}
+
+.figuras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+
+}
+

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/article_style.css">
     <title>Seletores, propriedades de texto e shorthands</title>
 </head>
 <body>
@@ -18,17 +19,105 @@
                 <li>Responsividade</li>
             </ul>
         </nav>
-        <div>
+        <div class="pesquisa">
             <input type="search" placeholder="Pesquisar" class="barra_busca">
             <img src="/images/search-outline.png" alt="Imagem de uma lupa">
         </div>
     </header>
     
-    <article class="artigo pagina_blog">
+    <section class="artigo pagina_blog">
         <h2 class="artigo_titulo">Seletores, propriedades de texto e shorthands</h2>
         <span class="artigo_tag css_basico">CSS BÁSICO</span>
         
-        <p class="artigo_texto">Texto aqui</p>
+        <article>
+            <h3 class="artigo_subtitulo">Seletores</h3>
+            <p class="artigo_texto">Os seletores são as identificações utilizadas no CSS interno e externo para que a estilização descrita seja aplicada à um item ou itens específicos. Existem alguns tipos de seletores como:</p>
+            
+            <ul class="artigo_texto">
+                <li><span>Seletores de tipo:</span> os seletores de tipo são aqueles que descrevem o item a ser estilizado pela própria tag HTML, ou seja, se incluímos <code>span { estilo }</code> em nosso código CSS, todas tags span do documento receberão a estilização descrita.</li>
+            
+                <li><span>Seletores de classe:</span> os seletores de classe estilizam itens com base em suas classes designadas no documento HTML. Como exemplo, para uma tag que possui o atributo <code>class = "vermelho"</code>, se inserirmos <code>.vermelho { estilo }</code> em nosso código CSS, todas as tags com a classe vermelho serão estilizadas conforme descrito. Este seletor é muito utilizado para reuso de código, em que blocos de código a serem estilizados da mesma forma recebem classes iguais para que o código de estilização seja um só.</li>
+            
+                <li><span>Seletores de id:</span> os seletores de id estilizam itens com base em sua id designada no documento HTML. Dessa forma, se temos uma tag com o atributo <code>id = "item"</code>, caso tenhamos o código <code>#item { estilo }</code> em nosso documento CSS, a tag com o id item será estilizada conforme descrito. Este seletor é utilizado para estilizações específicas em um item, visto que ids, ao contrário de classes, não podem ser reutilizados em diferentes tags.</li>
+            
+                <li><span>Seletor universal:</span> o seletor universal, representado pelo símbolo <code>*</code> estiliza o código como um todo. Este seletor é muito utilizado para realizar o "reset" da estilização padrão do navegador, para que se tenha maior controle dos espaçamentos entre itens a serem aplicados, visto que muitas tags possuem espaçamentos padrão definidos pelo navegador. Também é utilizado para definir propriedades padrão que se repetirão ao longo do documento, como fonte, cor de fundo ou cor de texto.</li>
+            
+                <li><span>Seletor de aninhamento:</span> o seletor de aninhamento, representado pelo símbolo <code>&</code> faz um link entre seletores pais e seletores filhos dentro do documento. Como exemplo, temos a imagem a seguir, em que tags <code>ul</code> terão seu estilo de lista modificado para nenhum, tags <code>li</code> filhas de tags <code>ul</code> terão sua cor de fonte modificada para cinza e tags <code>span</code> filhas das tags <code>li</code> anteriormente citadas, tão seu peso de fonte modificado para 500.</li>
+                <figure>
+                    <img src="/images/seletor-aninhamento.png" alt="Código CSS descrito para tags ul, li e span utilizando seletores de aninhamento.">
+                    <figcaption>Estilização descrita para tags ul, li e span utilizando seletores de aninhamento.</figcaption>
+                </figure>
+
+                <li><span>Seletores de atributo:</span> os seletores de atributo estilizam itens com base em valores de atributos das tags HTML, em que a estilização descrita será aplicada caso o valor do atributo possua em parte ou em sua totalidade, o valor descrito no seletor. Como exemplo, temos a tag <code>a</code>, que possui como atributo principal o <code>href</code>. Se gostaríamos de estilizar tags <code>a</code>, com atributo <code>href</code> que possua o sufixo <code>.br</code> podemos adicionar o código <code>a[href$=".br"]</code> à folha de estilo. Diferentes símbolos antecedendo o símbolo de igualdade representam diferentes tipos de busca dentro do valor do atributo. O símbolo <code>*</code> representa "contém em qualquer parte do valor", o símbolo <code>^</code> representa "inicia com", entre outras simbologias possíveis.</li>
+
+                <li><span>Combinação de seletores:</span> os seletores também podem ser combinados para uma maior especificidade daquilo que se está querendo estilizar. Por exemplo, um código como <code>.item p{ estilo }</code> estiliza todos os parágrafos dentro de tags com a classe "item" ou um código <code>span, h3 { estilo }</code> confere estilo igual à todas as tags <code>span</code> e <span>h3</span> no documento. A depender do símbolo utilizado entre as tags, podendo ser <code>+</code>, <code>></code>, <code>~</code>, entre outros, a combinação a ser realizada é modificada. </li>
+            </ul>
+        </article>
+
+        <article>
+            <h3 class="artigo_subtitulo">Propriedades de texto</h3>
+            <p class="artigo_texto">O CSS possui várias propriedades para estilização de textos. Algumas destas propriedades estão listadas e descritas a seguir:</p>
+            
+            <ul class="artigo_texto">
+                <li><span>color:</span> esta propriedade modifica a cor da fonte em CSS. Cores em CSS podem ser descritas por nome em inglês (red, black, white), em códigos hexadecimais (#ffffff, #000000), em códigos RGB (rgb(0,0,0)), em código RGBA - quando se quer adicionar a opacidade da fonte por meio desta propriedade - (rgba(0,0,0,0.5)), entre outras formas.</li>
+                
+                <li><span>font-family:</span> esta propriedade muda a família da fonte. A fonte padrão do documento HTML é a Times New Roman, mas pode ser modificada para uma outra fonte específica que já exista no sistema (como Arial, Georgia, Courier New); para uma nova família sem especificar a fonte (serif, sans-serif, monospace); ou para fontes externas, como o auxílio de uma tag <code>link</code> no documento HTML ou um <code>@import</code> no documento CSS, para que os documentos consigam acessar a fonte.</li>
+                
+                <li><span>font-size:</span> esta propriedade modifica o tamanho da fonte, podendo receber valores em px, rem, em e porcentagem (%), entre outros.</li>
+                
+                <li><span>line-height:</span> esta propriedade modifica o tamanho da linha de texto. Algumas fontes, ao aumentar de tamanho, aumentam ainda mais o tamanho de linha. Para modificar questões de espaçamento entre linhas, esta propriedade pode ser utilizada. Assim como o font-size, pode receber valores em px, rem, em e porcentagem (%), entre outros.</li>
+                
+                <li><span>font-style:</span> esta propriedade modifica o estilo da fonte, recebendo valores como normal, italic ou oblique. O oblique é utilizado para deixar a fonte em itálico, caso uma versão em itálico desta não exista.</li>
+                
+                <li><span>font-weight:</span> esta propriedade modifica o peso da fonte no texto. Pode receber valores numéricos que vão, usualmente, de 300 a 800 em incrementos de 100, ou valores como bold, bolder e lighter.</li>
+                
+                <li><span>text-align:</span> esta propriedade modifica o alinhamento do texto, podendo receber valores como left, right, center, entre outros valores relativos ao elemento pai.</li>
+                
+                <li><span>text-decoration-line:</span> esta propriedade insere uma decoração de linha no texto, podendo receber valores como overline, underline ou line-through, a depender do posicionamento da linha em referência ao texto. </li>
+                
+                <li><span>text-decoration-color:</span> esta propriedade modifica a cor da linha definida pela propriedade text-decoration-line.</li>
+                
+                <li><span>text-decoration-style:</span> esta propriedade modifica o estilo da linha definida pela propriedade text-decoration-line, podendo receber valores além do padrão como dotted, dashed e wavy.</li>
+                
+                <li><span>text-decoration-thickness:</span> esta propriedade modifica a espessura da linha definida pela propriedade text-decoration-line.</li>
+                
+                <li><span>word-spacing:</span> esta propriedade indica o tamanho do espaço entre palavras em uma frase.</li>
+                
+                <li><span>letter-spacing:</span> esta propriedade indica o tamanho do espaço entre letras em uma palavra.</li>
+
+                <div class="figuras">
+                    <figure>
+                        <img src="/images/css sem shorthands.png" alt="Código CSS em um fundo preto com as propriedades apresentadas no texto.">
+                        <figcaption>Código CSS com as propriedades apresentadas no texto.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/images/texto-com-css.png" alt="Imagem com os dizeres texto a ser estilizado, com a estilização aplicada pelo código da figura anterior">
+                        <figcaption>Texto com a estilização da figura anterior aplicada.</figcaption>
+                    </figure>
+                </div>
+            </ul>
+        </article>
+
+        <article>
+            <h3 class="artigo_subtitulo">Shorthands</h3>
+            <p class="artigo_texto">Shorthands são uma forma simplificadas e concisas de escrever várias propriedades em uma só linha. Este artifício é muito utilizado para deixar o código mais objetivo e agrupar propriedades que podem ser facilmente agrupadas. Alguns exemplos são:</p>
+           
+            <ul class="artigo_texto">
+                <li><span>margin, padding e inset (position):</span> podem ser utilizadas com os sufixos top, bottom, left e right, porém, em uma linha só, pode-se definir um valor para todos (1 valor especificado), um valor para top e bottom e um para left e right (2 valores especificados) ou um valor para cada lado do conteúdo (4 valores especificados). Ou seja, um código <code>margin: 1px 2px 3px 4px</code> retorna uma margem de 1px para cima, 2px para a direita, 3px para baixo e 4px para a esquerda. Para padding e inset (definição dos valores de position), o resultado seria o mesmo. Note que, para 4 valores especificados, a sequência dos lados é em sentido horário, iniciando no topo.</li>
+               
+                <li><span>font:</span> o shorthand para fonte agrupa as propriedades font-style, font-weight, font-size, line-height e font-family. Dessa forma, com o código <code>font: oblique 600 1.4rem/1.5rem, Verdana, sans-serif</code> podemos modificar estas 5 propriedades em uma linha só. Notar que é obrigatório que font-size e line-height sejam descritas uma após a outra e com o separador <code>/</code>.</li>
+               
+                <li><span>border:</span> o shorthand para border agrupa as propriedades border-width, border-style e border-color. Dessa forma, podemos utilizar o código <code>border: 1px solid #ffffff</code> para modificar as três propriedades em uma linha.</li>
+               
+                <li><span>background:</span> o shorthand da propriedade background agrupa quatro propriedades: background-color, background-image, background-repeat e background-position. Dessa forma, com o código <code>background: red url(image.jpg) no-repeat left</code>, podemos aplicar as quatro propriedades em uma linha só.</li>
+            </ul>
+
+            <figure>
+                <img src="/images/css com shorthands.png" alt="Código CSS em um fundo preto similar ao código da seção anterior, porém utilizando shorthands">
+                <figcaption>Código da seção "propriedades de texto", porém utilizando shorthands.</figcaption>
+            </figure>
+        </article>
 
         <div class="artigo_info">
             <div class="artigo_autor">
@@ -42,6 +131,6 @@
                 <p>14 Fev</p>
             </div>
         </div>
-    </article>
+    </section>
 </body>
 </html>
