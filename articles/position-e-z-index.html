@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/article_style.css">
+    <title>Position e Z-index</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Blog</h1>
+        <nav>
+            <ul class="barra_nav">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/pages/css-basico.html">CSS Básico</a></li>
+                <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
+                <li>Animações</li>
+                <li>Responsividade</li>
+            </ul>
+        </nav>
+        <div class="pesquisa">
+            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <img src="/images/search-outline.png" alt="Imagem de uma lupa">
+        </div>
+    </header>
+
+    <main>
+        <section class="artigo pagina_blog">
+            <h2 class="artigo_titulo">Position e Z-index</h2>
+            <span class="artigo_tag posicionamento">POSICIONAMENTO</span>
+            
+            <article>
+                <h3 class="artigo_subtitulo">Position</h3>
+                <p class="artigo_texto">Texto aqui</p>
+            </article>
+            
+            <article>
+                <h3 class=artigo_subtitulo>Z-index</h3>
+                <p class="artigo_texto">O z-index é uma referência ao eixo z, ou seja, é uma forma de gerar alguma noção de profundidade ou empilhamento dentro do visual criado pela estilização CSS. Quando mais de um item são positionados de forma que eles irão se sobrepor, o z-index é o que indicará quem ficará no topo (mais visível) e quem ficará no fundo (menos visível)</p>
+                <p class="artigo_texto">O z-index recebe valores numéricos e adimensionais, e, quanto maior o z-index, maior prioridade o elemento terá de ficar no topo da pilha. O desenvolvedor deverá escolher os números de acordo com a necessidade, sabendo que, a depender dos números escolhidos, colocar um z-index de 3 e um z-index de 3000 terão o mesmo efeito. O que importa não é a grandeza, mas sim, ser o maior dentre os existentes.</p>
+            </article>
+    
+            <div class="artigo_info">
+                <div class="artigo_autor">
+                    <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
+                    <div class="artigo_autor_info">
+                        <p>Camila Matias</p>
+                        <span>Desenvolvedora Front End</span>
+                    </div>
+                </div>
+                <div class="artigo_data">
+                    <p>14 Fev</p>
+                </div>
+            </div>
+    </main>
+</body>
+</html>
