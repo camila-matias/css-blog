@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/article_style.css">
+    <title>Display em CSS</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Blog</h1>
+        <nav>
+            <ul class="barra_nav">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/pages/css-basico.html">CSS Básico</a></li>
+                <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
+                <li>Animações</li>
+                <li>Responsividade</li>
+            </ul>
+        </nav>
+        <div class="pesquisa">
+            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <img src="/images/search-outline.png" alt="Imagem de uma lupa">
+        </div>
+    </header>
+    
+    <section class="artigo pagina_blog">
+        <h2 class="artigo_titulo">Display em CSS</h2>
+        <span class="artigo_tag posicionamento">POSICIONAMENTO</span>
+        
+        <article>
+            <p class="artigo_texto">A propriedade <i>display</i> especifica com qual comportamento um elemento será renderizado na página. Alguns dos valores que essa propriedade pode assumir são:</p>
+
+            <ul class="artigo_texto">
+                <li><span>inline:</span> com este valor, o item será renderizado como uma caixa dentro de uma linha. Não há quebras de linha antes e após o item, de forma que, se houver espaço, vários itens inline estarão em uma mesma linha.</li>
+                
+                <li><span>block:</span> com este valor, o item será renderizado como uma caixa de bloco, em que há quebras de linha tanto antes quanto depois do conteúdo.</li>
+                
+                <li><span>inline-block:</span> este valor gera um item em bloco que será renderizado como um item único em uma linha.</li>
+                
+                <li><span>flex:</span> com este valor, o item se comporta como um container no modelo flexbox.</li>
+                
+                <li><span>inline-flex:</span> este valor gera um container do modelo flexbox dentro de um contexto de linha.</li>
+                
+                <li><span>grid:</span>com este valor, o item se comporta como um container no modelo grid.</li>
+                
+                <li><span>inline-grid:</span> este valor gera um container do modelo grid dentro de um contexto de linha</li>
+                
+                <li><span>flow-root:</span> este valor cria um novo contexto de formatação em bloco, ou seja, o item age como a tag <code>html</code> em termos de criação de um fluxo de layout do zero.</li>
+                
+                <li><span>none:</span> este valor faz com que o elemento seja renderizado como se não existisse, ou seja, o fluxo do documento não "guarda" o espaço reservado a ele. Caso se queira apenas reduzir a visibilidade, mas ainda mantendo o item no fluxo, deve-se utilizar as propriedades <i>opacity</i> ou <i>visibility</i>.</li>
+            </ul>
+
+            <p class="artigo_texto">Também há outros valores para esta propriedade, como <code>list-item</code>, que mostra o item como se fosse uma tag <code>li</code> do HTML e <code>table</code> e seus valores internos, que fazem com que os itens sejam renderizados e se comportem como elementos de tabelas HTML.</p>
+
+            <p class="artigo_texto">Na seção de <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/display" target="_blank">resultados</a> da documentação <abbr title="Mozilla Developer Network">MDN</abbr> é possível testar como cada valor afetará a renderização dos itens.</p>
+        </article>
+
+        <div class="artigo_info">
+            <div class="artigo_autor">
+                <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
+                <div class="artigo_autor_info">
+                    <p>Camila Matias</p>
+                    <span>Desenvolvedora Front End</span>
+                </div>
+            </div>
+            <div class="artigo_data">
+                <p>14 Fev</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

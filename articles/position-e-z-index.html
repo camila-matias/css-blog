@@ -36,9 +36,13 @@
 
                 <ul class="artigo_texto">
                     <li><span>static:</span> é o valor que representa o posicionamento default, posicionando-o no fluxo normal do documento. As propriedades de top, bottom, left e right não podem ser aplicadas à um elemento com <code>position: static</code>.</li>
+                    
                     <li><span>absolute:</span> o valor de posicionamento absoluto tira o item do fluxo normal do documento e, por default, o mantém sobre os demais elementos. Neste posicionamento, o item possui como ponto de partida o container onde ele estava inserido, dado que o container pai tenha seu position declarado. Caso ele não esteja inserido em nenhum container com position definido (ou seja, um elemento pai <i>static</i>), o início do documento serve como seu ponto de partida. As propriedades de top, bottom, left e right podem ser aplicadas, sendo percebidas visualmente como uma "força" que "empurra" o item, ou seja, a propriedade top "empurra" o item para baixo, a propriedade left empurra o item para a direita e asism por diante. Este tipo de posicionamento é muito utilizado em visualizações de imagens, notificações no estilo pop-up, entre outros.</li>
+                    
                     <li><span>relative:</span> neste tipo de posicionamento, o item não é retirado totalmente do fluxo normal do documento e tem como seu ponto de partida o seu próprio posicionamento no fluxo normal. Assim como no <code>position: absolute</code>, as propriedades auxiliares top, bottom, left e right também poderão ser utilizadas.</li>
+                    
                     <li><span>fixed:</span> neste posicionamento, o item ficará com seu posicionamento fixado no documento, mesmo que a página tenha um rolamento. Propriedades auxilares também poder ser utilizadas em conjunto.</li>
+                    
                     <li><span>sticky:</span> este posicionamento é uma mistura entre os posicionamentos <i>relative</i> e <i>fixed</i>. Ao ter seu position definido como sticky, o item possui comportamento de <code>position: relative</code> até que se chegue em um certo ponto de rolagem da página em que ele se comporte como <code>position: fixed</code>, a depender dos valores das propriedades auxiliares. Muito utilizado para fixar menus de navegação no topo da página ao longo da rolagem.</li>
                 </ul>
 
@@ -64,6 +68,7 @@
             <article>
                 <h3 class=artigo_subtitulo>Z-index</h3>
                 <p class="artigo_texto">O z-index é uma referência ao eixo z, ou seja, é uma forma de gerar alguma noção de profundidade ou empilhamento dentro do visual criado pela estilização CSS. Quando mais de um item são positionados de forma que eles irão se sobrepor, o z-index é o que indicará quem ficará no topo (mais visível) e quem ficará no fundo (menos visível)</p>
+                
                 <p class="artigo_texto">O z-index recebe valores numéricos e adimensionais, e, quanto maior o z-index, maior prioridade o elemento terá de ficar no topo da pilha. O desenvolvedor deverá escolher os números de acordo com a necessidade, sabendo que, a depender dos números escolhidos, colocar um z-index de 3 e um z-index de 3000 terão o mesmo efeito. O que importa não é a grandeza, mas sim, ser o maior dentre os existentes.</p>
             </article>
     
