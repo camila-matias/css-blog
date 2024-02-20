@@ -1,0 +1,71 @@
+@import "/styles/style.css";
+@import "/styles/article_style.css";
+
+button{
+    position:relative;
+    font-family: var(--fonte-tags);
+    padding: 0.5rem 1rem;
+    margin: 2rem 0;
+    display: block;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #b09bc1;
+    color: #fff;
+    border: 2px solid #b09bc1;
+    transform: scale(1.2);
+}
+
+label{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+    display: block;
+}
+
+.artigo_titulo{
+    animation: escrita 5s steps(120, end);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@keyframes escrita {
+    0% {
+        width: 0%;
+    } 
+    
+    100% {
+        width: 100%;
+    }
+}
+
+.transition1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 2rem 0 1rem 0;
+    position: relative;
+    transition: all 1s ease-in;
+}
+
+.transition1:hover{
+    background-color: #b09bc1;
+    transform: rotateZ(90deg);
+}
+
+#teste{
+    width: 20vw;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid black;
+    background-color: #e7e6e7;
+    font-family: var(--fonte-tags);
+}
+
+#teste:focus{
+    background-color: #fff;
+    color: red;
+}
