@@ -29,7 +29,34 @@
         <h2 class="artigo_titulo">Variáveis CSS</h2>
         <span class="artigo_tag css_basico">CSS BÁSICO</span>
         
-        <p class="artigo_texto">Texto aqui</p>
+        <p class="artigo_texto">As variáveis CSS são valores fixos criados pelo desenvolvedor para propriedades que se repetem bastante ao longo do código. Podem representar cores, dimensões, fontes, entre outros tipos de valores. As variáveis são facilitadoras de manutenção de código, visto que, para variáveis global, cada mudança só precisa ser alterada em um local, o da inicialização da variável.</p>
+
+        <p class="artigo_texto">A inicialização de uma variável CSS pode se dar de 3 formas: por meio do pseudo elemento <code>:root</code> e pela regra <code>@property</code>, gerando variáveis globais, ou apenas pela definição de variáveis e valor em um bloco de código com <code>--</code> no início do nome, gerando variáveis locais.</p>
+
+        <div class="figuras">
+            <figure>
+                <img src="/images/variaveis-root.png" alt="Imagem com fundo preto com código escrito de CSS para inicialização de uma variável no pseudo elemento root">
+                <figcaption>Variáveis CSS criadas no pseudo elemento <code>:root</code></figcaption>
+            </figure>
+
+            <figure>
+                <img src="/images/variaveis-property.png" alt="Imagem em fundo preto com código escrito de CSS para inicialização de uma variável com a regra property">
+                <figcaption>Variável CSS criada pela regra <code>@property</code></figcaption>
+            </figure>
+
+            <figure>
+                <img src="/images/variaveis-local.png" alt="Imagem em fundo preto com código escrito de CSS para inicialização de uma variável local">
+                <figcaption>Variável CSS criada em um bloco de código com <code>--</code></figcaption>
+            </figure>
+        </div>
+
+        <p class="artigo_texto">A grande diferença entre as formas de inicialização de variáveis, além de seu escopo, é que a regra <code>@property</code> confere maior controle sobre o tipo da variável e se ela herda valores de elementos pais.</p>
+
+        <p class="artigo_texto">Na utilização, a variável deve ser englobada pelo <code>var()</code>, ou seja, para a utilização de uma cor definida como <code>--cor-principal: #ffffff</code> temos, como exemplo, <code>color: var(--cor-principal)</code>. A utilização seguirá esta regra independente do modo de inicialização da variável.</p>
+
+        <p class="artigo_texto">É possível, também, definir valores de backup para variáveis, para caso ela venha a receber um valor invalido. Por exemplo, se uma variável <code>--cor-principal</code> for inicializada com o valor 16px, ela gerará um valor inválido caso utilizada em propriedades de cor. Caso a propriedade tenha seu valor indicado como <code>var(--cor-principal, #ffffff)</code>, ela assumirá o valor do segundo argumento, que é válido para propriedades de cor. Caso nenhum argumento dentro dos parênteses do <code>var()</code> sejam válidos, a propriedade retornará seu valor inicial default ou um valor herdado por um elemento pai com a propriedade definida, se existir.</p>
+
+        <p class="artigo_texto">Variáveis globalmente inicializadas podem ser sobrescritas localmente, porém o escopo desta sobrescrição será somente este: local. Utilizações da variável em outros blocos de código seguirão retornando o valor definido globalmente.</p>
 
         <div class="artigo_info">
             <div class="artigo_autor">
@@ -40,7 +67,7 @@
                 </div>
             </div>
             <div class="artigo_data">
-                <p>14 Fev</p>
+                <p>20 Fev</p>
             </div>
         </div>
     </section>
