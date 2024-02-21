@@ -40,8 +40,8 @@ label{
     color: red;
 }
 
-.artigo_titulo_animation{
-    animation: escrita 5s steps(120, end);
+.artigo_titulo_animacao{
+    animation: escrita 10s steps(120, end) infinite;
     white-space: nowrap;
     overflow: hidden;
 }
@@ -53,6 +53,119 @@ label{
     
     100% {
         width: 100%;
+    }
+}
+
+.homem_aranha img{
+    width: 3vw;
+    margin: 25vh 0 0 0;
+    border-radius: 100%;
+    animation: animação 4s infinite linear alternate;
+    position: relative;
+}
+
+@keyframes animação {
+    0% {
+        left: 5vw;
+    }
+
+    4% {
+        left: 8vw;
+        bottom:3vh;
+    }
+
+    7% {
+        left: 10vw;
+        bottom: 5vh
+    }
+
+    14% {
+        left: 15vw;
+        bottom: 10vh;
+    }
+
+    21% {
+        left: 20vw;
+        bottom: 15vh;
+    }
+
+    28% {
+        left: 25vw;
+        bottom: 20vh;
+    }
+
+    31% {
+        left: 28vw;
+        bottom:22.5vh;
+    }
+
+    35% {
+        left: 30vw;
+        bottom: 25vh;
+    }
+
+    38% {
+        left: 33vw;
+        bottom: 22.5vh;
+    }
+
+    42% {
+        left: 35vw;
+        bottom: 20vh;
+    }
+
+    49% {
+        left: 40vw;
+        bottom: 15vh;
+    }
+
+    56% {
+        left: 35vw;
+        bottom: 10vh;
+    }
+
+    63% {
+        left: 30vw;
+        bottom: 5vh;
+    }
+
+    70% {
+        left: 30vw;
+        bottom: 15vh;
+    }
+
+    74%{
+        left: 33vw;
+        bottom: 17vh;
+    }
+
+    77% {
+        left: 35vw;
+        bottom: 20vh;
+    }
+
+    84% {
+        left: 45vw;
+        bottom: 25vh;
+    }
+
+    87% {
+        left: 47vw;
+        bottom: 20vh;
+    }
+
+    91% {
+        left: 50vw;
+        bottom: 15vh;
+    }
+    95% {
+        left: 55vw;
+        bottom: 10vh;
+    }
+
+    100% {
+        left: 60vw;
+        bottom: 5vh;
     }
 }
 
