@@ -1,49 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "/styles/reset.css";
+@import "/styles/variables.css";
 
-:root{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 62.5%;
-    --cor-fundo-principal: #f6f6f6;
-    --cor-fundo-sec: #c1c1c1;
-    --cor-fonte-principal: #232323;
-    --cor-fonte-sec: #5b5b5b;
-    --fonte-titulos: 'Roboto Slab', serif;
-    --fonte-tags: 'Space Mono', sans-serif;
-    --css-basico: #0095DA;
-    --posicionamento: #FF8F7C;
-    --animacoes: #F39200;
-    --responsividade: #1BB2BB;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: var(--cor-fundo-principal);  
-    color: var(--cor-fonte-principal);
-}
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 2rem;
-}
-
-.css_basico {
-    background-color: var(--css-basico);
-}
-
-.posicionamento{
-    background-color: var(--posicionamento);
-}
-
-.animacoes{
-    background-color: var(--animacoes);
-}
-
-.responsividade{
-    background-color: var(--responsividade);
 }
 
 h1 {
@@ -52,20 +16,43 @@ h1 {
     font-family: var(--fonte-titulos);
 }
 
-.barra_nav {
-    list-style: none;
-    display: flex;
-    gap: 3rem;
-    font-size: 1.6rem;
-    justify-content: center;
-}
-
 a {
     text-decoration: none;
 }
 
 a:hover{
     font-weight: 700;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.css_basico {
+    background-color: var(--cor-tag-css-basico);
+}
+
+.posicionamento{
+    background-color: var(--cor-tag-posicionamento);
+}
+
+.animacoes{
+    background-color: var(--cor-tag-animacoes);
+}
+
+.responsividade{
+    background-color: var(--cor-tag-responsividade);
+}
+
+
+.barra_nav {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    font-size: 1.6rem;
+    justify-content: center;
 }
 
 .barra_busca {
@@ -156,6 +143,7 @@ a:hover{
 
 .artigo_card > img {
     width: 100%;
+    height: 60%;
     margin: 0 auto;
     border-radius: 1rem;
 }
@@ -222,10 +210,4 @@ a:hover{
     align-items: center;
     font-weight: 800;
     font-size: 1.2em;
-}
-
-footer{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
 }

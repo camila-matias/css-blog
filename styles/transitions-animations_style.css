@@ -25,7 +25,22 @@ label{
     display: block;
 }
 
-.artigo_titulo{
+#teste{
+    width: 20vw;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid black;
+    background-color: #e7e6e7;
+    font-family: var(--fonte-tags);
+}
+
+#teste:focus{
+    background-color: #fff;
+    color: red;
+}
+
+.artigo_titulo_animation{
     animation: escrita 5s steps(120, end);
     white-space: nowrap;
     overflow: hidden;
@@ -41,12 +56,19 @@ label{
     }
 }
 
-.transition1{
+.transitions{
+    width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.transition1, .transition2, .transition3, .transition4{
     width: 100px;
     height: 100px;
-    background-color: red;
     margin: 2rem 0 1rem 0;
     position: relative;
+    background-color: red;
     transition: all 1s ease-in;
 }
 
@@ -55,17 +77,17 @@ label{
     transform: rotateZ(90deg);
 }
 
-#teste{
-    width: 20vw;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border-radius: 0.5rem;
-    border: 2px solid black;
-    background-color: #e7e6e7;
-    font-family: var(--fonte-tags);
+.transition2:hover{
+    background-color: #b09bc1;
+    transform: translateX(5rem);
 }
 
-#teste:focus{
-    background-color: #fff;
-    color: red;
+.transition3:hover{
+    background-color: #b09bc1;
+    transform:skew(15deg);
+}
+
+.transition4:hover{
+    background-color: #b09bc1;
+    transform: scale(0.5);
 }

@@ -1,0 +1,13 @@
+:root{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62.5%;
+    --cor-fundo-principal: #f6f6f6;
+    --cor-fonte-principal: #232323;
+    --cor-fonte-sec: #5b5b5b;
+    --cor-tag-css-basico: #0095DA;
+    --cor-tag-posicionamento: #FF8F7C;
+    --cor-tag-animacoes: #F39200;
+    --cor-tag-responsividade: #1BB2BB;
+    --fonte-titulos: 'Roboto Slab', serif;
+    --fonte-tags: 'Space Mono', sans-serif;
+}
