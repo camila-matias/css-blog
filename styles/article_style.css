@@ -25,6 +25,12 @@ p, li {
     text-align: justify;
 }
 
+code {
+    background-color: rgba(243, 146, 0, 0.1);
+    border-radius: 0.3rem;
+    padding: 0 0.3rem;
+}
+
 .conteudo {
     display:flex;
     flex-direction: column;

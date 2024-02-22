@@ -49,15 +49,15 @@ footer {
     background-color: var(--cor-tag-css-basico);
 }
 
-.artigo__tag--posicionamento{
+.artigo__tag--posicionamento {
     background-color: var(--cor-tag-posicionamento);
 }
 
-.artigo__tag--animacoes{
+.artigo__tag--animacoes {
     background-color: var(--cor-tag-animacoes);
 }
 
-.artigo__tag--responsividade{
+.artigo__tag--responsividade {
     background-color: var(--cor-tag-responsividade);
 }
 
@@ -89,12 +89,12 @@ footer {
     text-align: center;
 }
 
-.artigo > img{
+.artigo > img {
     width: 70%;
     border-radius: 1.2rem;
 }
 
-.artigo__card{
+.artigo__card {
     width: fit-content;
     max-width: 50%;
     border-radius: 1.2rem;
@@ -109,7 +109,7 @@ footer {
     gap: 2rem;
     padding: 2rem;
 
-    & h2{
+    & h2 {
         font-size: 3rem;
         line-height: 3.1rem;
         font-family: var(--fonte-titulos);
@@ -151,10 +151,6 @@ footer {
     border-radius: 1rem;
 }
 
-.listagem-artigos__card .artigo__info{
-    float: inline-end;
-}
-
 .artigo__tag {
     font-size: 1.2rem;
     font-family: var(--fonte-tags);
@@ -189,7 +185,7 @@ footer {
     }
 
     & span {
-        color: var(--cor-fonte-sec)
+        color: var(--cor-fonte-sec);
     }
 }
 
