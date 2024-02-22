@@ -11,7 +11,7 @@
     <header>
         <h1>CSS Blog</h1>
         <nav>
-            <ul class="barra_nav">
+            <ul class="navegacao">
                 <li><a href="/index.html">Início</a></li>
                 <li><a href="/pages/css-basico.html">CSS Básico</a></li>
                 <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
@@ -19,105 +19,117 @@
                 <li>Responsividade</li>
             </ul>
         </nav>
+
         <div class="pesquisa">
-            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <input type="search" placeholder="Pesquisar" class="pesquisa__item">
             <img src="/images/search-outline.png" alt="Imagem de uma lupa">
         </div>
     </header>
-    <main class="pagina_blog">
-        <h2 class="titulo_pagina">CSS Básico</h2>
+    
+    <main>
+        <h2 class="titulo">CSS Básico</h2>
 
-        <section class="artigos_pagina">
-            <article class="artigo_card">
+        <section class="listagem-artigos">
+            <article class="listagem-artigos__card">
                 <img src="/images/css.png" alt="Imagem da logo do CSS em um fundo azul com linhas de código CSS escritas ao redor.">
-                <span class="artigo_tag css_basico">CSS BÁSICO</span>
+                
+                <span class="artigo__tag artigo__tag--css-basico">CSS BÁSICO</span>
+                
                 <h2><a href="/articles/inline-interno-externo.html">CSS inline, interno e externo</a></h2>
-                <p></p>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
+                
+                <div class="artigo__info">
+                    <div class="artigo__info__autor">
+                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
+                        <div class="artigo__info__autor__nome">
                             <p>Camila Matias</p>
                             <span>Desenvolvedora Front End</span>
                         </div>
                     </div>
-                    <div class="artigo_data">
+                    <div class="artigo__data">
                         <p>14 Fev</p>
                     </div>
                 </div>
             </article>
 
-            <article class="artigo_card">
+            <article class="listagem-artigos__card">
                 <img src="https://blog.alexdevero.com/wp-content/uploads/2015/02/css-code-e1517469545230.jpeg" alt="Imagem com um fundo preto com linhas de código CSS escritas.">
-                <span class="artigo_tag css_basico">CSS BÁSICO</span>
+                
+                <span class="artigo__tag artigo__tag--css-basico">CSS BÁSICO</span>
+                
                 <h2><a href="/articles/seletores-propried-shorthands.html">Seletores, propriedades de texto e shorthands</a></h2>
-                <p></p>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
+                
+                <div class="artigo__info">
+                    <div class="artigo__info__autor">
+                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo__info__autor_foto">
+                        <div class="artigo__info__autor__nome">
                             <p>Camila Matias</p>
                             <span>Desenvolvedora Front End</span>
                         </div>
                     </div>
-                    <div class="artigo_data">
+                    <div class="artigo__data">
                         <p>14 Fev</p>
                     </div>
                 </div>
             </article>
 
-            <article class="artigo_card">
+            <article class="listagem-artigos__card">
                 <img src="/images/box_model-cover.png" alt="Imagem do box model com retângulos identificando cada item, do mais interno para o mais externo, content, border, padding e margin.">
-                <span class="artigo_tag css_basico">CSS BÁSICO</span>
+                
+                <span class="artigo__tag artigo__tag--css-basico">CSS BÁSICO</span>
+                
                 <h2><a href="/articles/box-model-medidas.html">Box model e medidas em CSS</a></h2>
-                <p></p>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
+                
+                <div class="artigo__info">
+                    <div class="artigo__info__autor">
+                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo__info__autor_foto">
+                        <div class="artigo__info__autor__nome">
                             <p>Camila Matias</p>
                             <span>Desenvolvedora Front End</span>
                         </div>
                     </div>
-                    <div class="artigo_data">
+                    <div class="artigo__data">
                         <p>14 Fev</p>
                     </div>
                 </div>
             </article>
 
-            <article class="artigo_card">
+            <article class="listagem-artigos__card">
                 <img src="https://assets.digitalocean.com/articles/68060/4.png" alt="Imagem da página da fonte Open Sans no site do Google fonts com visualizações da fonte em todos os seus pesos.">
-                <span class="artigo_tag css_basico">CSS BÁSICO</span>
+                
+                <span class="artigo__tag artigo__tag--css-basico">CSS BÁSICO</span>
+                
                 <h2><a href="/articles/fontes-personalizadas.html">Fontes personalizadas</a></h2>
-                <p></p>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
+                
+                <div class="artigo__info">
+                    <div class="artigo__info__autor">
+                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo__info__autor_foto">
+                        <div class="artigo__info__autor__nome">
                             <p>Camila Matias</p>
                             <span>Desenvolvedora Front End</span>
                         </div>
                     </div>
-                    <div class="artigo_data">
+                    <div class="artigo__data">
                         <p>14 Fev</p>
                     </div>
                 </div>
             </article>
 
-            <article class="artigo_card">
+            <article class="listagem-artigos__card">
                 <img src="/images/variaveis-css.png" alt="Imagem com fundo branco e regras de variáveis em CSS escritas em texto preto.">
-                <span class="artigo_tag css_basico">CSS BÁSICO</span>
+                
+                <span class="artigo__tag artigo__tag--css-basico">CSS BÁSICO</span>
+                
                 <h2><a href="/articles/variaveis-css.html">Variáveis CSS</a></h2>
-                <p></p>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
+
+                <div class="artigo__info">
+                    <div class="artigo__info__autor">
+                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo__info__autor_foto">
+                        <div class="artigo__info__autor__nome">
                             <p>Camila Matias</p>
                             <span>Desenvolvedora Front End</span>
                         </div>
                     </div>
-                    <div class="artigo_data">
+                    <div class="artigo__data">
                         <p>20 Fev</p>
                     </div>
                 </div>

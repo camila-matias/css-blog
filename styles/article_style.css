@@ -1,12 +1,12 @@
 @import "/styles/styles.css";
 
-figure{
+figure {
     text-align: center;
     font-size: 1.3rem;
     margin: 1rem 0;
 }
 
-h3{
+h3 {
     font-size: 2rem;
 }
 
@@ -15,31 +15,50 @@ ul {
     & li {
         color: var(--cor-fonte-sec);
         & span {
-            font-weight: 500;
+            font-weight: 800;
         }
     }
 }
 
 p, li {
-    margin: 0.5rem 0;
+    margin: 1rem 0;
+    text-align: justify;
 }
 
-.figuras{
+.conteudo {
+    display:flex;
+    flex-direction: column;
+}
+
+.conteudo__titulo {
+    font-size: 3rem;
+    font-family: var(--fonte-titulos);
+    margin-bottom: 0.5rem;
+}
+
+.conteudo__texto {
+    font-size: 1.6rem;
+    color: var(--cor-fonte-sec);
+}
+
+.conteudo__figuras {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 3rem;
 }
 
-.figuras_coluna{
+.conteudo__figuras--em-coluna {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 2rem;
 }
 
-.imagem_grande{
-    width: 100%;
+.artigo__info {
+    margin-top: 3rem;
+
+    & .artigo__info__autor__nome p{
+        margin: 0;
+    }
 }
-
-

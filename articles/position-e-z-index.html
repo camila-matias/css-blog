@@ -11,7 +11,7 @@
     <header>
         <h1>CSS Blog</h1>
         <nav>
-            <ul class="barra_nav">
+            <ul class="navegacao">
                 <li><a href="/index.html">Início</a></li>
                 <li><a href="/pages/css-basico.html">CSS Básico</a></li>
                 <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
@@ -19,22 +19,23 @@
                 <li>Responsividade</li>
             </ul>
         </nav>
+
         <div class="pesquisa">
-            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <input type="search" placeholder="Pesquisar" class="pesquisa__item">
             <img src="/images/search-outline.png" alt="Imagem de uma lupa">
         </div>
     </header>
 
     <main>
-        <section class="artigo pagina_blog">
-            <h2 class="artigo_titulo">Position e Z-index</h2>
-            <span class="artigo_tag posicionamento">POSICIONAMENTO</span>
+        <section class="conteudo">
+            <h2 class="conteudo__titulo">Position e Z-index</h2>
+            <span class="artigo__tag artigo__tag--posicionamento">POSICIONAMENTO</span>
             
             <article>
-                <h3 class="artigo_subtitulo">Position</h3>
-                <p class="artigo_texto">A propriedade <i>position</i> é uma das propriedades de definição de posicionamento dentro do código CSS. A depender do seu valor, outras propriedades, como <code>top</code>, <code>bottom</code>, <code>left</code> e <code>right</code>, podem ser aplicadas para adequar o posicionamento ao que se deseja. Esta propriedade pode assumir os seguintes valores:</p>
+                <h3>Position</h3>
+                <p class="conteudo__texto">A propriedade <i>position</i> é uma das propriedades de definição de posicionamento dentro do código CSS. A depender do seu valor, outras propriedades, como <code>top</code>, <code>bottom</code>, <code>left</code> e <code>right</code>, podem ser aplicadas para adequar o posicionamento ao que se deseja. Esta propriedade pode assumir os seguintes valores:</p>
 
-                <ul class="artigo_texto">
+                <ul class="conteudo__texto">
                     <li><span>static:</span> é o valor que representa o posicionamento default, posicionando-o no fluxo normal do documento. As propriedades de top, bottom, left e right não podem ser aplicadas à um elemento com <code>position: static</code>.</li>
                     
                     <li><span>absolute:</span> o valor de posicionamento absoluto tira o item do fluxo normal do documento e, por default, o mantém sobre os demais elementos. Neste posicionamento, o item possui como ponto de partida o container onde ele estava inserido, dado que o container pai tenha seu position declarado. Caso ele não esteja inserido em nenhum container com position definido (ou seja, um elemento pai <i>static</i>), o início do documento serve como seu ponto de partida. As propriedades de top, bottom, left e right podem ser aplicadas, sendo percebidas visualmente como uma "força" que "empurra" o item, ou seja, a propriedade top "empurra" o item para baixo, a propriedade left empurra o item para a direita e asism por diante. Este tipo de posicionamento é muito utilizado em visualizações de imagens, notificações no estilo pop-up, entre outros.</li>
@@ -46,44 +47,45 @@
                     <li><span>sticky:</span> este posicionamento é uma mistura entre os posicionamentos <i>relative</i> e <i>fixed</i>. Ao ter seu position definido como sticky, o item possui comportamento de <code>position: relative</code> até que se chegue em um certo ponto de rolagem da página em que ele se comporte como <code>position: fixed</code>, a depender dos valores das propriedades auxiliares. Muito utilizado para fixar menus de navegação no topo da página ao longo da rolagem.</li>
                 </ul>
 
-                <p class="artigo_texto">As propriedades auxiliares top, bottom, left e right podem receber valores em px, em, rem ou porcentagem (%).</p>
+                <p class="conteudo__texto">As propriedades auxiliares top, bottom, left e right podem receber valores em px, em, rem ou porcentagem (%).</p>
                 
                 <figure>
-                    <img class="imagem_grande" src="/images/exemplos-de-position.png" alt="Imagem da página inicial do site devmedia.com com indicações coloridas de qual parte do site poderia ser um exemplo de cada tipo de position.">
+                    <img src="/images/exemplos-de-position.png" alt="Imagem da página inicial do site devmedia.com com indicações coloridas de qual parte do site poderia ser um exemplo de cada tipo de position.">
                     <figcaption>Exemplos de possíveis positions com o site devmedia.com</figcaption>
                 </figure>
                 
-                <p class="artigo_texto">Além da propriedade <i>position</i>, também temos a propriedade <i>float</i>, possivelmente atrelada ou não à propriedade <i>clear</i>. O float pode receber valores de left, right e none, em que o item irá se posicionar para a esquerda, para a direita, ou permanecer no seu local original, respectivamente.</p>
+                <p class="conteudo__texto">Além da propriedade <i>position</i>, também temos a propriedade <i>float</i>, possivelmente atrelada ou não à propriedade <i>clear</i>. O float pode receber valores de left, right e none, em que o item irá se posicionar para a esquerda, para a direita, ou permanecer no seu local original, respectivamente.</p>
                 
-                <p class="artigo_texto">Com a propriedade float definida para left ou right para um item em específico, os elementos subsequentes irão se adequar ao seu redor. Para que se tenha um maior controle do fluxo do documento com a propriedade float, existe a propriedade clear. Com ela, que possui valores como left, right, both e none, o conteúdo subsequente do item que está "flutuando" pode se adequar ou não ao seu redor.</p>
+                <p class="conteudo__texto">Com a propriedade float definida para left ou right para um item em específico, os elementos subsequentes irão se adequar ao seu redor. Para que se tenha um maior controle do fluxo do documento com a propriedade float, existe a propriedade clear. Com ela, que possui valores como left, right, both e none, o conteúdo subsequente do item que está "flutuando" pode se adequar ou não ao seu redor.</p>
 
                 <figure>
                     <img src="/images/exemplo-float.png" alt="Fundo preto com um elemento de borda amarela escrito left à esquerda, um elemento de borda amarela escrito right à direita e um texto branco com dizeres aleatórios abaixo do elemento à esquerda e ao lado do elemento à direita.">
                     <figcaption>Exemplo visual das propriedades float e clear</figcaption>
                 </figure>
 
-                <p class="artigo_texto">Na figura anterior, temos um item com <code>float: left</code> à esquerda, um item com <code>float: right</code> à direita e um texto com <code>clear: left</code>. Desta forma, o texto fica abaixo do item que flutua para a esquerda, mas se adequa ao redor do item que flutua para a direita.</p>
+                <p class="conteudo__texto">Na figura anterior, temos um item com <code>float: left</code> à esquerda, um item com <code>float: right</code> à direita e um texto com <code>clear: left</code>. Desta forma, o texto fica abaixo do item que flutua para a esquerda, mas se adequa ao redor do item que flutua para a direita.</p>
             </article>
             
             <article>
                 <h3 class=artigo_subtitulo>Z-index</h3>
-                <p class="artigo_texto">O z-index é uma referência ao eixo z, ou seja, é uma forma de gerar alguma noção de profundidade ou empilhamento dentro do visual criado pela estilização CSS. Quando mais de um item são positionados de forma que eles irão se sobrepor, o z-index é o que indicará quem ficará no topo (mais visível) e quem ficará no fundo (menos visível)</p>
+                <p class="conteudo__texto">O z-index é uma referência ao eixo z, ou seja, é uma forma de gerar alguma noção de profundidade ou empilhamento dentro do visual criado pela estilização CSS. Quando mais de um item são positionados de forma que eles irão se sobrepor, o z-index é o que indicará quem ficará no topo (mais visível) e quem ficará no fundo (menos visível)</p>
                 
-                <p class="artigo_texto">O z-index recebe valores numéricos e adimensionais, e, quanto maior o z-index, maior prioridade o elemento terá de ficar no topo da pilha. O desenvolvedor deverá escolher os números de acordo com a necessidade, sabendo que, a depender dos números escolhidos, colocar um z-index de 3 e um z-index de 3000 terão o mesmo efeito. O que importa não é a grandeza, mas sim, ser o maior dentre os existentes.</p>
+                <p class="conteudo__texto">O z-index recebe valores numéricos e adimensionais, e, quanto maior o z-index, maior prioridade o elemento terá de ficar no topo da pilha. O desenvolvedor deverá escolher os números de acordo com a necessidade, sabendo que, a depender dos números escolhidos, colocar um z-index de 3 e um z-index de 3000 terão o mesmo efeito. O que importa não é a grandeza, mas sim, ser o maior dentre os existentes.</p>
             </article>
     
-            <div class="artigo_info">
-                <div class="artigo_autor">
-                    <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                    <div class="artigo_autor_info">
+            <div class="artigo__info">
+                <div class="artigo__info__autor">
+                    <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
+                    <div class="artigo__info__autor__nome">
                         <p>Camila Matias</p>
                         <span>Desenvolvedora Front End</span>
                     </div>
                 </div>
-                <div class="artigo_data">
-                    <p>14 Fev</p>
+                <div class="artigo__data">
+                    <p>20 Fev</p>
                 </div>
             </div>
+        </section>
     </main>
 </body>
 </html>

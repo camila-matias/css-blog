@@ -1,14 +1,12 @@
 @import "/styles/style.css";
 
-.titulo_pagina{
+.titulo{
     font-size: 4rem;
     font-family: var(--fonte-titulos);
     text-align: center;
     margin: 2rem 0;
 }
 
-.artigos_pagina{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 3rem;
+.listagem-artigos, .titulo {
+    bottom: 0;
 }

@@ -25,7 +25,7 @@ label{
     display: block;
 }
 
-#teste{
+#conteudo__teste{
     width: 20vw;
     padding: 0.5rem;
     margin-bottom: 1rem;
@@ -35,12 +35,12 @@ label{
     font-family: var(--fonte-tags);
 }
 
-#teste:focus{
+#conteudo__teste:focus{
     background-color: #fff;
     color: red;
 }
 
-.artigo_titulo_animacao{
+.conteudo__titulo--animado{
     animation: escrita 10s steps(120, end) infinite;
     white-space: nowrap;
     overflow: hidden;
@@ -56,7 +56,7 @@ label{
     }
 }
 
-.homem_aranha img{
+.conteudo__animacao img{
     width: 3vw;
     margin: 25vh 0 0 0;
     border-radius: 100%;
@@ -169,14 +169,14 @@ label{
     }
 }
 
-.transitions{
+.conteudo__transicoes {
     width: 50vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
 
-.transition1, .transition2, .transition3, .transition4{
+.conteudo__transicoes div {
     width: 100px;
     height: 100px;
     margin: 2rem 0 1rem 0;
@@ -185,22 +185,22 @@ label{
     transition: all 1s ease-in;
 }
 
-.transition1:hover{
+.conteudo__transicoes--primeiro:hover{
     background-color: #b09bc1;
     transform: rotateZ(90deg);
 }
 
-.transition2:hover{
+.conteudo__transicoes--segundo:hover{
     background-color: #b09bc1;
     transform: translateX(5rem);
 }
 
-.transition3:hover{
+.conteudo__transicoes--terceiro:hover{
     background-color: #b09bc1;
     transform:skew(15deg);
 }
 
-.transition4:hover{
+.conteudo__transicoes--quarto:hover{
     background-color: #b09bc1;
     transform: scale(0.5);
 }

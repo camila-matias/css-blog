@@ -11,7 +11,7 @@
     <header>
         <h1>CSS Blog</h1>
         <nav>
-            <ul class="barra_nav">
+            <ul class="navegacao">
                 <li><a href="/index.html">Início</a></li>
                 <li><a href="/pages/css-basico.html">CSS Básico</a></li>
                 <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
@@ -19,53 +19,59 @@
                 <li>Responsividade</li>
             </ul>
         </nav>
+
         <div class="pesquisa">
-            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <input type="search" placeholder="Pesquisar" class="pesquisa__item">
             <img src="/images/search-outline.png" alt="Imagem de uma lupa">
         </div>
     </header>
 
-    <main class="pagina_blog">
-        <h2 class="titulo_pagina">Posicionamento</h2>
+    <main>
+        <h2 class="titulo">Posicionamento</h2>
 
-        <section class="artigos_pagina">
-            <article class="artigo_card">
+        <section class="listagem-artigos">
+            <article class="listagem-artigos__card">
                 <img src="https://dillionmegida.com/post-covers/86-positioning-styles.png" alt="Imagem com fundo azul marinho e vários blocos brancos com texto em preto representando os vários tipos de posicionamento em CSS.">
-                <span class="artigo_tag posicionamento">POSICIONAMENTO</span>
+                
+                <span class="artigo__tag artigo__tag--posicionamento">POSICIONAMENTO</span>
+                
                 <h2><a href="/articles/position-e-z-index.html">Position e Z-index</a></h2>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
+                
+                <div class="artigo__info">
+                    <div class="artigo__info__autor">
+                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
+                        <div class="artigo__info__autor__nome">
                             <p>Camila Matias</p>
                             <span>Desenvolvedora Front End</span>
                         </div>
                     </div>
-                    <div class="artigo_data">
+                    <div class="artigo__data">
                         <p>19 Fev</p>
                     </div>
                 </div>
             </article>
 
-            <article class="artigo_card">
+            <article class="listagem-artigos__card">
                 <img src="https://miro.medium.com/v2/resize:fit:1400/1*dwcWnf3ArsatTs5VG7h64w.png" alt="Imagem com fundo azul marinho e vários blocos brancos com texto em preto representando os vários tipos de posicionamento em CSS.">
-                <span class="artigo_tag posicionamento">POSICIONAMENTO</span>
+                
+                <span class="artigo__tag artigo__tag--posicionamento">POSICIONAMENTO</span>
+                
                 <h2><a href="/articles/display.html">Display em CSS</a></h2>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
+                
+                <div class="artigo__info">
+                    <div class="artigo__info__autor">
+                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
+                        <div class="artigo__info__autor__nome">
                             <p>Camila Matias</p>
                             <span>Desenvolvedora Front End</span>
                         </div>
                     </div>
-                    <div class="artigo_data">
+                    <div class="artigo__data">
                         <p>19 Fev</p>
                     </div>
                 </div>
             </article>
         </section>
-
     </main>
 </body>
 </html>

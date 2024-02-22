@@ -11,7 +11,7 @@
     <header>
         <h1>CSS Blog</h1>
         <nav>
-            <ul class="barra_nav">
+            <ul class="navegacao">
                 <li><a href="/index.html">Início</a></li>
                 <li><a href="/pages/css-basico.html">CSS Básico</a></li>
                 <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
@@ -19,48 +19,54 @@
                 <li>Responsividade</li>
             </ul>
         </nav>
+
         <div class="pesquisa">
-            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <input type="search" placeholder="Pesquisar" class="pesquisa__item">
             <img src="/images/search-outline.png" alt="Imagem de uma lupa">
         </div>
     </header>
 
-    <main class="pagina_blog">
-        <h2 class="titulo_pagina">Animações</h2>
+    <main>
+        <h2 class="titulo">Animações</h2>
 
-        <section class="artigos_pagina">
-            <article class="artigo_card">
+        <section class="listagem-artigos">  
+            <article class="listagem-artigos__card">
                 <img src="/images/transitions-animations.png" alt="Imagem com fundo azul petróleo com 3 quadrados um ao lado do outro, um verde, um rosa e um azul. O verde dá a impressão de se mover para cima, o rosa para o lado e o azul, de diminuir de tamanho.">
-                <span class="artigo_tag animacoes">ANIMAÇÕES</span>
+                
+                <span class="artigo__tag artigo__tag--animacoes">ANIMAÇÕES</span>
+                
                 <h2><a href="/articles/transitions.html">Transitions</a></h2>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
+                
+                <div class="artigo__info">
+                    <div class="artigo__info__autor">
+                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
+                        <div class="artigo__info__autor__nome">
                             <p>Camila Matias</p>
                             <span>Desenvolvedora Front End</span>
                         </div>
                     </div>
-                    <div class="artigo_data">
+                    <div class="artigo__data">
                         <p>20 Fev</p>
                     </div>
                 </div>
             </article>
 
-            <article class="artigo_card">
+            <article class="listagem-artigos__card">
                 <img src="/images/transitions-animations.png" alt="Imagem com fundo azul petróleo com 3 quadrados um ao lado do outro, um verde, um rosa e um azul. O verde dá a impressão de se mover para cima, o rosa para o lado e o azul, de diminuir de tamanho.">
-                <span class="artigo_tag animacoes">ANIMAÇÕES</span>
+                
+                <span class="artigo__tag artigo__tag--animacoes">ANIMAÇÕES</span>
+                
                 <h2><a href="/articles/animations.html">Animations</a></h2>
-                <p></p>
-                <div class="artigo_info">
-                    <div class="artigo_autor">
-                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                        <div class="artigo_autor_info">
+                
+                <div class="artigo__info">
+                    <div class="artigo__info__autor">
+                        <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo__info__autor_foto">
+                        <div class="artigo__info__autor__nome">
                             <p>Camila Matias</p>
                             <span>Desenvolvedora Front End</span>
                         </div>
                     </div>
-                    <div class="artigo_data">
+                    <div class="artigo__data">
                         <p>21 Fev</p>
                     </div>
                 </div>

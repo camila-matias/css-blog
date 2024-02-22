@@ -12,7 +12,7 @@
     <header>
         <h1>CSS Blog</h1>
         <nav>
-            <ul class="barra_nav">
+            <ul class="navegacao">
                 <li><a href="/index.html">Início</a></li>
                 <li><a href="/pages/css-basico.html">CSS Básico</a></li>
                 <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
@@ -20,79 +20,82 @@
                 <li>Responsividade</li>
             </ul>
         </nav>
+
         <div class="pesquisa">
-            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <input type="search" placeholder="Pesquisar" class="pesquisa__item">
             <img src="/images/search-outline.png" alt="Imagem de uma lupa">
         </div>
     </header>
     
-    <section class="artigo pagina_blog">
-        <h2 class="artigo_titulo">Transitions</h2>
-        <span class="artigo_tag animacoes">ANIMAÇÕES</span>
-        
-        <article>
-            <p class="artigo_texto">As transitions, como o nome já denota, são transições de estado de elementos, se assemelhando à animações. Muito utilizadas em conjunto com as pseudo-classes como <code>:hover</code>, <code>:active</code> e <code>:focus</code>, são, em geral, utilizadas para que haja uma animação quando o usuário clica ou passa o cursor em algum item da página.</p>
-
-            <button>Passe o mouse aqui e veja uma transition</button>
+    <main>
+        <section class="conteudo">
+            <h2 class="conteudo__titulo">Transitions</h2>
+            <span class="artigo__tag artigo__tag--animacoes">ANIMAÇÕES</span>
             
-            <label for="teste">Caixa de texto</label>
-            <input name="teste" id="teste" type="text" placeholder="Clique aqui e visualize outra transition">
-
-            <p class="artigo_texto">Além de mudança de propriedades já definidas, com a propriedade <code>transform</code>, é possível mover, rotacionar, distorcer, aumentar ou diminuir o tamanho de elementos.</p>
+            <article>
+                <p class="conteudo__texto">As transitions, como o nome já denota, são transições de estado de elementos, se assemelhando à animações. Muito utilizadas em conjunto com as pseudo-classes como <code>:hover</code>, <code>:active</code> e <code>:focus</code>, são, em geral, utilizadas para que haja uma animação quando o usuário clica ou passa o cursor em algum item da página.</p>
+    
+                <button>Passe o mouse aqui e veja uma transition</button>
+                
+                <label for="teste">Caixa de texto</label>
+                <input name="teste" id="conteudo__teste" type="text" placeholder="Clique aqui e visualize outra transition">
+    
+                <p class="conteudo__texto">Além de mudança de propriedades já definidas, com a propriedade <code>transform</code>, é possível mover, rotacionar, distorcer, aumentar ou diminuir o tamanho de elementos.</p>
+                
+                <div class="conteudo__transicoes">
+                    <div class="conteudo__transicoes--primeiro"></div>
+                    <div class="conteudo__transicoes--segundo"></div>
+                    <div class="conteudo__transicoes--terceiro"></div>
+                    <div class="conteudo__transicoes--quarto"></div>
+                </div>
+    
+                <p class="conteudo__texto">Para aplicar a transition à um elemento, após definir todas as modificações a serem realizadas por meio de uma pseudo-classe, é necessário adicionar as propriedades de transition no bloco de estilização do elemento original. Estas propriedades são:</p> 
+    
+                <ul class="conteudo__texto"> 
+                    <li><span>transition-property:</span> propriedade que sofrerá uma alteração, como <code>margin</code>, <code>background-color</code>, entre outras. </li>
+                    
+                    <li><span>transition-duration:</span> tempo no qual a alteração ocorrerá.</li>
+                    
+                    <li><span>transition-timing-function:</span> permite estabelecer uma curva de aceleração da transição. Recebe valores como <code>steps()</code>, <code>ease-in</code>, <code>linear</code>, a depender de como se queira que a transição ocorra.</li>
+                    
+                    <li><span>transition-delay:</span> quanto tempo demorará para a transição iniciar</li>
+                    
+                    <li><span>transition-behavior:</span> define se animações do tipo discreta (que possuem apenas um valor para início e um valor para fim) serão permitidas.</li>
+                </ul>
+                
+                <p class="conteudo__texto">Para diminuição do código, existe a shorthand <code>transition</code> que engloba todas estas propriedades um uma só linha. A aplicação das transitions pode ser única, caso todas as transitions aplicadas tenham os mesmos valores de propriedades, ou pode ser customizada de acordo com a necessidade.</p>
             
-            <div class="transitions">
-                <div class="transition1"></div>
-                <div class="transition2"></div>
-                <div class="transition3"></div>
-                <div class="transition4"></div>
-            </div>
-
-            <p class="artigo_texto">Para aplicar a transition à um elemento, após definir todas as modificações a serem realizadas por meio de uma pseudo-classe, é necessário adicionar as propriedades de transition no bloco de estilização do elemento original. Estas propriedades são:</p> 
-
-            <ul class="artigo_texto"> 
-                <li><span>transition-property:</span> propriedade que sofrerá uma alteração, como <code>margin</code>, <code>background-color</code>, entre outras. </li>
-                
-                <li><span>transition-duration:</span> tempo no qual a alteração ocorrerá.</li>
-                
-                <li><span>transition-timing-function:</span> permite estabelecer uma curva de aceleração da transição. Recebe valores como <code>steps()</code>, <code>ease-in</code>, <code>linear</code>, a depender de como se queira que a transição ocorra.</li>
-                
-                <li><span>transition-delay:</span> quanto tempo demorará para a transição iniciar</li>
-                
-                <li><span>transition-behavior:</span> define se animações do tipo discreta (que possuem apenas um valor para início e um valor para fim) serão permitidas.</li>
-            </ul>
-            
-            <p class="artigo_texto">Para diminuição do código, existe a shorthand <code>transition</code> que engloba todas estas propriedades um uma só linha. A aplicação das transitions pode ser única, caso todas as transitions aplicadas tenham os mesmos valores de propriedades, ou pode ser customizada de acordo com a necessidade.</p>
-        
-            <div class="figuras">
-                <figure>
-                    <img src="/images/transition-all.png" alt="Imagem em fundo preto com código CSS de aplicação de transitions em uma só linha">
-                    <figcaption>Transition aplicada para todas as propriedades em uma linha.</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="/images/transition-menos-uma.png" alt="Imagem em fundo preto com código CSS de aplicação de transitions com exceções">
-                    <figcaption>Transition aplicada para todas as proprieades em uma linha, exceto para background-color, cuja transição foi definida na linha seguinte.</figcaption>
-                </figure>
-
-                <figure>
-                    <img src="/images/transition-separada.png" alt="Imagem em fundo preto com código CSS de aplicação de transitions separadamente">
-                    <figcaption>Transição aplicada para todas as propriedades em linhas diferentes.</figcaption>
-                </figure>
-            </div>
-        </article>     
-
-        <div class="artigo_info">
-            <div class="artigo_autor">
-                <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                <div class="artigo_autor_info">
-                    <p>Camila Matias</p>
-                    <span>Desenvolvedora Front End</span>
+                <div class="conteudo__figuras">
+                    <figure>
+                        <img src="/images/transition-all.png" alt="Imagem em fundo preto com código CSS de aplicação de transitions em uma só linha">
+                        <figcaption>Transition aplicada para todas as propriedades em uma linha.</figcaption>
+                    </figure>
+    
+                    <figure>
+                        <img src="/images/transition-menos-uma.png" alt="Imagem em fundo preto com código CSS de aplicação de transitions com exceções">
+                        <figcaption>Transition aplicada para todas as proprieades em uma linha, exceto para background-color, cuja transição foi definida na linha seguinte.</figcaption>
+                    </figure>
+    
+                    <figure>
+                        <img src="/images/transition-separada.png" alt="Imagem em fundo preto com código CSS de aplicação de transitions separadamente">
+                        <figcaption>Transição aplicada para todas as propriedades em linhas diferentes.</figcaption>
+                    </figure>
+                </div>
+            </article>     
+    
+            <div class="artigo__info">
+                <div class="artigo__info__autor">
+                    <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
+                    <div class="artigo__info__autor__nome">
+                        <p>Camila Matias</p>
+                        <span>Desenvolvedora Front End</span>
+                    </div>
+                </div>
+                <div class="artigo__data">
+                    <p>20 Fev</p>
                 </div>
             </div>
-            <div class="artigo_data">
-                <p>20 Fev</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 </html>

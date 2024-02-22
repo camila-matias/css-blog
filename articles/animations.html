@@ -12,7 +12,7 @@
     <header>
         <h1>CSS Blog</h1>
         <nav>
-            <ul class="barra_nav">
+            <ul class="navegacao">
                 <li><a href="/index.html">Início</a></li>
                 <li><a href="/pages/css-basico.html">CSS Básico</a></li>
                 <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
@@ -20,34 +20,35 @@
                 <li>Responsividade</li>
             </ul>
         </nav>
+
         <div class="pesquisa">
-            <input type="search" placeholder="Pesquisar" class="barra_busca">
+            <input type="search" placeholder="Pesquisar" class="pesquisa__item">
             <img src="/images/search-outline.png" alt="Imagem de uma lupa">
         </div>
     </header>
     
     <main>
-        <section class="artigo pagina_blog">
-            <h2 class="artigo_titulo artigo_titulo_animacao">Animations</h2>
-            <span class="artigo_tag animacoes">ANIMAÇÕES</span>
+        <section class="conteudo">
+            <h2 class="conteudo__titulo conteudo__titulo--animado">Animations</h2>
+            <span class="artigo__tag artigo__tag--animacoes">ANIMAÇÕES</span>
             
             <article>
-                <p class="artigo_texto">As animations, assim como as transitions, também são mudanças de estado de elementos. As principais diferenças entre esses dois tipos de mudanças são que as animations não necessariamente precisam de um gatilho para acontecerem e podem acontecer infinitamente, e que as animations permitem um controle muito maior dos estados intermediários entre o início e o fim da animação.</p>
+                <p class="conteudo__texto">As animations, assim como as transitions, também são mudanças de estado de elementos. As principais diferenças entre esses dois tipos de mudanças são que as animations não necessariamente precisam de um gatilho para acontecerem e podem acontecer infinitamente, e que as animations permitem um controle muito maior dos estados intermediários entre o início e o fim da animação.</p>
 
-                <div class="homem_aranha">
+                <div class="conteudo__animacao">
                     <img src="/images/homem-aranha.png" alt="Rosto do homem aranha com uniforme vermelho com preto e olhos brancos">
                 </div>
 
-                <p class="artigo_texto">Para esse controle seja efetivo, é utilizada a regra <code>@keyframes</code>, que permite que os estados de transição seja definidos com porcentagens (%) ou com palavras reservadas como <code>from</code> (estado inicial de 0%) e <code>to</code> (estado final de 100%).</p>
+                <p class="conteudo__texto">Para esse controle seja efetivo, é utilizada a regra <code>@keyframes</code>, que permite que os estados de transição seja definidos com porcentagens (%) ou com palavras reservadas como <code>from</code> (estado inicial de 0%) e <code>to</code> (estado final de 100%).</p>
 
                 <figure>
                     <img src="/images/@keyframes.png" alt="Imagem com fundo preto com código CSS escrito da regra keyframes">
                     <figcaption>Estrutura da regra <code>@keyframes</code> com porcentagens</figcaption>
                 </figure>
 
-                <p class="artigo_texto">Para aplicar as animações, é necessário, no bloco de estilização do item, indicar os valores das propriedades de animação. São elas:</p>
+                <p class="conteudo__texto">Para aplicar as animações, é necessário, no bloco de estilização do item, indicar os valores das propriedades de animação. São elas:</p>
                 
-                <ul class="artigo_texto">
+                <ul class="conteudo__texto">
                     <li><span>animation-name:</span> o nome da animação. Notar que este nome deverá ser o mesmo identificador do <code>@keyframes</code> correspondente.</li>
                     
                     <li><span>animation-duration:</span> o tempo de duração que a animação terá.</li>
@@ -65,11 +66,11 @@
                     <li><span>animation-play-state:</span> indica se a animação está correndo ou pausada. Recebe apenas o valores <code>running</code> ou <code>paused</code>.</li>
                 </ul>
                 
-                <p class="artigo_texto">Para manter o código conciso, existe a shorthand <code>animation</code>, que engloba todas as propriedades supracitadas em uma linha única. O shorthand mais comum para animações utilizado agrupa name, duration, timing function e iteration count, mas as demais propriedades listadas podem ser utilizadas na mesma linha de código CSS.</p>
+                <p class="conteudo__texto">Para manter o código conciso, existe a shorthand <code>animation</code>, que engloba todas as propriedades supracitadas em uma linha única. O shorthand mais comum para animações utilizado agrupa name, duration, timing function e iteration count, mas as demais propriedades listadas podem ser utilizadas na mesma linha de código CSS.</p>
 
-                <p class="artigo_texto">Para animações múltiplas, é possível utilizar uma shorthand para cada uma ou utilizar as propriedades originais separadamente e criar "listas" em cada uma, de modo que cada posição da lista em cada propriedade refletirá os valores de uma animação.</p>
+                <p class="conteudo__texto">Para animações múltiplas, é possível utilizar uma shorthand para cada uma ou utilizar as propriedades originais separadamente e criar "listas" em cada uma, de modo que cada posição da lista em cada propriedade refletirá os valores de uma animação.</p>
 
-                <div class="figuras">
+                <div class="conteudo__figuras">
                     <figure>
                         <img src="/images/animation-shorthands.png" alt="Imagem com fundo preto e código CSS escrito aplicando animações com shorthands">
                         <figcaption>Aplicação de animações múltiplas com shorthands separadas</figcaption>
@@ -82,15 +83,15 @@
                 </div>
             </article>
     
-            <div class="artigo_info">
-                <div class="artigo_autor">
-                    <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta" class="artigo_autor_foto">
-                    <div class="artigo_autor_info">
+            <div class="artigo__info">
+                <div class="artigo__info__autor">
+                    <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
+                    <div class="artigo__info__autor__nome">
                         <p>Camila Matias</p>
                         <span>Desenvolvedora Front End</span>
                     </div>
                 </div>
-                <div class="artigo_data">
+                <div class="artigo__data">
                     <p>20 Fev</p>
                 </div>
             </div>
