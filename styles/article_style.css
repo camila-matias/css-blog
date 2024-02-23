@@ -1,9 +1,9 @@
 @import "/styles/styles.css";
 
 figure {
+    margin: 1rem 0;
     text-align: center;
     font-size: 1.3rem;
-    margin: 1rem 0;
 }
 
 h3 {
@@ -26,9 +26,9 @@ p, li {
 }
 
 code {
+    padding: 0 0.3rem;
     background-color: rgba(243, 146, 0, 0.1);
     border-radius: 0.3rem;
-    padding: 0 0.3rem;
 }
 
 .conteudo {
@@ -37,9 +37,9 @@ code {
 }
 
 .conteudo__titulo {
+    margin-bottom: 0.5rem;
     font-size: 3rem;
     font-family: var(--fonte-titulos);
-    margin-bottom: 0.5rem;
 }
 
 .conteudo__texto {
