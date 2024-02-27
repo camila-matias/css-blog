@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/article_style.css">
+    <title>Flexbox em CSS</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Blog</h1>
+        <nav>
+            <ul class="navegacao">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/pages/css-basico.html">CSS Básico</a></li>
+                <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
+                <li><a href="/pages/animacoes.html">Animações</a></li>
+                <li>Responsividade</li>
+            </ul>
+        </nav>
+
+        <div class="pesquisa">
+            <input type="search" placeholder="Pesquisar" class="pesquisa__item">
+            <img src="/images/search-outline.png" alt="Imagem de uma lupa">
+        </div>
+    </header>
+
+    <main>
+        <section class="conteudo">
+            <h2 class="conteudo__titulo">Flexbox</h2>
+            <span class="artigo__tag artigo__tag--posicionamento">POSICIONAMENTO</span>
+            
+            <p class="conteudo__texto">O <code>flexbox</code>, nome advindo da junção das palavras <i>Flexible Box</i> é um modelo de posicionamento para layouts que permite maior flexibilidade de posicionamento de itens e facilita as adaptações do layout para garantir a responsividade, quando comparado com modelos como o <code>position</code> ou o <code>float</code>. Este modelo possui alguns conceitos iniciais nos quais suas propriedades irão se basear para gerar o comportamento esperado. São estes:</p>
+
+            <ul class="conteudo__texto">
+                <li><span>Flex container:</span> é o elemento cujos itens irão ter o comportamento flexível.</li>
+                <li><span>Flex item:</span> é um item dentro de um container flexível.</li>
+                <li><span>Eixo principal:</span> eixo que definirá de onde o posicionamento dos itens iniciará. A depender da propriedade <code>flex-direction</code>, pode ser o eixo vertical ou horizontal. A propriedade na sua forma default tem o eixo horizontal como principal.</li>
+                <li><span>Eixo secundário:</span> eixo que é secundário ao eixo principal. A depender da propriedade <code>flex-direction</code>, pode ser o eixo vertical ou horizontal. A propriedade na sua forma default tem o eixo vertical como secundário. </li>
+                <li><span><i>main-start / main-end:</i></span> início e fim do eixo principal, seja ele vertical ou horizontal, a depender da propriedade <code>flex-direction</code>.</li>
+                <li><span><i>cross-star / cross-end:</i></span> início e fim do eixo secundário, seja ele vertical ou horizontal, a depender da propriedade <code>flex-direction</code>.</li>
+                <li><span><i>main size / cross size:</i></span> tamanhos dos eixos principal e secundário, sejam eles o vertical ou horizontal, a depender da propriedade <code>flex-direction</code>.</li>
+            </ul>
+
+            <figure>
+                <img src="/images/flexbox-conceitos.png" alt="Imagem com um flex container e 2 flex items com indicações de todos os conceitos citados na listagem anterior.">
+                <figcaption>Figura ilustrativa dos conceitos iniciais do Flexbox.</figcaption>
+            </figure>
+
+            <p class="conteudo__texto">Para inicializar um flex container, deve ser inclusa a propriedade <code>display:flex</code> em seu bloco de código. Dessa forma, os itens contidos neste flex container se tornarão flex items e as propriedades do flexbox poderão ser aplicadas. As propriedades são:</p>
+
+            <ul class="conteudo__texto">
+                <li><span>flex-direction:</span> define qual o eixo principal do container, horizontal (<code>row</code>) ou vertical (<code>column</code>). Se o eixo horizontal é o principal, automaticamente o eixo vertical se torna o secundário e vice-versa.</li>
+                
+                <li><span>justify-content:</span> esta propriedade define como os elementos serão posicionados no seu eixo principal. Pode ter valores como <code>center</code>, <code>flex-start</code>, <code>flex-end</code>, <code>space-around</code>, <code>space-between</code> e <code>space-evenly</code>.</li>
+                
+                <li><span>align-items:</span> esta propriedade define como os elementos serão posicionados no seu eixo secundário. Pode ter valores como <code>center</code>, <code>flex-start</code>, <code>flex-end</code> e <code>stretch</code>.</li>
+                
+                <li><span>align-content:</span> esta propriedade define o espaçamento entre os flex items no seu eixo secundário. Pode ter valores como <code>center</code>, <code>flex-start</code>, <code>flex-end</code>, <code>stretch</code>, <code>space-around</code> e <code>space-between</code>.</li>
+                
+                <figure class="conteudo__figuras--em-coluna">
+                    <img src="/images/flexbox-1.png" alt="Imagem ilustrativa dos valores possíveis para as propriedades de flex-direction, justify-content, align-items e align-content.">
+                    <figcaption>Imagem ilustrativa dos valores possíveis para as propriedades de <code>flex-direction</code>, <code>justify-content</code>, <code>align-items</code> e <code>align-content</code>.</figcaption>
+                </figure>
+
+                <li><span>flex-wrap:</span> esta propriedade define se, caso a soma dos tamanhos dos itens ultrapasse o <i>main size</i> disponível, se os itens poderão ou não ser quebrados em novas linhas/colunas. Possue valores de <code>wrap</code> (pode quebrar), <code>nowrap</code> (não pode quebrar) e <code>wrap-reverse</code> (pode quebrar e os elementos são posicionados na ordem reversa ao normal)</li> 
+                
+                <figure>
+                    <img src="https://triangulo.dev/posts/introducao-flexbox/flex-wrap.png" alt="Imagem ilustrativa dos valores possíveis para a propriedade flex-wrap.">
+                    <figure>Imagem ilustrativa dos valores possíveis para a propriedade <code>flex-wrap</code>.</figure>
+                </figure>
+
+                <li><span>flex-flow:</span> é um shorthand que agrupa as propriedades de <code>flex-direction</code> e <code>flex-wrap</code>. Deste modo, seus valores possíveis são as combinações entre os valores destas duas propriedades.</li>
+                
+                <li><span>gap:</span> define um valor de espaçamento entre flex items, assumindo valores numéricos. Caso sejam definidos 2 valores, como em <code>gap: 10px 30px</code>, o primeiro valor é o espaçamento entre ramificações do eixo principal e, o segundo, entre ramificações do eixo secundário.</li>
+
+                <figure>
+                    <img src="/images/flexbox-gap.png" alt="Imagem ilustrativa dos valores possíveis para a propriedade gap.">
+                    <figure>Imagem ilustrativa dos valores possíveis para a propriedade <code>gap</code>.</figure>
+                </figure>
+                
+                <li><span>align-self:</span> esta propriedade, quando aplicada no bloco de código de estilização de um flex item, sobrescreve a propriedade <code>align-items</code> para aquele item em específico. Deste modo, possui a mesma função e valores possíveis de <code>align-items</code>, mas só é aplicada naqueles que possuírem esta propriedade no código.</li>
+
+                <figure>
+                    <img src="https://triangulo.dev/posts/introducao-flexbox/align-self.png" alt="Imagem ilustrativa dos valores possíveis para a propriedade align-self.">
+                    <figure>Imagem ilustrativa dos valores possíveis para a propriedade <code>align-self</code>.</figure>
+                </figure>
+                
+                <li><span>flex-grow:</span> aplicada no flex item, esta propriedade define um fator de crescimento de um flex item, especificando quanto de espaço dentro do flex container esse item irá tomar em relação aos demais items. Esta propriedade assume valores numéricos sem unidade e seu valor padrão é 0.</li>
+
+                <li><span>flex-shrink:</span> é uma propriedade análoga ao <code>flex-grow</code>, porém, por sua vez, define um fator de encolhimento. </li>
+
+                <figure>
+                    <img src="https://dev-to-uploads.s3.amazonaws.com/i/z094e3wehsoe8z6lsxnz.png" alt="Imagem ilustrativa das propriedades flex-grow e flex-shrink.">
+                    <figure>Imagem ilustrativa das propriedades <code>flex-grow</code> e <code>flex-shrink</code>.</figure>
+                </figure>
+                
+                <li><span>flex-basis:</span> esta propriedade define o valor base para a dimensão no eixo principal de um flex item, antes de qualquer ação das propriedades <code>flex-wrap</code>, <code>flex-grow</code> ou <code>flex-shrink</code>, ou seja, antes que o espaço remanescente do container seja distribuído.</li>
+
+                <figure>
+                    <img src="https://www.programiz.com/sites/tutorial2program/files/css-flex-basis-example.png" alt="Imagem ilustrativa da propriedade flex-basis.">
+                    <figure>Imagem ilustrativa da propriedade <code>flex-basis</code>.</figure>
+                </figure>
+
+                <li><span>flex:</span> é um shorthand que agrupa as propriedades de <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code>, sendo estas duas últimas opcionais. Deste modo, seus valores possíveis são as combinações entre os valores destas três propriedades.</li>
+                
+                <li><span>order:</span> aplicada nos flex items, é uma propriedade que define a order na qual os elementos serão renderizados. Recebe valores numéricos e sem unidade, indicando, de forma crescente, a ordem de cada elemento ou uma priorização de um elemento específico.</li>
+
+                <figure>
+                    <img src="https://www.programiz.com/sites/tutorial2program/files/css-order-property-example.png" alt="Imagem ilustrativa da propriedade order.">
+                    <figure>Imagem ilustrativa da propriedade <code>order</code>.</figure>
+                </figure>              
+            </ul>
+
+            <div class="artigo__info">
+                <div class="artigo__info__autor">
+                    <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
+                    <div class="artigo__info__autor__nome">
+                        <p>Camila Matias</p>
+                        <span>Desenvolvedora Front End</span>
+                    </div>
+                </div>
+                <div class="artigo__data">
+                    <p>27 Fev</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
