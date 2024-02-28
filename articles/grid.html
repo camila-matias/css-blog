@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/article_style.css">
+    <title>Grid em CSS</title>
+</head>
+<body>
+    <header>
+        <h1>CSS Blog</h1>
+        <nav>
+            <ul class="navegacao">
+                <li><a href="/index.html">Início</a></li>
+                <li><a href="/pages/css-basico.html">CSS Básico</a></li>
+                <li><a href="/pages/posicionamento.html">Posicionamento</a></li>
+                <li><a href="/pages/animacoes.html">Animações</a></li>
+                <li>Responsividade</li>
+            </ul>
+        </nav>
+
+        <div class="pesquisa">
+            <input type="search" placeholder="Pesquisar" class="pesquisa__item">
+            <img src="/images/search-outline.png" alt="Imagem de uma lupa">
+        </div>
+    </header>
+
+    <main>
+        <section class="conteudo">
+            <h2 class="conteudo__titulo">Grid</h2>
+            <span class="artigo__tag artigo__tag--posicionamento">POSICIONAMENTO</span>
+            
+            <p class="conteudo__texto">O display Grid é um modelo de posicionamento que, assim como o Flexbox, traz mais flexibilidade no posicionamento de itens na tela. Este modelo simula uma "grade", com linhas e colunas, onde os itens serão posicionados. É considerado por alguns como uma melhoria do flexbox, visto que traz consigo algumas das vantagens deste modelo e consegue, apenas com suas proprias propriedades, posicionar itens que, no Flexbox, teriam que ser envoltos por elementos <code>div</code> no HTML para que o posicionamento ocorresse da forma esperada. Dessa forma, com o Grid, é possível reduzir o tamanho do código HTML em relação à layouts utilizando Flexbox.</p>
+
+            <p class="conteudo__texto">Este modelo possui alguns conceitos iniciais para que seu entendimento seja mais facilitado na hora da aplicação das propriedades. São estes:</p>
+
+            <ul class="conteudo__texto">
+                <li><span>grid container:</span> definido pela propriedade <code>display: grid</code> em seu bloco de código, é o elemento pai cujos elementos serão posicionados conforme o modelo Grid.</li>
+                
+                <li><span>grid item:</span> todos os elementos que são filhos diretos de um grid container tornam-se, automaticamente, grid items.</li>
+                
+                <li><span>grid tracks:</span> na definição do grid, são criadas linhas e colunas. Um grid track é o espaço entre duas grid lines dentro do grid.</li>
+                
+                <li><span>grid lines:</span> as grid lines são as linhas dentro do template grid. É importante não confundir este conceito com o de grid column, pois as linhas são as separações entre os elementos.</li>
+                
+                <li><span>grid column:</span> é uma coluna dentro do grid template.</li>
+                
+                <li><span>grid row:</span> é uma linha dentro do grid template.</li>
+                
+                <li><span>grid area:</span> é uma área do grid template, que deve sempre ser retangular.</li>
+                
+                <li><span>fr:</span> é uma unidade de medida que significa unidade fracional de espaço disponível. Se criamos uma grid com 3 colunas de <code>1fr</code> cada, temos que 33,33% do espaço disponível para o grid será destinado a cada coluna, que aumenta ou diminui de tamanho a depender do tamanho total disponível. </li>
+                
+                <li><span>minmax():</span> é uma forma de notação que define os tamanho mínimo e máximo de uma linha ou coluna do grid template. Se temos, por exemplo, uma coluna com <code>minmax(200px, 1fr)</code> isso significa que ela terá, no mínimo, 200px e, a partir disso, crescerá conforme o espaço disponível para o grid.</li>
+                
+                <li><span>repeat():</span> é uma forma de deixar o código mais conciso quando temos repetição de tamanhos de coluna ou linhas. Podemos, ao escrever que teremos 3 linhas, cada uma com 1fr de tamanho utilizar o valor <code>repeat(3, 1fr)</code>. Inicia-se com quantas vezes o valor irá se repetir e, depois, qual será a dimensão.</li>
+            </ul>
+
+            <figure>
+                <img src="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout/1_diagram_numbered_grid_lines.png" alt="Imagem de um grid container com 2 linhas, 3 colunas e 5 itens de cor amarela, indicando numericamente as grid lines.">
+                <figcaption>Imagem ilustrativa de um grid container com 5 grid items, 2 grid rows e 3 grid columns. As grid lines estão numeradas e cada espaço entre quaisquer duas linhas são os grid tracks.</figcaption>
+            </figure>
+
+            <p class="conteudo__texto">Definidos os conceitos iniciais e utilizando o código <code>display: grid</code> para inicializar um grid container, é possível utilizar as propriedades inerentes a este modelo, que são:</p>
+
+            <ul class="conteudo__texto">
+                <li><span>grid-template-columns:</span> define a quantidade e o tamanho das colunas dentro de um grid template. Caso o número de linhas não seja definido, gerando um <i>grid implícito</i> os itens se acomodarão em linhas respeitando o espaço disponível e o número de colunas. </li>
+                <li><span>grid-template-rows:</span> define a quantidade e o tamanho das linhas dentro de um grid template. Quando utilizada junto à propriedade <code>grid-template-columns</code>, gera um <i>grid explícito</i>, com linhas e colunas definidas.</li>
+
+                <div class="conteudo__figuras">
+                    <figure>
+                        <img src="/images/grid-template-columns.png" alt="Imagem com fundo branco e quadrados alaranjados, numerados de 1 a 10, dispostos em 5 colunas e 2 linhas, cada coluna com tamanhos diferentes">
+                        <figcaption>Grid template criado com <code>grid-template-columns: 1fr 100px repeat(2, 1fr) minmax(200px, 1fr)</code></figcaption>
+                    </figure>
+                    
+                    <figure>
+                        <img src="/images/grid-template-rows.png" alt="Imagem com fundo branco e quadrados alaranjados, numerados de 1 a 9, dispostos em 3 colunas e 3 linhas, cada linha com tamanhos diferentes">
+                        <figcaption>Grid template criado com  <code>grid-template-columns: repeat(3, 1fr)</code> e <code>grid-template-rows: 25px minmax(40px, 1fr) 3fr</code></figcaption>
+                    </figure>
+
+                </div>
+
+                <li><span>grid-template-areas:</span> define áreas nomeadas dentro de um grid template. É uma forma mais intuitiva de definir onde cada elemento será posicionado. É utilizado em conjunto com a propriedade <code>grid-area</code>.</li>
+                <li><span>grid-area:</span> aplicada nos grid items, define um nome para o elemento para que ele seja intuitivamente posicionado no <code>grid-template-areas</code>. Esta propriedade também pode ter o comportamento de shorthand para outras propriedades, mas isto será abordado posteriormente.</li>
+
+                <div class="conteudo__figuras">
+                    <figure>
+                        <img src="/images/grid-area.png" alt="Imagem com fundo preto com código CSS escrito em amarelo, roxo e branco com definição de uma grid area.">
+                        <figcaption>Código de definição de uma grid area.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/images/grid-template-area code.png" alt="Imagem com fundo preto com código CSS escrito em roxo e verde definindo uma grid template areas">
+                        <figcaption>Código de definição de uma grid template areas.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/images/grid-template-area view.png" alt="Imagem com fundo branco e vários quadrados alaranjados identificados com os nomes das áreas (logo, nav, content, sidebar, ads e footer)">
+                        <figcaption>Resultado do grid definido pelos códigos anteriores (além das definições das demais grid areas).</figcaption>
+                    </figure>
+                </div>
+
+                <li><span>grid-template:</span> shorthand que agrupa as propriedades <code>grid-template-columns</code>, <code>grid-template-rows</code> e <code>grid-template-areas</code>. Os tamanhos de linhas são definidos ao lado da definição de cada área de linha e os tamanhos das colunas são definidos no final, separados por um símbolo <code>/</code> do restante do código da propriedade.</li>
+
+                <div class="conteudo__figuras">
+                    <figure>
+                        <img src="/images/grid-template code.png" alt="Imagem com fundo preto com código CSS escrito em roxo, verde e laranja definindo uma grid template.">
+                        <figcaption>Código de definição de uma grid template.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/images/grid-template view.png" alt="Imagem com fundo branco e vários quadrados alaranjados identificados com os nomes das áreas (logo, nav, content, sidebar, ads e footer), cada uma com uma tamanho diferente">
+                        <figcaption>Resultado do grid definido pelo código anterior (além das definições das grid areas).</figcaption>
+                    </figure>
+                </div>
+
+                <li><span>grid-row-gap:</span> esta propriedade cria um espaçamento entre linhas de um grid. Pode receber valores numéricos com unidade ou em porcentagem.</li>
+                <li><span>grid-column-gap:</span> esta propriedade cria um espaçamento entre colunas de um grid. Pode receber valores numéricos com unidade ou em porcentagem.</li>
+                <li><span>grid-gap:</span> shorthand que agrupa as propriedades <code>grid-row-gap</code> e <code>grid-column-gap</code>. Quando utilizado 1 valor, este será aplicado para ambas as propriedades. Quando utilizados 2 valores distintos, o primeiro será aplicado no espaçamento entre linhas e o segundo, entre colunas.</li>
+
+                <div class="conteudo__figuras">
+                    <figure>
+                        <img src="/images/grid-row-gap.png" alt="Imagem com fundo branco e 6 caixas alaranjadas, dispostas em 2 colunas e 3 linhas, com espaçamento maior entre as linhas.">
+                        <figcaption>Resultado de espaçamento de <code>grid-row-gap: 10px</code> aplicado.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/images/grid-column-gap.png" alt="Imagem com fundo branco e 6 caixas alaranjadas, dispostas em 2 colunas e 3 linhas, com espaçamento maior entre as colunas.">
+                        <figcaption>Resultado de espaçamento de <code>grid-column-gap: 10px</code> aplicado.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="/images/grid-gap.png" alt="Imagem com fundo branco e 6 caixas alaranjadas, dispostas em 2 colunas e 3 linhas, com espaçamento aplicado entre as linhas e entre as colunas.">
+                        <figcaption>Resultado de espaçamento de <code>grid-gap: 10px 50px</code> aplicado.</figcaption>
+                    </figure>
+                </div>
+                
+                <li><span>grid-auto-columns:</span></li>
+                <li><span>grid-auto-rows:</span></li>
+                <li><span>grid-auto-flow:</span></li>
+                
+                <li><span>grid-column:</span> <code>grid-column-start</code> e <code>grid-column-end</code></li>
+                <li><span>grid-row:</span> <code>grid-row-start</code> e <code>grid-row-end</code></li>
+
+                <li><span>justify-content:</span></li>
+                <li><span>align-content:</span></li>
+
+                <li><span>justify-self:</span></li>
+                <li><span>align-self:</span></li>
+                <li><span>place-self:</span></li>
+                <li><span>order:</span></li>
+                
+            </ul>
+
+            <div class="artigo__info">
+                <div class="artigo__info__autor">
+                    <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
+                    <div class="artigo__info__autor__nome">
+                        <p>Camila Matias</p>
+                        <span>Desenvolvedora Front End</span>
+                    </div>
+                </div>
+                <div class="artigo__data">
+                    <p>28 Fev</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
