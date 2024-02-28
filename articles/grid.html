@@ -66,6 +66,7 @@
 
             <ul class="conteudo__texto">
                 <li><span>grid-template-columns:</span> define a quantidade e o tamanho das colunas dentro de um grid template. Caso o número de linhas não seja definido, gerando um <i>grid implícito</i> os itens se acomodarão em linhas respeitando o espaço disponível e o número de colunas. </li>
+                
                 <li><span>grid-template-rows:</span> define a quantidade e o tamanho das linhas dentro de um grid template. Quando utilizada junto à propriedade <code>grid-template-columns</code>, gera um <i>grid explícito</i>, com linhas e colunas definidas.</li>
 
                 <div class="conteudo__figuras">
@@ -78,10 +79,10 @@
                         <img src="/images/grid-template-rows.png" alt="Imagem com fundo branco e quadrados alaranjados, numerados de 1 a 9, dispostos em 3 colunas e 3 linhas, cada linha com tamanhos diferentes">
                         <figcaption>Grid template criado com  <code>grid-template-columns: repeat(3, 1fr)</code> e <code>grid-template-rows: 25px minmax(40px, 1fr) 3fr</code></figcaption>
                     </figure>
-
                 </div>
 
                 <li><span>grid-template-areas:</span> define áreas nomeadas dentro de um grid template. É uma forma mais intuitiva de definir onde cada elemento será posicionado. É utilizado em conjunto com a propriedade <code>grid-area</code>.</li>
+                
                 <li><span>grid-area:</span> aplicada nos grid items, define um nome para o elemento para que ele seja intuitivamente posicionado no <code>grid-template-areas</code>. Esta propriedade também pode ter o comportamento de shorthand para outras propriedades, mas isto será abordado posteriormente.</li>
 
                 <div class="conteudo__figuras">
@@ -115,9 +116,11 @@
                     </figure>
                 </div>
 
-                <li><span>grid-row-gap:</span> esta propriedade cria um espaçamento entre linhas de um grid. Pode receber valores numéricos com unidade ou em porcentagem.</li>
-                <li><span>grid-column-gap:</span> esta propriedade cria um espaçamento entre colunas de um grid. Pode receber valores numéricos com unidade ou em porcentagem.</li>
-                <li><span>grid-gap:</span> shorthand que agrupa as propriedades <code>grid-row-gap</code> e <code>grid-column-gap</code>. Quando utilizado 1 valor, este será aplicado para ambas as propriedades. Quando utilizados 2 valores distintos, o primeiro será aplicado no espaçamento entre linhas e o segundo, entre colunas.</li>
+                <li><span>grid-row-gap / row-gap:</span> esta propriedade cria um espaçamento entre linhas de um grid. Pode receber valores numéricos com unidade ou em porcentagem.</li>
+                
+                <li><span>grid-column-gap / column-gap:</span> esta propriedade cria um espaçamento entre colunas de um grid. Pode receber valores numéricos com unidade ou em porcentagem.</li>
+                
+                <li><span>grid-gap / gap:</span> shorthand que agrupa as propriedades <code>grid-row-gap</code> e <code>grid-column-gap</code>. Quando utilizado 1 valor, este será aplicado para ambas as propriedades. Quando utilizados 2 valores distintos, o primeiro será aplicado no espaçamento entre linhas e o segundo, entre colunas.</li>
 
                 <div class="conteudo__figuras">
                     <figure>
@@ -136,21 +139,40 @@
                     </figure>
                 </div>
                 
-                <li><span>grid-auto-columns:</span></li>
-                <li><span>grid-auto-rows:</span></li>
-                <li><span>grid-auto-flow:</span></li>
+                <li><span>grid-auto-columns:</span> define o tamanho de colunas criadas implicitamente, ou seja, quando há mais elementos do que o definido no grid template. Pode receber valores numéricos com unidade, porcentagens ou unidades fracionais.</li>
                 
-                <li><span>grid-column:</span> <code>grid-column-start</code> e <code>grid-column-end</code></li>
-                <li><span>grid-row:</span> <code>grid-row-start</code> e <code>grid-row-end</code></li>
+                <li><span>grid-auto-rows:</span> define o tamanho de linhas criadas implicitamente, ou seja, quando há mais elementos do que o definido no grid template. Pode receber valores numéricos com unidade, porcentagens ou unidades fracionais.</li>
+                
+                <li><span>grid-auto-flow:</span> define como elementos cujo posicionamento não está definido irão popular o grid, estejam eles em linhas/colunas explícitas ou implícitas. Pode receber os valores <code>row</code>, <code>column</code>, <code>column dense</code> ou <code>row dense</code>. O valor <code>dense</code> </li>
+                
+                <figure>
+                    <img src="" alt="">
+                    <figcaption></figcaption>
+                    
+                    <img src="" alt="">
+                    <figcaption></figcaption>
+                    
+                    <img src="" alt="">
+                    <figcaption></figcaption>
+                </figure>
+
+                <li><span>grid-column:</span> define em quais grid lines do eixo das colunas o elemento inicia e termina, atuando como shorthand das propriedades <code>grid-column-start</code> e <code>grid-column-end</code>. Os valores são numéricos sem unidades ou pode ser utilizada a palavra reservada <code>span</code>, sendo os dois valores separados pelo símbolo <code>/</code>. Nesse contexto de grid, o <code>span</code> representa "quantas grid lines à frente de onde o elemento inicia". Desta forma, por exemplo, se temos um elemento que inicia na grid line 1 e aplicamos <code>span 2</code> como segundo valor do seu <code>grid-column</code>, o elemento terminará na grid line 3, ocupando as colunas 1 e 2.</li>
+                
+                <li><span>grid-row:</span> define em quais grid lines do eixo das linhas o elemento inicia e termina, atuando como shorthand das propriedades <code>grid-row-start</code> e <code>grid-row-end</code>. Os valores são numéricos sem unidades ou pode ser utilizada a palavra reservada <code>span</code>, sendo os dois valores separados pelo símbolo <code>/</code>.</li>
+
+                <figure>
+                    <img src="/images/grid-row-grid-column.png" alt="Imagem com fundo branco e 2 quadrados alaranjados identificados de 1 e 2, posicionados com grid row e grid column">
+                    <figcaption>Imagem ilustrativa de 2 elementos posicionados com grid-row e grid-column em uma grid 3x3. Elemento 1: <code>grid-column: 1 / 3</code> e <code>grid-row: 1 / 2</code>. Elemento 2: <code>grid-column: 3 / 4</code> e <code>grid-row: 2 / span 2</code>.</figcaption>
+                </figure>
 
                 <li><span>justify-content:</span></li>
                 <li><span>align-content:</span></li>
-
+                <li><span>align-items:</span></li>
+                <li><span>justify-items:</span></li>
                 <li><span>justify-self:</span></li>
                 <li><span>align-self:</span></li>
                 <li><span>place-self:</span></li>
-                <li><span>order:</span></li>
-                
+                <li><span>order:</span></li> 
             </ul>
 
             <div class="artigo__info">
