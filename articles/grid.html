@@ -31,7 +31,7 @@
             <h2 class="conteudo__titulo">Grid</h2>
             <span class="artigo__tag artigo__tag--posicionamento">POSICIONAMENTO</span>
             
-            <p class="conteudo__texto">O display Grid é um modelo de posicionamento que, assim como o Flexbox, traz mais flexibilidade no posicionamento de itens na tela. Este modelo simula uma "grade", com linhas e colunas, onde os itens serão posicionados. É considerado por alguns como uma melhoria do flexbox, visto que traz consigo algumas das vantagens deste modelo e consegue, apenas com suas proprias propriedades, posicionar itens que, no Flexbox, teriam que ser envoltos por elementos <code>div</code> no HTML para que o posicionamento ocorresse da forma esperada. Dessa forma, com o Grid, é possível reduzir o tamanho do código HTML em relação à layouts utilizando Flexbox.</p>
+            <p class="conteudo__texto">O display Grid é um modelo de posicionamento que traz mais flexibilidade no posicionamento de itens na tela. Este modelo simula uma "grade", com linhas, colunas e células, onde os itens serão posicionados. É considerado por alguns como uma melhoria do Flexbox, visto que traz consigo algumas das vantagens deste modelo e consegue, apenas com suas proprias propriedades, posicionar itens que, no outro modelo, teriam que ser envoltos por elementos <code>div</code> no HTML para que o posicionamento ocorresse da forma esperada. Dessa forma, com o Grid, é possível reduzir o tamanho do código HTML em relação à layouts utilizando Flexbox.</p>
 
             <p class="conteudo__texto">Este modelo possui alguns conceitos iniciais para que seu entendimento seja mais facilitado na hora da aplicação das propriedades. São estes:</p>
 
@@ -54,7 +54,7 @@
                 
                 <li><span>minmax():</span> é uma forma de notação que define os tamanho mínimo e máximo de uma linha ou coluna do grid template. Se temos, por exemplo, uma coluna com <code>minmax(200px, 1fr)</code> isso significa que ela terá, no mínimo, 200px e, a partir disso, crescerá conforme o espaço disponível para o grid.</li>
                 
-                <li><span>repeat():</span> é uma forma de deixar o código mais conciso quando temos repetição de tamanhos de coluna ou linhas. Podemos, ao escrever que teremos 3 linhas, cada uma com 1fr de tamanho utilizar o valor <code>repeat(3, 1fr)</code>. Inicia-se com quantas vezes o valor irá se repetir e, depois, qual será a dimensão.</li>
+                <li><span>repeat():</span> é uma forma de deixar o código mais conciso quando temos repetição de tamanhos de coluna ou linhas. Podemos, ao escrever que teremos 3 linhas, cada uma com 1fr de tamanho, utilizar o valor <code>repeat(3, 1fr)</code>. Inicia-se com quantas vezes o valor irá se repetir e, depois, qual será a dimensão.</li>
             </ul>
 
             <figure>
@@ -104,7 +104,7 @@
                     </figure>
                 </div>
 
-                <li><span>grid-template:</span> shorthand que agrupa as propriedades <code>grid-template-columns</code>, <code>grid-template-rows</code> e <code>grid-template-areas</code>. Os tamanhos de linhas são definidos ao lado da definição de cada área de linha e os tamanhos das colunas são definidos no final, separados por um símbolo <code>/</code> do restante do código da propriedade.</li>
+                <li><span>grid-template:</span> shorthand que agrupa as propriedades <code>grid-template-columns</code>, <code>grid-template-rows</code> e <code>grid-template-areas</code>. Os tamanhos de linhas são definidos ao lado da definição das áreas de cada linha e os tamanhos das colunas são definidos no final, separados por um símbolo <code>/</code> do restante do código da propriedade.</li>
 
                 <div class="conteudo__figuras">
                     <figure>
@@ -124,26 +124,28 @@
                 
                 <li><span>grid-gap / gap:</span> shorthand que agrupa as propriedades <code>grid-row-gap</code> e <code>grid-column-gap</code>. Quando utilizado 1 valor, este será aplicado para ambas as propriedades. Quando utilizados 2 valores distintos, o primeiro será aplicado no espaçamento entre linhas e o segundo, entre colunas.</li>
 
+                <li>O prefixo <code>grid</code> para estas propriedades foi depreciado, mas, para manter a compatibilidade com sites legados, os navegadores ainda aceitam as propriedades com o prefixo. Dessa forma, para desenvolvimentos mais atuais, são utilizadas as propriedades <code>row-gap</code>, <code>column-gap</code> e o shorthand <code>gap</code>.</li>
+
                 <div class="conteudo__figuras">
                     <figure>
                         <img src="/images/grid-row-gap.png" alt="Imagem com fundo branco e 6 caixas alaranjadas, dispostas em 2 colunas e 3 linhas, com espaçamento maior entre as linhas.">
-                        <figcaption>Resultado de espaçamento de <code>grid-row-gap: 10px</code> aplicado.</figcaption>
+                        <figcaption>Resultado de espaçamento de <code>row-gap: 10px</code> aplicado.</figcaption>
                     </figure>
 
                     <figure>
                         <img src="/images/grid-column-gap.png" alt="Imagem com fundo branco e 6 caixas alaranjadas, dispostas em 2 colunas e 3 linhas, com espaçamento maior entre as colunas.">
-                        <figcaption>Resultado de espaçamento de <code>grid-column-gap: 10px</code> aplicado.</figcaption>
+                        <figcaption>Resultado de espaçamento de <code>column-gap: 10px</code> aplicado.</figcaption>
                     </figure>
 
                     <figure>
                         <img src="/images/grid-gap.png" alt="Imagem com fundo branco e 6 caixas alaranjadas, dispostas em 2 colunas e 3 linhas, com espaçamento aplicado entre as linhas e entre as colunas.">
-                        <figcaption>Resultado de espaçamento de <code>grid-gap: 10px 50px</code> aplicado.</figcaption>
+                        <figcaption>Resultado de espaçamento de <code>gap: 10px 50px</code> aplicado.</figcaption>
                     </figure>
                 </div>
+
+                <li><span>grid-auto-rows:</span> define o tamanho de linhas criadas implicitamente, ou seja, quando há mais elementos do que o definido no grid template. Pode receber valores numéricos com unidade, porcentagens ou unidades fracionais.</li>
                 
                 <li><span>grid-auto-columns:</span> define o tamanho de colunas criadas implicitamente, ou seja, quando há mais elementos do que o definido no grid template. Pode receber valores numéricos com unidade, porcentagens ou unidades fracionais.</li>
-                
-                <li><span>grid-auto-rows:</span> define o tamanho de linhas criadas implicitamente, ou seja, quando há mais elementos do que o definido no grid template. Pode receber valores numéricos com unidade, porcentagens ou unidades fracionais.</li>
                 
                 <div class="conteudo__figuras">
                     <figure>
@@ -153,7 +155,7 @@
 
                     <figure>
                         <img src="/images/grid-auto-columns.png" alt="Imagem em fundo branco com 6 retângulos alaranjados enumerados de 1 a 6 e 4 retângulos verdes enumerados de 7 a 10. Estes elementos estão em um grid de 3x2 e, elementos que não cabem no grid estão com tamanho maior.">
-                        <figcaption>Imagem de um grid 3x2 com 10 elementos e os elementos esverdeados com <code>grid-column: 4</code> aplicado, coluna que não foi definida no grid inicial. Com a propriedade aplicada de <code>grid-auto-columns: 150px</code>, colunas implícitas criadas possuem esse tamanho aplicado.</figcaption>
+                        <figcaption>Imagem de um grid 3x2 com 10 elementos onde elementos esverdeados possuem <code>grid-column: 4</code> aplicado, coluna que não foi definida no grid inicial. Com a propriedade aplicada de <code>grid-auto-columns: 150px</code>, colunas implícitas criadas possuem esse tamanho aplicado.</figcaption>
                     </figure>
                 </div>
 
@@ -171,16 +173,16 @@
                     </figure>
                 </div>
 
-                <li><span>grid-column:</span> define em quais grid lines do eixo das colunas o elemento inicia e termina, atuando como shorthand das propriedades <code>grid-column-start</code> e <code>grid-column-end</code>. Os valores são numéricos sem unidades ou pode ser utilizada a palavra reservada <code>span</code>, sendo os dois valores separados pelo símbolo <code>/</code>. Nesse contexto de grid, o <code>span</code> representa "quantas grid lines à frente de onde o elemento inicia". Desta forma, por exemplo, se temos um elemento que inicia na grid line 1 e aplicamos <code>span 2</code> como segundo valor do seu <code>grid-column</code>, o elemento terminará na grid line 3, ocupando as colunas 1 e 2.</li>
-                
-                <li><span>grid-row:</span> define em quais grid lines do eixo das linhas o elemento inicia e termina, atuando como shorthand das propriedades <code>grid-row-start</code> e <code>grid-row-end</code>. Os valores são numéricos sem unidades ou pode ser utilizada a palavra reservada <code>span</code>, sendo os dois valores separados pelo símbolo <code>/</code>.</li>
+                <li><span>grid-row:</span> define em quais grid lines do eixo das linhas o elemento inicia e termina, atuando como shorthand das propriedades <code>grid-row-start</code> e <code>grid-row-end</code>. Os valores assumidos são numéricos sem unidades ou pode ser utilizada a palavra reservada <code>span</code>, sendo os dois valores separados pelo símbolo <code>/</code>.  Nesse contexto de grid, o <code>span</code> representa "quantas grid lines à frente de onde o elemento inicia". Desta forma, por exemplo, se temos um elemento que inicia na grid line 1 e aplicamos <code>span 2</code> como segundo valor do seu <code>grid-row</code>, o elemento terminará na grid line 3, ocupando as linhas 1 e 2.</li>
+
+                <li><span>grid-column:</span> define em quais grid lines do eixo das colunas o elemento inicia e termina, atuando como shorthand das propriedades <code>grid-column-start</code> e <code>grid-column-end</code>. Os valores assumidos são numéricos sem unidades ou pode ser utilizada a palavra reservada <code>span</code>, sendo os dois valores separados pelo símbolo <code>/</code>.</li>          
 
                 <figure>
                     <img src="/images/grid-row-grid-column.png" alt="Imagem com fundo branco e 2 quadrados alaranjados identificados de 1 e 2, posicionados com grid row e grid column">
                     <figcaption>Imagem ilustrativa de 2 elementos posicionados com grid-row e grid-column em uma grid 3x3. Elemento 1: <code>grid-column: 1 / 3</code> e <code>grid-row: 1 / 2</code>. Elemento 2: <code>grid-column: 3 / 4</code> e <code>grid-row: 2 / span 2</code>.</figcaption>
                 </figure>
 
-                <li>A propriedade <code>grid-area</code> também pode servir como um shorthand global de definição de grid lines no modelo a seguir: <code>grid-area: grid-row-start / grid-column start / grid-row-end / grid-column-end</code>.</li>
+                <li>A propriedade <code>grid-area</code> também pode servir como um shorthand global de definição de posição por grid lines no modelo a seguir: <code>grid-area: grid-row-start / grid-column start / grid-row-end / grid-column-end</code>.</li>
 
                 <li><span>order:</span> esta propriedade permite o controle da ordem na qual os elementos são posicionados dentro do grid. Assume valores numéricos sem unidade e, quanto menor o número, maior a prioridade de posicionamento do item. Assim como no modelo flexbox, esta propriedade não altera a ordem dos elementos no DOM, apenas na exibição.</li> 
 
@@ -257,9 +259,7 @@
 
                 <li><span>place-self:</span> shorthand para as propriedades <code>align-self</code> e <code>justify-self</code>, nesta ordem. Deste modo, seus valores possíveis são as combinações dos valores das duas propriedades. Caso se use apenas um valor, este será aplicado para ambas as propriedades.</li>
                
-                <li>Com os conceitos de todos os alinhamentos definidos, é possível diferenciá-los por: propriedades com <code>content</code> alinham tudo o que há dentro do grid container como se fosse um elemento só e devem ser aplicadas no bloco de código do grid container. Propriedades com <code>items</code> alinham os items do grid container em relação à célula do grid que ocupam e devem ser aplicadas no bloco de código do grid container. Propriedades com <code>self</code> são similares às propriedades com <code>items</code>, porém, devem ser aplicadas no bloco de código do grid item e seus valores são reproduzidos apenas no item no qual o código foi aplicado.</li>
-
-                
+                <li>Com os conceitos de todos os alinhamentos definidos, é possível diferenciá-los por: propriedades com <code>content</code> alinham tudo o que há dentro do grid container como se fosse um elemento só e devem ser aplicadas no bloco de código do grid container. Propriedades com <code>items</code> alinham os items do grid container em relação à célula do grid que ocupam e devem ser aplicadas no bloco de código do grid container por afetarem todos os itens existentes no grid. Propriedades com <code>self</code> são similares às propriedades com <code>items</code>, porém, devem ser aplicadas no bloco de código do grid item e seus valores são reproduzidos apenas no item no qual o código foi aplicado.</li>
             </ul>
 
             <div class="artigo__info">
@@ -271,7 +271,7 @@
                     </div>
                 </div>
                 <div class="artigo__data">
-                    <p>28 Fev</p>
+                    <p>29 Fev</p>
                 </div>
             </div>
         </section>
