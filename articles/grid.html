@@ -62,7 +62,9 @@
                 <figcaption>Imagem ilustrativa de um grid container com 5 grid items, 2 grid rows e 3 grid columns. As grid lines estão numeradas e cada espaço entre quaisquer duas linhas são os grid tracks.</figcaption>
             </figure>
 
-            <p class="conteudo__texto">Definidos os conceitos iniciais e utilizando o código <code>display: grid</code> para inicializar um grid container, é possível utilizar as propriedades inerentes a este modelo, que são:</p>
+            <p class="conteudo__texto">Definidos os conceitos iniciais e utilizando o código <code>display: grid</code> para inicializar um grid container, é possível utilizar as propriedades inerentes a este modelo, que são:</p>            
+
+            <h3>Propriedades de posicionamento e tamanho</h3>
 
             <ul class="conteudo__texto">
                 <li><span>grid-template-columns:</span> define a quantidade e o tamanho das colunas dentro de um grid template. Caso o número de linhas não seja definido, gerando um <i>grid implícito</i> os itens se acomodarão em linhas respeitando o espaço disponível e o número de colunas. </li>
@@ -178,14 +180,86 @@
                     <figcaption>Imagem ilustrativa de 2 elementos posicionados com grid-row e grid-column em uma grid 3x3. Elemento 1: <code>grid-column: 1 / 3</code> e <code>grid-row: 1 / 2</code>. Elemento 2: <code>grid-column: 3 / 4</code> e <code>grid-row: 2 / span 2</code>.</figcaption>
                 </figure>
 
-                <li><span>justify-content:</span></li>
-                <li><span>align-content:</span></li>
-                <li><span>align-items:</span></li>
-                <li><span>justify-items:</span></li>
-                <li><span>justify-self:</span></li>
-                <li><span>align-self:</span></li>
-                <li><span>place-self:</span></li>
-                <li><span>order:</span></li> 
+                <li>A propriedade <code>grid-area</code> também pode servir como um shorthand global de definição de grid lines no modelo a seguir: <code>grid-area: grid-row-start / grid-column start / grid-row-end / grid-column-end</code>.</li>
+
+                <li><span>order:</span> esta propriedade permite o controle da ordem na qual os elementos são posicionados dentro do grid. Assume valores numéricos sem unidade e, quanto menor o número, maior a prioridade de posicionamento do item. Assim como no modelo flexbox, esta propriedade não altera a ordem dos elementos no DOM, apenas na exibição.</li> 
+
+                <figure>
+                    <img src="/images/grid-order.png" alt="Imagem de fundo branco e 5 retângulos alaranjados numerados de 1 a 5 e desordenados.">
+                    <figcaption>Imagem ilustrativa da propriedade <code>order</code>.</figcaption>
+                </figure>
+
+                <li>É importante observar que, para que a propriedade <code>order</code> funcione da maneira esperada, é necessário que todos os elementos do grid possuam ordem ou posicionamento definido. Isso acontece porque o valor default para esta propriedade é 0, então quaisquer valores com ordem ou posicionamento não definidos terão prioridade na exibição.</li>
+            </ul>
+
+            <h3>Propriedades de alinhamento</h3>
+
+            <ul class="conteudo__texto">
+                <li><span>justify-content:</span> esta propriedade alinha o bloco de conteúdo de um grid container ao longo do eixo das linhas, quando o tamanho do conteúdo não preenche todo o espaço disponível. Seu valor padrão é <code>stretch</code>, mas pode assumir valores como <code>center</code>, <code>start</code>, <code>end</code>, <code>space-between</code>, <code>space-around</code> e <code>space-evenly</code>.</li>
+
+                <div class="conteudo__figuras">
+                    <figure>
+                        <img src="https://triangulo.dev/posts/css-grid-alinhando-elementos-na-pratica/justify-content-valores.svg" alt="Imagem no fundo branco com 4 seções mostrando os alinhamentos de 4 elementos conforme os valores de justify content.">
+                        <figcaption>Imagem ilustrativa de alguns valores da propriedade <code>justify-content</code>.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://triangulo.dev/posts/css-grid-alinhando-elementos-na-pratica/justify-content-space-valores.svg" alt="Imagem no fundo branco com 3 seções mostrando os alinhamentos de 6 elementos conforme os valores de justify content.">
+                        <figcaption>Imagem ilustrativa de alguns valores da propriedade <code>justify-content</code>.</figcaption>
+                    </figure>
+                </div>
+
+                <li><span>align-content:</span> esta propriedade alinha o bloco de conteúdo de um grid container ao longo do eixo das colunas, quando o tamanho do conteúdo não preenche todo o espaço disponível. Seu valor padrão é <code>stretch</code>, mas pode assumir valores como <code>center</code>, <code>start</code>, <code>end</code>, <code>space-between</code>, <code>space-around</code> e <code>space-evenly</code>. </li>
+
+                <div class="conteudo__figuras">
+                    <figure>
+                        <img src="https://triangulo.dev/posts/css-grid-alinhando-elementos-na-pratica/align-content-valores.svg" alt="Imagem no fundo branco com 4 seções mostrando os alinhamentos de 4 elementos conforme os valores de align content.">
+                        <figcaption>Imagem ilustrativa de alguns valores da propriedade <code>align-content</code>.</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="https://triangulo.dev/posts/css-grid-alinhando-elementos-na-pratica/align-content-space-valores.svg" alt="Imagem no fundo branco com 3 seções mostrando os alinhamentos de 6 elementos conforme os valores de align content.">
+                        <figcaption>Imagem ilustrativa de alguns valores da propriedade <code>align-content</code>.</figcaption>
+                    </figure>
+                </div>
+                
+                <li><span>place-content:</span> shorthand para as propriedades <code>align-content</code> e <code>justify-content</code>, nesta ordem. Deste modo, seus valores possíveis são as combinações dos valores das duas propriedades agrupadas. Caso se use apenas um valor, este será aplicado para ambas as propriedades.</li>
+
+                <li><span>justify-items:</span> esta propriedade alinha os itens de um grid container, dentro de suas células, ao longo do eixo das linhas, quando o tamanho do conteúdo não preenche todo o espaço disponível. Seu valor padrão é <code>stretch</code>, mas pode assumir valores como <code>center</code>, <code>start</code> e <code>end</code>.</li>
+
+                <figure>
+                    <img src="https://triangulo.dev/posts/css-grid-alinhando-elementos-na-pratica/justify-items-valores.svg" alt="Imagem com fundo branco e 4 seções alinhando itens em grids 2x2 a depender do valor da propriedade justify items.">
+                    <figcaption>Imagem ilustrativa dos resultados da aplicação da propriedade <code>justify-items</code>.</figcaption>
+                </figure>
+                
+                <li><span>align-items:</span> esta propriedade alinha os itens de um grid container, dentro de suas células, ao longo do eixo das colunas, quando o tamanho do conteúdo não preenche todo o espaço disponível. Seu valor padrão é <code>stretch</code>, mas pode assumir valores como <code>center</code>, <code>start</code> e <code>end</code>.</li>
+
+                <figure>
+                    <img src="https://triangulo.dev/posts/css-grid-alinhando-elementos-na-pratica/align-items-valores.svg" alt="Imagem com fundo branco e 4 seções alinhando itens em grids 2x2 a depender do valor da propriedade align items.">
+                    <figcaption>Imagem ilustrativa dos resultados da aplicação da propriedade <code>align-items</code>.</figcaption>
+                </figure>
+                
+                <li><span>place-items:</span> shorthand para as propriedades <code>align-items</code> e <code>justify-items</code>, nesta ordem. Deste modo, seus valores possíveis são as combinações dos valores das duas propriedades. Caso se use apenas um valor, este será aplicado para ambas as propriedades.</li>
+
+                <li><span>justify-self:</span> esta propriedade alinha um item dentro de uma célula do grid ao longo do eixo das linhas, quando o tamanho do conteúdo não preenche todo o espaço disponível. Seu valor padrão é <code>stretch</code>, mas pode assumir valores como <code>center</code>, <code>start</code> e <code>end</code>.</li>
+
+                <figure>
+                    <img src="https://triangulo.dev/posts/css-grid-alinhando-elementos-na-pratica/justify-self-valores.svg" alt="Imagem com fundo branco e 4 seções alinhando itens em grids 2x2 a depender do valor da propriedade justify self.">
+                    <figcaption>Imagem ilustrativa dos resultados da aplicação da propriedade <code>justify-self</code>.</figcaption>
+                </figure>
+
+                <li><span>align-self:</span> esta propriedade alinha um item dentro de uma célula do grid ao longo do eixo das colunas, quando o tamanho do conteúdo não preenche todo o espaço disponível. Seu valor padrão é <code>stretch</code>, mas pode assumir valores como <code>center</code>, <code>start</code> e <code>end</code>.</li>
+
+                <figure>
+                    <img src="https://triangulo.dev/posts/css-grid-alinhando-elementos-na-pratica/align-self-valores.svg" alt="Imagem com fundo branco e 4 seções alinhando itens em grids 2x2 a depender do valor da propriedade align self.">
+                    <figcaption>Imagem ilustrativa dos resultados da aplicação da propriedade <code>align-self</code>.</figcaption>
+                </figure>
+
+                <li><span>place-self:</span> shorthand para as propriedades <code>align-self</code> e <code>justify-self</code>, nesta ordem. Deste modo, seus valores possíveis são as combinações dos valores das duas propriedades. Caso se use apenas um valor, este será aplicado para ambas as propriedades.</li>
+               
+                <li>Com os conceitos de todos os alinhamentos definidos, é possível diferenciá-los por: propriedades com <code>content</code> alinham tudo o que há dentro do grid container como se fosse um elemento só e devem ser aplicadas no bloco de código do grid container. Propriedades com <code>items</code> alinham os items do grid container em relação à célula do grid que ocupam e devem ser aplicadas no bloco de código do grid container. Propriedades com <code>self</code> são similares às propriedades com <code>items</code>, porém, devem ser aplicadas no bloco de código do grid item e seus valores são reproduzidos apenas no item no qual o código foi aplicado.</li>
+
+                
             </ul>
 
             <div class="artigo__info">
