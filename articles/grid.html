@@ -143,17 +143,22 @@
                 
                 <li><span>grid-auto-rows:</span> define o tamanho de linhas criadas implicitamente, ou seja, quando há mais elementos do que o definido no grid template. Pode receber valores numéricos com unidade, porcentagens ou unidades fracionais.</li>
                 
-                <li><span>grid-auto-flow:</span> define como elementos cujo posicionamento não está definido irão popular o grid, estejam eles em linhas/colunas explícitas ou implícitas. Pode receber os valores <code>row</code>, <code>column</code>, <code>column dense</code> ou <code>row dense</code>. O valor <code>dense</code> </li>
+                <figure>
+                    <img src="/images/grid-auto-rows.png" alt="Imagem em fundo branco com 6 retângulos alaranjados enumerados de 1 a 6 e 4 retângulos verdes enumerados de 7 a 10. Estes elementos estão em um grid de 3x2 e, elementos que não cabem no grid estão com tamanho menor.">
+                    <figcaption>Imagem de um grid 3x2 com 10 elementos. Com a propriedade aplicada de <code>grid-auto-rows: 40px</code>, linhas implícitas criadas possuem esse tamanho aplicado.</figcaption>
+                    
+                    <img src="/images/grid-auto-columns.png" alt="Imagem em fundo branco com 6 retângulos alaranjados enumerados de 1 a 6 e 4 retângulos verdes enumerados de 7 a 10. Estes elementos estão em um grid de 3x2 e, elementos que não cabem no grid estão com tamanho maior.">
+                    <figcaption>Imagem de um grid 3x2 com 10 elementos e os elementos esverdeados com <code>grid-column: 4</code> aplicado, coluna que não foi definida no grid inicial. Com a propriedade aplicada de <code>grid-auto-columns: 150px</code>, colunas implícitas criadas possuem esse tamanho aplicado.</figcaption>
+                </figure>
+
+                <li><span>grid-auto-flow:</span> define como elementos cujo posicionamento não está definido irão popular o grid, estejam eles em linhas/colunas explícitas ou implícitas. Pode receber os valores <code>row</code>, <code>column</code>, <code>column dense</code> ou <code>row dense</code>. O valor <code>dense</code> indica ao algoritmo de posicionamento que tente preencher espaços vazios, de modo que pode deixar o layout desordenado, de forma que seu uso não é muito recomendado.</li>
                 
                 <figure>
-                    <img src="" alt="">
-                    <figcaption></figcaption>
+                    <img src="/images/grid-auto-flow-row.png" alt="Imagem com fundo branco e 5 retângulos alaranjados enumerados de 1 a 5 em um grid 5x2 com os dois primeiros elementos posicionados nos cantos esquerdo e direito e os demais ao centro, populando toda a primeira linha.">
+                    <figcaption>Imagem ilustrativa do <code>grid-auto-flow: row</code>. Os elementos 1 e 2 estão com posição fixada, enquanto os elementos 3, 4 e 5 não. Com a propriedade aplicada, os elementos não fixados buscam popular completamente o máximo de linhas possível.</figcaption>
                     
-                    <img src="" alt="">
-                    <figcaption></figcaption>
-                    
-                    <img src="" alt="">
-                    <figcaption></figcaption>
+                    <img src="/images/grid-auto-flow-column.png" alt="Imagem com fundo branco e 5 quadrados alaranjados enumerados de 1 a 5 em um grid 5x2 com os dois primeiros elementos posicionados nos cantos esquerdo e direito e os demais ao centro, populando o máximo de colunas.">
+                    <figcaption>Imagem ilustrativa do <code>grid-auto-flow: column</code>. Os elementos 1 e 2 estão com posição fixada, enquanto os elementos 3, 4 e 5 não. Com a propriedade aplicada, os elementos não fixados buscam popular completamente o máximo de colunas possível.</figcaption>
                 </figure>
 
                 <li><span>grid-column:</span> define em quais grid lines do eixo das colunas o elemento inicia e termina, atuando como shorthand das propriedades <code>grid-column-start</code> e <code>grid-column-end</code>. Os valores são numéricos sem unidades ou pode ser utilizada a palavra reservada <code>span</code>, sendo os dois valores separados pelo símbolo <code>/</code>. Nesse contexto de grid, o <code>span</code> representa "quantas grid lines à frente de onde o elemento inicia". Desta forma, por exemplo, se temos um elemento que inicia na grid line 1 e aplicamos <code>span 2</code> como segundo valor do seu <code>grid-column</code>, o elemento terminará na grid line 3, ocupando as colunas 1 e 2.</li>
