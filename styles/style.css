@@ -35,9 +35,8 @@ main {
 }
 
 main > h2 {
-    position: relative;
-    bottom: 10rem;
     font-size: 2.5rem;
+    margin-top: 5rem;
 }
 
 img {
@@ -95,17 +94,21 @@ footer {
 }
 
 .artigo > img {
-    width: 70%;
-    border-radius: 1.2rem;
+    max-width: 100%;
+    height: 60vh;
+}
+
+.artigo__card {
+    position: relative;
 }
 
 .artigo__card a {
     padding: 2rem;
     width: fit-content;
     max-width: 50%;
-    position: relative;
-    bottom: 15rem;
-    left: 20%;
+    position: absolute;
+    bottom: -5rem;
+    left: 30rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -126,8 +129,6 @@ footer {
 }
 
 .listagem-artigos {
-    position: relative;
-    bottom: 8rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
