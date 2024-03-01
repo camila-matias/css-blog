@@ -2,7 +2,6 @@
 @import "/styles/variables.css";
 
 @media screen and (min-width: 1920px) {
-
     .listagem-artigos{
         grid-template-columns: repeat(4,1fr);
     }
@@ -10,7 +9,6 @@
     .listagem-artigos__card a {
         max-width: 100%;
     }
-
 }
 
 /* Tamanho de 1280px à 1919px é o tamanho original para o qual o site foi desenvolvido */
@@ -24,12 +22,20 @@
         display: block;
     }
 
+    .artigo > img {
+        height: 50vh;
+    }
+
     .listagem-artigos{
         grid-template-columns: repeat(2, 1fr);
     }
 
     .listagem-artigos__card a {
         max-width: 100%;
+    }
+
+    .artigo__card a {
+        left: 10%;
     }
 }
 
@@ -42,12 +48,20 @@
         display: block;
     }
 
+    .artigo > img {
+        height: 40vh;
+    }
+
     .listagem-artigos{
         grid-template-columns: 1fr;
     }
 
     .listagem-artigos__card a {
         max-width: 100%;
+    }
+
+    .artigo__card a {
+        left: 10%;
     }
 
 }

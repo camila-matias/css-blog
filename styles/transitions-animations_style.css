@@ -1,7 +1,7 @@
 @import "/styles/style.css";
 @import "/styles/article_style.css";
 
-button {
+.conteudo__botao {
     margin: 2rem 0;
     padding: 0.5rem 1rem;
     position: relative;
@@ -11,7 +11,7 @@ button {
     transition: all 0.5s ease-in-out;
 }
 
-button:hover {
+.conteudo__botao:hover {
     cursor: pointer;
     background-color: #b09bc1;
     color: #fff;
@@ -63,8 +63,8 @@ label {
 
 .conteudo__transicoes div {
     margin: 2rem 0 1rem 0;
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
     position: relative;
     background-color: #ff0000;
     transition: all 1s ease-in;
@@ -202,5 +202,27 @@ label {
     100% {
         left: 60vw;
         bottom: 5vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) { 
+    .conteudo__transicoes div {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .conteudo__animacao img {
+        width: 5vw;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .conteudo__transicoes div {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .conteudo__animacao img {
+        width: 10vw;
     }
 }
