@@ -38,6 +38,10 @@
         display: none;
     }
 
+    .navegacao--responsiva {
+        display: block;
+    }
+
     .listagem-artigos{
         grid-template-columns: 1fr;
     }

@@ -12,7 +12,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
 }
 
 h1 {
@@ -90,7 +90,7 @@ footer {
 }
 
 .navegacao__imagem--responsiva {
-    width: 4rem;
+    height: 4rem;
     border-radius: 0;
 }
 
@@ -101,14 +101,18 @@ footer {
 .navegacao__listagem--responsiva {
     display: none;
     position: absolute;
-    top: 7rem;
+    top: 8rem;
 }
 
 .navegacao__listagem--responsiva a {
     display: block;
-    padding: 1rem;
-    font-size: 1.4rem;
-    font-weight: 700;
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.pesquisa {
+    position: relative;
 }
 
 .pesquisa__item {
@@ -118,9 +122,9 @@ footer {
 }
 
 .pesquisa img {
-    position: relative;
-    right: 11%;
-    top: 0.3rem;
+    position: absolute;
+    right: 5%;
+    top: 0.5rem;
 }
 
 .artigo {
