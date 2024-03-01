@@ -1,13 +1,39 @@
 @import "/styles/reset.css";
 @import "/styles/variables.css";
 
-/* Tamanho de 1280px à 1919px é o tamanho original para o qual o site foi desenvolvido */
-/* Tamanho à partir de 1920px não precisa de alterações nesta folha de estilo */
+@media screen and (min-width: 1920px) {
 
-@media screen and (min-width: 768px) and (max-width: 1279px) { 
-    
+    .listagem-artigos{
+        grid-template-columns: repeat(4,1fr) !important;
+    }
+
+    .listagem-artigos__card a {
+        max-width: 100%;
+    }
+
 }
 
-@media screen and (max-width: 767px){
-   
+/* Tamanho de 1280px à 1919px é o tamanho original para o qual o site foi desenvolvido */
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+
+    .listagem-artigos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .listagem-artigos__card a {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+ 
+    .listagem-artigos{
+        grid-template-columns: 1fr;
+    }
+
+    .listagem-artigos__card a {
+        max-width: 100%;
+    }
+
 }

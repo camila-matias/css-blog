@@ -4,8 +4,7 @@
 @media (min-width: 1920px){
 
     .listagem-artigos{
-        grid-template-columns: repeat(4,1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(4, 1fr);
 
     }
     .listagem-artigos__card a {

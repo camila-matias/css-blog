@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import "/styles/reset.css";
 @import "/styles/variables.css";
+@import "/styles/style_responsive.css";
 
 header {
     padding: 2rem;
@@ -129,12 +130,11 @@ footer {
     bottom: 8rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 3rem;
+    gap: 2rem;
 }
 
 .listagem-artigos__card a {
     padding: 2rem;
-    max-width: 25vw;
     height: 100%;
     display: flex;
     flex-direction: column;
