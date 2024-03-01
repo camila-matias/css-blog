@@ -1,0 +1,26 @@
+@import "/styles/reset.css";
+@import "/styles/variables.css";
+
+@media (min-width: 720px) and (max-width: 1023px) {
+
+    .listagem-artigos{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .listagem-artigos__card a {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 719px){
+
+    .listagem-artigos{
+        grid-template-columns: 1fr;
+
+    }
+    .listagem-artigos__card a {
+        max-width: 100%;
+    }
+
+}
