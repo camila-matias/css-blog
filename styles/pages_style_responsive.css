@@ -1,7 +1,22 @@
 @import "/styles/reset.css";
 @import "/styles/variables.css";
 
-@media (min-width: 720px) and (max-width: 1023px) {
+@media (min-width: 1920px){
+
+    .listagem-artigos{
+        grid-template-columns: repeat(4,1fr);
+        gap: 2rem;
+
+    }
+    .listagem-artigos__card a {
+        max-width: 100%;
+    }
+
+}
+
+/* Tamanho de 1280px à 1919px é o tamanho original para o qual o site foi desenvolvido */
+
+@media (min-width: 768px) and (max-width: 1279px) {
 
     .listagem-artigos{
         grid-template-columns: repeat(2, 1fr);
@@ -13,7 +28,7 @@
     }
 }
 
-@media (max-width: 719px){
+@media (max-width: 767px){
 
     .listagem-artigos{
         grid-template-columns: 1fr;
