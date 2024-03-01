@@ -16,6 +16,13 @@
 /* Tamanho de 1280px à 1919px é o tamanho original para o qual o site foi desenvolvido */
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
+    .navegacao {
+        display: none;
+    }
+    
+    .navegacao--responsiva {
+        display: block;
+    }
 
     .listagem-artigos{
         grid-template-columns: repeat(2, 1fr);
@@ -27,7 +34,10 @@
 }
 
 @media screen and (max-width: 767px) {
- 
+    .navegacao {
+        display: none;
+    }
+
     .listagem-artigos{
         grid-template-columns: 1fr;
     }

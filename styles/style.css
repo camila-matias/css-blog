@@ -25,6 +25,10 @@ a {
     text-decoration: none;
 }
 
+ul{
+    list-style: none;
+}
+
 main {
     margin: 5rem auto;
     width: 80vw;
@@ -70,10 +74,40 @@ footer {
     gap: 3rem;
     justify-content: center;
     font-size: 1.6rem;
-    list-style: none;
 }
 
 .navegacao a:hover {
+    font-weight: 700;
+}
+
+.navegacao--responsiva{
+    display: none;
+}
+
+.navegacao__botao--responsiva {
+    align-self: center;
+    border: none;
+}
+
+.navegacao__imagem--responsiva {
+    width: 4rem;
+    border-radius: 0;
+}
+
+.navegacao--responsiva {
+    display: relative;
+}
+
+.navegacao__listagem--responsiva {
+    display: none;
+    position: absolute;
+    top: 7rem;
+}
+
+.navegacao__listagem--responsiva a {
+    display: block;
+    padding: 1rem;
+    font-size: 1.4rem;
     font-weight: 700;
 }
 
@@ -199,3 +233,4 @@ footer {
     font-weight: 800;
     font-size: 1.2rem;
 }
+
