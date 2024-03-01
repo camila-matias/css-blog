@@ -1,0 +1,14 @@
+@import "/styles/reset.css";
+@import "/styles/variables.css";
+
+@media screen and (min-width: 720px) and (max-width: 1023px) { 
+    figcaption, img {
+        max-width: 80% !important;
+    }
+}
+
+@media screen and (max-width: 719px){
+    figcaption, img {
+        max-width: 100% !important;
+    } 
+}
