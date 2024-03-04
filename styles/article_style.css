@@ -38,6 +38,10 @@ code {
     border-radius: 0.3rem;
 }
 
+.conteudo__texto span {
+    font-weight: 600;
+}
+
 .conteudo {
     display:flex;
     flex-direction: column;
