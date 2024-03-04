@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/pages_style.css">
-    <title>Responsividade em CSS</title>
+    <link rel="stylesheet" href="/styles/article_style.css">
+    <link rel="stylesheet" href="/styles/style_responsive.css">
+    <title>CSS Inline, Interno e Externo</title>
 </head>
 <body>
     <header>
@@ -18,7 +19,7 @@
                 <li><a href="/pages/animacoes.html">Animações</a></li>
                 <li><a href="/pages/responsividade.html">Responsividade</a></li>
             </ul>
-
+        
             <div class="navegacao--responsiva">
                 <button class="navegacao__botao--responsiva"><img src="/images/barra-de-menu.png" alt="Ícone de menu" class="navegacao__imagem--responsiva"></button>
                 <nav class="navegacao__listagem--responsiva">
@@ -36,33 +37,19 @@
             <img src="/images/search-outline.png" alt="Imagem de uma lupa">
         </div>
     </header>
-
+    
     <main>
-        <h2 class="titulo">Responsividade</h2>
-
-        <section class="listagem-artigos">
-            <article class="listagem-artigos__card">
-                <a href="/articles/responsividade-media-queries.html">
-                    <img src="https://dillionmegida.com/post-covers/86-positioning-styles.png" alt="">
-                    
-                    <span class="artigo__tag artigo__tag--responsividade">RESPONSIVIDADE</span>
-                    
-                    <h2>Responsividade e Media Queries</h2>
-                    
-                    <div class="artigo__info">
-                        <div class="artigo__info__autor">
-                            <img src="/images/foto-autor.jpeg" alt="Foto de Camila, autora do artigo, uma mulher de cabelos marrons, pele clara, camisa preta e óculos de grau com armação preta">
-                            <div class="artigo__info__autor__nome">
-                                <p>Camila Matias</p>
-                                <span>Desenvolvedora Front End</span>
-                            </div>
-                        </div>
-                        <div class="artigo__data">
-                            <p>19 Fev</p>
-                        </div>
-                    </div>
-                </a>
-            </article>
+        <section class="conteudo">
+            <h2 class="conteudo__titulo">Responsividade e Media Queries</h2>
+            
+            <span class="artigo__tag artigo__tag--responsividade">RESPONSIVIDADE</span>
+            
+            <h3>Responsividade</h3>
+            <p class="conteudo__texto">Texto aqui</p>
+            
+            <h3>Media Queries</h3>
+            <p class="conteudo__texto">Texto aqui</p>
+        </section>
     </main>
 </body>
 <script src="/script.js"></script>
