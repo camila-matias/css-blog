@@ -214,6 +214,10 @@ label {
     .conteudo__animacao img {
         width: 5vw;
     }
+
+    #conteudo__teste {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -224,5 +228,9 @@ label {
 
     .conteudo__animacao img {
         width: 10vw;
+    }
+
+    #conteudo__teste {
+        width: 100%;
     }
 }

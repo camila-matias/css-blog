@@ -50,7 +50,9 @@ img {
 footer {
     margin-bottom: 1rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .artigo__tag--css-basico {
@@ -238,4 +240,5 @@ footer {
     font-weight: 800;
     font-size: 1.2rem;
 }
+
 

@@ -40,6 +40,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .artigo > img {
+        height: 40vh;
+    }
+
     .navegacao {
         display: none;
     }
@@ -48,8 +52,8 @@
         display: block;
     }
 
-    .artigo > img {
-        height: 40vh;
+    .pesquisa__item{
+        width: 30vw;
     }
 
     .listagem-artigos{

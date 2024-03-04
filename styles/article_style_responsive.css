@@ -6,7 +6,11 @@
 
 @media screen and (min-width: 768px) and (max-width: 1279px) { 
     figcaption, img {
-        max-width: 80% !important;
+        max-width: 80%;
+    }
+    
+    .navegacao__imagem--responsiva {
+        max-width: 100% !important;
     }
 }
 
