@@ -1,15 +1,15 @@
-const botao = document.querySelector(".navegacao__botao--responsiva");
-const menu = document.querySelector(".navegacao__listagem--responsiva");
-let estaAberto = false;
+const botaoMenu = document.querySelector(".navegacao__botao--responsiva");
+const listaMenu = document.querySelector(".navegacao__listagem--responsiva");
+let menuAberto = false;
 
-botao.addEventListener("click", dropdown);
+botaoMenu.addEventListener("click", mudarMenu);
 
-function dropdown () {
-    if (estaAberto == false) {
-        menu.style.display = "block";
-        estaAberto = true;
+function mudarMenu () {
+    if (menuAberto == false) {
+        listaMenu.style.display = "block";
+        menuAberto = true;
     } else {
-       menu.style.display = "none";
-       estaAberto = false;
+       listaMenu.style.display = "none";
+       menuAberto = false;
     }  
 };
