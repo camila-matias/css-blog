@@ -44,7 +44,40 @@
             
             <span class="artigo__tag artigo__tag--responsividade">RESPONSIVIDADE</span>
             
-            <p class="conteudo__texto">Texto aqui</p>
+            <p class="conteudo__texto">As media queries são recursos do CSS em que, mediante o valor verdadeiro de uma ou mais condições, um bloco de código de estilização será aplicado no documento. Utilizado principalmente para adaptar o layout de uma aplicação à diferentes tamanhos de tela, as media queries são um dos 3 principais pilares do <a href="/articles/design-responsivo.html">Design Responsivo</a>.</p>
+
+            <figure>
+                <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--Aw7MvBtq--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://i.ibb.co/7GKTqSy/media-query-syntax.png" alt="Imagem com fundo preto e código CSS escrito em azul, vermelho, rosa e verde mostrando a estrutura de uma media query">
+                <figcaption>Estrutura de uma media query.</figcaption>
+            </figure>
+
+            <p class="conteudo__texto">A estrutura de uma media query é sempre iniciada pela regra <code>@media</code>. Logo após, os seguintes elementos completam a sintaxe:</p>
+
+            <ul class="conteudo__texto">
+                <li><span>media type:</span> é o tipo de mídia, que é opcional e pode assumir os valores <code>all</code>, que serve para todos os tipos de mídia e é implícito caso não se indique um media type, <code>print</code>, que serve para visão de documentos ou material paginado visualizados em modo de impressão, ou <code>screen</code>, que representa telas de qualquer dispositivo. Outros media types existiam em versões anteriores do media queries, mas foram depreciadas no Media Queries 4.</li>
+                <li><span>media features:</span> são as condições as quais o dispositivo deve obedecer para que o bloco de código CSS seja aplicado. As opções de media features são muitas, mas as mais utilizadas no design responsivo são <code>min-width</code>, <code>max-width</code>, <code>orientation</code> e <code>aspect-ratio</code>.</li>
+                <li><span>código CSS:</span> incluso dentro de chaves, fica o código CSS que será aplicado caso a media feature, ou o conjunto de media features, retorne verdadeiro. Este código é sempre carregado, porém apenas aplicado mediante a condição descrita anteriormente.</li>
+            </ul>
+
+            <p class="conteudo__texto">Para um conjunto de media features ou regras mais específicas, é possível utilizar os seguintes operadores lógicos na construção das condições:</p>
+
+            <ul class="conteudo__texto">
+                <li><span>and:</span> operador lógico de adição, une um media type definido às media features ou combina múltiplas media features como em <code>@media screen and (min-width: 768px) and (max-width: 1279px)</code>. Para que o código CSS seja aplicado, todas as condições conectadas por <code>and</code> devem ser verdadeiras.</li>
+                <li><span>not:</span> operador de negação, pode negar tanto uma media type, uma media feature ou toda a media query. Utilizando o operador not, expressões que retornariam falso, retornam verdadeiro. Com seu uso, a inclusão de um media type se torna obrigatório. </li>
+                <li><span>only:</span> aplica o estilo apenas se todas as condições da query são atendidas. Em browsers antigos, sem a palavra reservada <code>only</code>, caso a primeira parte da media query fosse verdadeira, o estilo já era aplicado sem considerar outras media features que poderiam ser falsas.</li>
+                <li><span>, (vírugla):</span> este operador é utilizado para converter várias condicionais em media queries em uma só de forma que, se pelo menos uma das condições retornar verdadeiro, o bloco de código será aplicado.</li>
+                <li><span>or:</span> adicionado na versão mais recente do media queries, é uma nova maneira de converter várias condicionais em uma só. Equivalente ao operador <code>,</code> (vírgula).</li>
+            </ul>
+
+            <p class="conteudo__texto">Um recurso que foi adicionado na versão mais recente do media queries objetivando deixar o código mais enxuto é a sintaxe de range. Os operadores <code><</code>, <code>></code>, <code>=></code> e <code><=</code> podem ser utilizados em qualquer media feature nas quais ranges podem ser aplicados.</p>
+
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
 
             <div class="artigo__info">
                 <div class="artigo__info__autor">

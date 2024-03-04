@@ -13,11 +13,11 @@
 
 /* Tamanho de 1280px à 1919px é o tamanho original para o qual o site foi desenvolvido */
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (769px <= width <= 1279px) {
     .navegacao {
         display: none;
     }
-    
+        
     .navegacao--responsiva {
         display: block;
     }
