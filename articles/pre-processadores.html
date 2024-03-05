@@ -50,7 +50,41 @@
             Diferença de SASS e SCSS
             Como utilizar Pré-Processadores no projeto-->
             
-            <p class="conteudo__texto">Texto aqui</p>
+            <p class="conteudo__texto">Os pré processadores CSS são programas com interpretadores de código que possuem sua própria sintaxe de linguagem de estilização, baseada em CSS. Ao final do processo de escrita do código, estes programas processam (ou compilam) o código em um arquivo no formato CSS para que a estilização possa ser entendida pelo navegador. É uma forma de dar mais funcionalidades à linguagem de estilização, mantendo a compatibilidade com o navegador.</p>
+
+            <p class="conteudo__texto">As vantagens de se utilizar pré processadores são justamente as funcionalidades adicionadas com o intuito de deixar o código mais reutilizável, legível e de melhor manutenção. Estas funcionalidades são: mixins, funções, utilização de operadores matemáticos, aninhamento de seletores e pseudo-classes, condicionais e laços de repetição, criação mais intuitiva de variáveis e herança. Com estas funcionalidades, o processo de escrita de código é bem mais veloz e produtivo, quando em comparação com o CSS puro.</p>
+
+            <p class="conteudo__texto">Atualmente, os principais pré processadores são o <abbr title="Syntactically Awesome Style Sheets">SASS</abbr>, o LESS e o Stylus. O SASS foi o primeiro a ser criado, em 2006. Em 2009, o LESS foi criado com o intuito de se aproximar mais da sintaxe do CSS puro, em comparação ao SASS. Logo após, em 2010, o Stylus foi criado com sua própria sintaxe. Os três possuem algumas diferenças entre si, como na declaração de variáveis e de mixins, que podem ser visualizadas, por exemplo, na documentação do Stylus disponível <a href="https://stylus-lang.com/docs/compare.html" target="_blank" noopener noreferrer>aqui</a>.</p>
+
+            <p class="conteudo__texto">Com a constante busca por evolução das técnicas utilizadas, o <abbr title="Sassy CSS">SCSS</abbr> foi criado no ecossistema do SASS como uma nova sintaxe, mais aproximada ao CSS, sendo hoje uma das mais utilizadas. As principais diferenças entre a sintaxe original do SASS e o SCSS são:</p>
+
+            <ul class="conteudo__texto">
+                <li><span>Regras de sintaxe:</span></li>
+                
+                <li><span>Integração com CSS puro:</span></li>
+                
+                <li><span>Extensão do arquivo:</span></li>
+                
+                <li><span>Aninhamento hierarquico:</span></li>
+                
+                <li><span>Compatibilidade com CSS puro:</span></li>
+            </ul>
+
+            <p class="conteudo__texto">Para utilização dos pré processadores, são requeridas algumas  instalações e comandos, que podem ser realizados por meio do terminal de comando ou com executáveis. O passo a passo a seguir é uma das formas para instalar o SASS via <abbr title="Node Package Manager">npm</abbr>, mas cada pré processador possui, em sua documentação, informações sobre como instalá-lo.</p>
+
+            <ol class="conteudo__texto">
+                <li><span>Instalar o NodeJS:</span> O NodeJS é um ambiente de execução de JavaScript no lado do servidor e é necessário para a utilização do npm. Em seu <a href="https://nodejs.org/en">site oficial</a>, é possível fazer o download do instalador e realizar a instalação. É indicado sempre baixar a versão "LTS", visto que é a mais estável e que possuirá maior suporte. É possível, após a instalação, rodar o comando <code>node -v</code> no terminal para verificar se a instalação ocorreu como esperado. Se sim, o terminal irá retornar a versão instalada do NodeJS.</li>
+                
+                <li><span>Instalar o npm:</span> O npm é instalado automaticamente quando se instala o NodeJS. No momento da produção deste artigo, a versão LTS mais recente do NodeJS é a 20.11.1 e já inclui na sua instalação o npm versão 10.2.4. É possível, após a instalação, rodar o comando <code>npm -v</code> no terminal para verificar se a instalação ocorreu como esperado. Se sim, o terminal irá retornar a versão instalada do npm.</li>
+                
+                <li><span>Instalar o SASS:</span> Com o npm instalado, basta rodar o comando <code>npm install -g sass</code> no terminal de comando sendo utilizado e aguardar a instalação. É possível, após a instalação, rodar o comando <code>sass --version</code> no terminal para verificar se a instalação ocorreu como esperado. Se sim, o terminal irá retornar a versão instalada do SASS.</li>
+                
+                <li><span>Criar um arquivo SCSS:</span> Como a criação de qualquer outro arquivo, é necessário apenas criá-lo dentro da pasta do projeto, porém, com a extensão <code>.scss</code>.</li>
+                
+                <li><span>Pré processar o arquivo em SCSS e gerar um arquivo CSS:</span> Com o SASS instalado, é possível rodar o comando <code>sass</code> para pré processar o arquivo <code>.scss</code> da seguinte maneira: <code>sass [input] [output]</code>, em que o input será o arquivo <code>.scss</code> e o output será o arquivo <code>.css</code> pré processado. É possível, também, rodar o comando com a bandeira <code>--watch</code> da seguinte forma: <code>sass --watch [input] [output]</code>. Dessa forma, o SASS irá observar quaisquer alterações no arquivo de input e irá pré processar automaticamente para o arquivo de output.</li>
+            </ol>
+
+            <p class="conteudo__texto">Seguindo os passos descritos anteriormente, é possível instalar e utilizar o SCSS em projetos de desenvolvimento. É importante notar que, visto que o SASS foi instalado globalmente com o comando utilizado, não é necessária uma nova instalação para cada projeto. Portanto, para projetos futuros, só é necessário realizar os passos 3 e 4 para a utilização do SCSS.</p>
                    
             <div class="artigo__info">
                 <div class="artigo__info__autor">
