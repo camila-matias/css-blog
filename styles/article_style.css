@@ -8,7 +8,7 @@ figure {
 }
 
 figcaption, img {
-    max-width: 60%;
+    max-width: 60vw;
     margin: 0 auto;
 }
 
