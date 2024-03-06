@@ -43,12 +43,6 @@
             <h2 class="conteudo__titulo">Pré Processadores CSS</h2>
             
             <span class="artigo__tag artigo__tag--css-basico">CSS BÁSICO</span>
-
-            <!--O que são Pré-Processadores
-            Vantagens de se usar Pré-Processadores
-            Quais os principais Pré-Processadores
-            Diferença de SASS e SCSS
-            Como utilizar Pré-Processadores no projeto-->
             
             <p class="conteudo__texto">Os pré processadores CSS são programas com interpretadores de código que possuem sua própria sintaxe de linguagem de estilização, baseada em CSS. Ao final do processo de escrita do código, estes programas processam (ou compilam) o código em um arquivo no formato CSS para que a estilização possa ser entendida pelo navegador. É uma forma de dar mais funcionalidades à linguagem de estilização, mantendo a compatibilidade com o navegador.</p>
 
@@ -56,19 +50,29 @@
 
             <p class="conteudo__texto">Atualmente, os principais pré processadores são o <abbr title="Syntactically Awesome Style Sheets">SASS</abbr>, o LESS e o Stylus. O SASS foi o primeiro a ser criado, em 2006. Em 2009, o LESS foi criado com o intuito de se aproximar mais da sintaxe do CSS puro, em comparação ao SASS. Logo após, em 2010, o Stylus foi criado com sua própria sintaxe. Os três possuem algumas diferenças entre si, como na declaração de variáveis e de mixins, que podem ser visualizadas, por exemplo, na documentação do Stylus disponível <a href="https://stylus-lang.com/docs/compare.html" target="_blank" noopener noreferrer>aqui</a>.</p>
 
-            <p class="conteudo__texto">Com a constante busca por evolução das técnicas utilizadas, o <abbr title="Sassy CSS">SCSS</abbr> foi criado no ecossistema do SASS como uma nova sintaxe, mais aproximada ao CSS, sendo hoje uma das mais utilizadas. As principais diferenças entre a sintaxe original do SASS e o SCSS são:</p>
+            <figure>
+                <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Via0Mro9khAxziT_3lF5Pw.png" alt="Imagem com fundo branco e as 3 logos dos principais pré processadores (sass, less e stylus) dispostas em linha nessa ordem.">
+                <figcaption>Principais pré processadores de CSS.</figcaption>
+            </figure>
+
+            <p class="conteudo__texto">Com a constante busca por evolução das técnicas utilizadas, o <abbr title="Sassy CSS">SCSS</abbr> foi criado no ecossistema do SASS como uma nova sintaxe, mais aproximada ao CSS, sendo hoje uma das mais utilizadas. As principais diferenças entre o SASS e o SCSS são:</p>
 
             <ul class="conteudo__texto">
-                <li><span>Regras de sintaxe:</span></li>
+                <li><span>Regras de sintaxe:</span> A sintaxe original do SASS é chamada sintaxe identada, se aproximando bastante de como é escrito código em Python, onde definições de blocos de código e aninhamentos são criados por meio da identação. Quanto mais identado, mais interna é a camada do seletor. Já no SCSS, o uso de chaves (<code>{}</code>) para delimitar blocos de código e ponto e vírgula (<code>;</code>) no final de cada linha são obrigatórios, assim como no CSS puro.</li>
                 
-                <li><span>Integração com CSS puro:</span></li>
+                <li><span>Integração em projetos com CSS puro existente:</span> A integração do SASS em projetos existentes é mais trabalhosa, visto que, com a sintaxe diferente, muita reescrita de código será necessária. Com o SCSS, é possível apenas criar novas linhas de código para as novas funcionalidades trazidas pelo pré processador, já que a sintaxe do CSS puro é semelhante à do SCSS.</li>
                 
-                <li><span>Extensão do arquivo:</span></li>
+                <li><span>Extensão do arquivo:</span> A extensão de arquivos SASS é <code>.sass</code> e a de arquivos SCSS é <code>.scss</code>.</li>
                 
-                <li><span>Aninhamento hierarquico:</span></li>
+                <li><span>Aninhamento hierarquico:</span> Devido à sintaxe, aninhamentos no SASS podem se tornar menos legíveis e de difícil manutenção, a depender do nível de aninhamento criado no HTML. No SCSS, pela organização na sintaxe, esse ponto é melhor abordado.</li>
                 
-                <li><span>Compatibilidade com CSS puro:</span></li>
+                <li><span>Compatibilidade com CSS puro:</span> um código CSS não pode ser utilizado como SASS e vice versa, ao passo que um código CSS pode ser utilizado como um código SCSS e um código SCSS pode ser utilizado como CSS, a não ser que contenha funcionalidades não suportadas no CSS puro.</li>
             </ul>
+
+            <figure>
+                <img src="https://qph.cf2.quoracdn.net/main-qimg-cb41710b11523148a80f95f38a5c81ae" alt="Imagem com 3 seções dispostas em linha, entituladas SASS, SCSS e CSS com, em baixo de cada titulo, uma imagem com fundo preto e código escrito em amarelo e branco definindo a cor de links como vermelho e a cor de links quando se passa o mouse por cima como verde limão.">
+                <figure>Comparativo entre códigos SASS, SCSS e CSS puro para uma mesma estilização: definir a cor de links como vermelho e definir a cor dos links em hover como verde limão.</figure>
+            </figure>
 
             <p class="conteudo__texto">Para utilização dos pré processadores, são requeridas algumas  instalações e comandos, que podem ser realizados por meio do terminal de comando ou com executáveis. O passo a passo a seguir é uma das formas para instalar o SASS via <abbr title="Node Package Manager">npm</abbr>, mas cada pré processador possui, em sua documentação, informações sobre como instalá-lo.</p>
 
@@ -84,7 +88,7 @@
                 <li><span>Pré processar o arquivo em SCSS e gerar um arquivo CSS:</span> Com o SASS instalado, é possível rodar o comando <code>sass</code> para pré processar o arquivo <code>.scss</code> da seguinte maneira: <code>sass [input] [output]</code>, em que o input será o arquivo <code>.scss</code> e o output será o arquivo <code>.css</code> pré processado. É possível, também, rodar o comando com a bandeira <code>--watch</code> da seguinte forma: <code>sass --watch [input] [output]</code>. Dessa forma, o SASS irá observar quaisquer alterações no arquivo de input e irá pré processar automaticamente para o arquivo de output.</li>
             </ol>
 
-            <p class="conteudo__texto">Seguindo os passos descritos anteriormente, é possível instalar e utilizar o SCSS em projetos de desenvolvimento. É importante notar que, visto que o SASS foi instalado globalmente com o comando utilizado, não é necessária uma nova instalação para cada projeto. Portanto, para projetos futuros, só é necessário realizar os passos 3 e 4 para a utilização do SCSS.</p>
+            <p class="conteudo__texto">Seguindo os passos descritos anteriormente, é possível instalar e utilizar o SCSS em projetos de desenvolvimento. É importante notar que, visto que o SASS foi instalado globalmente com o comando utilizado, não é necessária uma nova instalação para cada projeto. Portanto, para projetos futuros, só é necessário realizar os dois últimos passos descritos para a utilização do SCSS. Vale também ressaltar que, mesmo com a utilização do SCSS, o documento que será linkado no HTML é o CSS gerado pelo pré processamento. </p>
                    
             <div class="artigo__info">
                 <div class="artigo__info__autor">

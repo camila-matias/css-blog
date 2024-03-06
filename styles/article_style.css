@@ -17,7 +17,7 @@ h3 {
     margin: 2rem 0 0.5rem 0;
 }
 
-ul {
+ul, ol {
     list-style: none;
     & li {
         color: var(--cor-fonte-sec);
