@@ -27,6 +27,35 @@ $fonte-tags: 'Space Mono', sans-serif;
     }  
 } 
 
+@mixin flex ($alinhamento: normal) {
+    display: flex;
+    justify-content: center;
+    align-items: $alinhamento;
+}
+
+@mixin sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    position: -ms-sticky;
+    position: -moz-sticky;
+    position: -o-sticky;
+}
+
+@mixin animation ($animacao) {
+    animation: $animacao;
+    -webkit-animation: $animacao;
+    -moz-animation: $animacao;
+    -o-animation: $animacao;
+}
+
+@mixin transform ($transformacao) { 
+    transform: $transformacao;
+    -webkit-transform: $transformacao;
+    -ms-transform: $transformacao;
+    -moz-transform: $transformacao;
+    -o-transform: $transformacao;
+}
+
 :root{
     font-family: 'Open Sans', sans-serif;
     font-size: 62.5%;
