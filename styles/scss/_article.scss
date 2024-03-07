@@ -16,9 +16,9 @@ h3 {
 
 ul, ol {
     list-style: none;
-    & li {
+    li {
         color: $cor-fonte-sec;
-        & span {
+        span {
             font-weight: 800;
         }
     }
@@ -35,12 +35,8 @@ code {
     border-radius: 0.3rem;
 }
 
-.conteudo__texto span {
-    font-weight: 600;
-}
-
 .conteudo {
-    display:flex;
+    display: flex;
     flex-direction: column;
 }
 
@@ -53,6 +49,10 @@ code {
 .conteudo__texto {
     font-size: 1.6rem;
     color: $cor-fonte-sec;
+
+    span {
+        font-weight: 600;
+    }
 }
 
 .conteudo__figuras {
@@ -70,10 +70,12 @@ code {
     gap: 2rem;
 }
 
-.artigo__info {
-    margin-top: 3rem;
+.conteudo {
+    .artigo__info {
+        margin-top: 3rem;
+    }    
+}
 
-    & .artigo__info__autor__nome p{
-        margin: 0;
-    }
+.artigo__info__autor__nome p{
+    margin: 0;
 }

@@ -55,15 +55,15 @@ label {
     width: 50vw;
     display: flex;
     justify-content: space-between;
-}
 
-.conteudo__transicoes div {
-    margin: 2rem 0 1rem 0;
-    width: 10rem;
-    height: 10rem;
-    position: relative;
-    background-color: #ff0000;
-    transition: all 1s ease-in;
+    div {
+        margin: 2rem 0 1rem 0;
+        width: 10rem;
+        height: 10rem;
+        position: relative;
+        background-color: #ff0000;
+        transition: all 1s ease-in;
+    }   
 }
 
 .conteudo__transicoes--primeiro:hover {

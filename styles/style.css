@@ -26,8 +26,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--cor-fundo-principal);
-  color: var(--cor-fonte-principal);
+  background-color: #f6f6f6;
+  color: #232323;
 }
 
 header {
@@ -39,6 +39,7 @@ header {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background: #f6f6f6;
 }
 
 h1 {
@@ -63,7 +64,6 @@ main {
   justify-content: center;
   gap: 2rem;
 }
-
 main > h2 {
   font-size: 2.5rem;
   margin-top: 5rem;
@@ -103,13 +103,13 @@ footer {
   justify-content: center;
   font-size: 1.6rem;
 }
-
 .navegacao a:hover {
   font-weight: 700;
 }
 
 .navegacao--responsiva {
   display: none;
+  position: relative;
 }
 
 .navegacao__botao--responsiva {
@@ -123,16 +123,11 @@ footer {
   border-radius: 0;
 }
 
-.navegacao--responsiva {
-  display: relative;
-}
-
 .navegacao__listagem--responsiva {
   display: none;
   position: absolute;
-  top: 8rem;
+  top: 6rem;
 }
-
 .navegacao__listagem--responsiva a {
   display: block;
   padding: 1.5rem 2rem;
@@ -143,6 +138,11 @@ footer {
 .pesquisa {
   position: relative;
 }
+.pesquisa img {
+  position: absolute;
+  right: 5%;
+  top: 0.5rem;
+}
 
 .pesquisa__item {
   padding: 0.5rem 1rem;
@@ -150,16 +150,9 @@ footer {
   border-radius: 0.5rem;
 }
 
-.pesquisa img {
-  position: absolute;
-  right: 5%;
-  top: 0.5rem;
-}
-
 .artigo {
   text-align: center;
 }
-
 .artigo > img {
   max-width: 100%;
   height: 60vh;
@@ -168,7 +161,6 @@ footer {
 .artigo__card {
   position: relative;
 }
-
 .artigo__card a {
   padding: 2rem;
   width: fit-content;
@@ -189,8 +181,7 @@ footer {
   font-size: 3rem;
   line-height: 3.1rem;
 }
-
-.artigo__card span, .listagem-artigos__card span {
+.artigo__card span {
   margin-bottom: 0;
 }
 
@@ -201,6 +192,7 @@ footer {
 }
 
 .listagem-artigos__card a {
+  width: 100%;
   padding: 2rem;
   height: 100%;
   display: flex;
@@ -214,12 +206,13 @@ footer {
   font-family: "Roboto Slab", serif;
   font-size: 2.5rem;
 }
-
 .listagem-artigos__card a > img {
-  margin: 0 auto;
   width: 100%;
   height: 50%;
   border-radius: 1rem;
+}
+.listagem-artigos__card span {
+  margin-bottom: 0;
 }
 
 .artigo__tag {
@@ -266,11 +259,7 @@ footer {
   margin: 2rem 0;
   text-align: center;
   font-size: 4rem;
-  font-family: var(--fonte-titulos);
-}
-
-.listagem-artigos, .titulo {
-  bottom: 0;
+  font-family: "Roboto Slab", serif;
 }
 
 figure {
@@ -310,10 +299,6 @@ code {
   border-radius: 0.3rem;
 }
 
-.conteudo__texto span {
-  font-weight: 600;
-}
-
 .conteudo {
   display: flex;
   flex-direction: column;
@@ -328,6 +313,9 @@ code {
 .conteudo__texto {
   font-size: 1.6rem;
   color: #5b5b5b;
+}
+.conteudo__texto span {
+  font-weight: 600;
 }
 
 .conteudo__figuras {
@@ -345,10 +333,11 @@ code {
   gap: 2rem;
 }
 
-.artigo__info {
+.conteudo .artigo__info {
   margin-top: 3rem;
 }
-.artigo__info .artigo__info__autor__nome p {
+
+.artigo__info__autor__nome p {
   margin: 0;
 }
 
@@ -409,7 +398,6 @@ label {
   display: flex;
   justify-content: space-between;
 }
-
 .conteudo__transicoes div {
   margin: 2rem 0 1rem 0;
   width: 10rem;
@@ -607,11 +595,16 @@ label {
   .artigo__card a {
     left: 10%;
   }
+  .listagem-artigos__card a {
+    margin: 0 auto;
+    width: 80%;
+    height: fit-content;
+  }
 }
 /* Tamanho de 1280px à 1919px é o tamanho original para o qual o site foi desenvolvido */
 /* Tamanho à partir de 1920px não precisa de alterações nesta folha de estilo */
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  figcaption, img {
+  figure figcaption, figure img {
     max-width: 80%;
   }
   .navegacao__imagem--responsiva {
@@ -619,7 +612,7 @@ label {
   }
 }
 @media screen and (max-width: 767px) {
-  figcaption, img {
+  figure figcaption, figure img {
     max-width: 100% !important;
   }
 }
