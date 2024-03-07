@@ -6,6 +6,7 @@
     font-family: $fonte-tags;
     border-radius: 0.5rem;
     transition: all 0.5s ease-in-out;
+    
     &:hover{
         cursor: pointer;
         background-color: #b09bc1;
@@ -34,7 +35,15 @@ label {
         background-color: #ffffff;
         color: #ff0000;
         }
+
+    @include responsividade("mobile") {
+        width: 100%;
     }
+
+    @include responsividade("tablet") {
+        width: 80%;
+    }
+}
 
 .conteudo__titulo--animado {
     animation: escrita 10s steps(120, end) infinite;
@@ -48,6 +57,14 @@ label {
     position: relative;
     border-radius: 100%;
     animation: animação 4s infinite linear alternate;
+
+    @include responsividade("mobile") {
+        width: 10vw;
+    }
+
+    @include responsividade("tablet") {
+        width: 5vw;
+    }
 }
 
 .conteudo__transicoes {
@@ -63,6 +80,16 @@ label {
         position: relative;
         background-color: #ff0000;
         transition: all 1s ease-in;
+
+        @include responsividade("mobile") {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        @include responsividade("tablet") {
+            width: 7rem;
+            height: 7rem;
+        }
     }   
 }
 
@@ -198,35 +225,5 @@ label {
     100% {
         left: 60vw;
         bottom: 5vh;
-    }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1279px) { 
-    .conteudo__transicoes div {
-        width: 7rem;
-        height: 7rem;
-    }
-
-    .conteudo__animacao img {
-        width: 5vw;
-    }
-
-    #conteudo__teste {
-        width: 80%;
-    }
-}
-
-@media screen and (max-width: 767px){
-    .conteudo__transicoes div {
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .conteudo__animacao img {
-        width: 10vw;
-    }
-
-    #conteudo__teste {
-        width: 100%;
     }
 }

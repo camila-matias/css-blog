@@ -139,7 +139,7 @@ footer {
 }
 @media screen and (768px <= width <= 1279px) {
   .navegacao__imagem--responsiva {
-    max-width: 100% !important;
+    max-width: 100%;
   }
 }
 
@@ -216,18 +216,18 @@ footer {
   font-size: 3rem;
   line-height: 3.1rem;
 }
-.artigo__card span {
-  margin-bottom: 0;
-}
 @media screen and (max-width: 767px) {
-  .artigo__card {
+  .artigo__card a {
     left: 10%;
   }
 }
 @media screen and (768px <= width <= 1279px) {
-  .artigo__card {
+  .artigo__card a {
     left: 10%;
   }
+}
+.artigo__card span {
+  margin-bottom: 0;
 }
 
 .listagem-artigos {
@@ -278,7 +278,7 @@ footer {
 @media screen and (max-width: 767px) {
   .listagem-artigos__card {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     height: fit-content;
   }
 }
@@ -380,6 +380,9 @@ code {
   display: flex;
   flex-direction: column;
 }
+.conteudo .artigo__info {
+  margin-top: 3rem;
+}
 
 .conteudo__titulo {
   margin-bottom: 0.5rem;
@@ -408,10 +411,6 @@ code {
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
-}
-
-.conteudo .artigo__info {
-  margin-top: 3rem;
 }
 
 .artigo__info__autor__nome p {
@@ -454,6 +453,16 @@ label {
   background-color: #ffffff;
   color: #ff0000;
 }
+@media screen and (max-width: 767px) {
+  #conteudo__teste {
+    width: 100%;
+  }
+}
+@media screen and (768px <= width <= 1279px) {
+  #conteudo__teste {
+    width: 80%;
+  }
+}
 
 .conteudo__titulo--animado {
   animation: escrita 10s steps(120, end) infinite;
@@ -467,6 +476,16 @@ label {
   position: relative;
   border-radius: 100%;
   animation: animação 4s infinite linear alternate;
+}
+@media screen and (max-width: 767px) {
+  .conteudo__animacao img {
+    width: 10vw;
+  }
+}
+@media screen and (768px <= width <= 1279px) {
+  .conteudo__animacao img {
+    width: 5vw;
+  }
 }
 
 .conteudo__transicoes {
@@ -482,6 +501,18 @@ label {
   position: relative;
   background-color: #ff0000;
   transition: all 1s ease-in;
+}
+@media screen and (max-width: 767px) {
+  .conteudo__transicoes div {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media screen and (768px <= width <= 1279px) {
+  .conteudo__transicoes div {
+    width: 7rem;
+    height: 7rem;
+  }
 }
 
 .conteudo__transicoes--primeiro:hover {
@@ -595,30 +626,6 @@ label {
   100% {
     left: 60vw;
     bottom: 5vh;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-  .conteudo__transicoes div {
-    width: 7rem;
-    height: 7rem;
-  }
-  .conteudo__animacao img {
-    width: 5vw;
-  }
-  #conteudo__teste {
-    width: 80%;
-  }
-}
-@media screen and (max-width: 767px) {
-  .conteudo__transicoes div {
-    width: 3rem;
-    height: 3rem;
-  }
-  .conteudo__animacao img {
-    width: 10vw;
-  }
-  #conteudo__teste {
-    width: 100%;
   }
 }
 

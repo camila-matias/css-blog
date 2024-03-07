@@ -107,7 +107,7 @@ footer {
     border-radius: 0;
 
     @include responsividade ("tablet"){
-        max-width: 100% !important;
+        max-width: 100%;
     }
 }
 
@@ -184,18 +184,18 @@ footer {
             font-size: 3rem;
             line-height: 3.1rem;
         }
+
+        @include responsividade("mobile") {
+            left: 10%;
+        }
+    
+        @include responsividade("tablet") {
+            left: 10%;
+        }
     }
 
     span {
         margin-bottom: 0;
-    }
-
-    @include responsividade("mobile") {
-        left: 10%;
-    }
-
-    @include responsividade("tablet") {
-        left: 10%;
     }
 }
 
@@ -248,7 +248,7 @@ footer {
 
     @include responsividade("mobile") {
         margin: 0 auto;
-        width: 80%;
+        width: 100%;
         height: fit-content;
     }
 }
