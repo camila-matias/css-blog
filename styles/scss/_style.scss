@@ -47,19 +47,19 @@ footer {
 }
 
 .artigo__tag--css-basico {
-    background-color: $cor-tag-css-basico;
+    background-color: corTag("css-basico");
 }
 
 .artigo__tag--posicionamento {
-    background-color: $cor-tag-posicionamento;
+    background-color: corTag("posicionamento");
 }
 
 .artigo__tag--animacoes {
-    background-color: $cor-tag-animacoes;
+    background-color: corTag("animacoes");
 }
 
 .artigo__tag--responsividade {
-    background-color: $cor-tag-responsividade;
+    background-color: corTag("responsividade");
 }
 
 .navegacao {
@@ -295,5 +295,3 @@ footer {
     font-weight: 800;
     font-size: 1.2rem;
 }
-
-

@@ -56,6 +56,18 @@ $fonte-tags: 'Space Mono', sans-serif;
     -o-transform: $transformacao;
 }
 
+@function corTag ($tag) {
+    @if $tag == "css-basico" {
+        @return $cor-tag-css-basico;
+    } @else if $tag == "posicionamento" {
+        @return $cor-tag-posicionamento;
+    } @else if $tag == "animacoes" {
+        @return $cor-tag-animacoes;
+    } @else if $tag == "responsividade" {
+        @return $cor-tag-responsividade;
+    }
+}
+
 :root{
     font-family: 'Open Sans', sans-serif;
     font-size: 62.5%;
