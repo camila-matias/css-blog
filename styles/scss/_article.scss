@@ -1,6 +1,3 @@
-@import "/styles/style.css";
-@import "/styles/article_style_responsive.css";
-
 figure {
     margin: 1rem 0;
     text-align: center;
@@ -20,7 +17,7 @@ h3 {
 ul, ol {
     list-style: none;
     & li {
-        color: var(--cor-fonte-sec);
+        color: $cor-fonte-sec;
         & span {
             font-weight: 800;
         }
@@ -50,12 +47,12 @@ code {
 .conteudo__titulo {
     margin-bottom: 0.5rem;
     font-size: 3rem;
-    font-family: var(--fonte-titulos);
+    font-family: $fonte-titulos;
 }
 
 .conteudo__texto {
     font-size: 1.6rem;
-    color: var(--cor-fonte-sec);
+    color: $cor-fonte-sec;
 }
 
 .conteudo__figuras {

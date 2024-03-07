@@ -1,22 +1,18 @@
-@import "/styles/style.css";
-@import "/styles/article_style.css";
-
 .conteudo__botao {
     margin: 2rem 0;
     padding: 0.5rem 1rem;
     position: relative;
     display: block;
-    font-family: var(--fonte-tags);
+    font-family: $fonte-tags;
     border-radius: 0.5rem;
     transition: all 0.5s ease-in-out;
-}
-
-.conteudo__botao:hover {
-    cursor: pointer;
-    background-color: #b09bc1;
-    color: #fff;
-    border: 2px solid #b09bc1;
-    transform: scale(1.2);
+    &:hover{
+        cursor: pointer;
+        background-color: #b09bc1;
+        color: #fff;
+        border: 2px solid #b09bc1;
+        transform: scale(1.2);
+    }
 }
 
 label {
@@ -29,16 +25,16 @@ label {
     padding: 0.5rem;
     width: 20vw;
     margin-bottom: 1rem;
-    font-family: var(--fonte-tags);
+    font-family: $fonte-tags;
     border-radius: 0.5rem;
     border: 2px solid #000000;
     background-color: #e7e6e7;
-}
 
-#conteudo__teste:focus {
-    background-color: #ffffff;
-    color: #ff0000;
-}
+    &:focus {
+        background-color: #ffffff;
+        color: #ff0000;
+        }
+    }
 
 .conteudo__titulo--animado {
     animation: escrita 10s steps(120, end) infinite;
