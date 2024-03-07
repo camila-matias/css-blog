@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 header {
     padding: 2rem;
     position: sticky;
@@ -21,10 +18,6 @@ h1 {
 
 a {
     text-decoration: none;
-}
-
-ul {
-    list-style: none;
 }
 
 main {
@@ -80,11 +73,27 @@ footer {
             font-weight: 700;
         }
     }
+
+    @include responsividade("mobile"){
+        display: none;
+    }
+
+    @include responsividade("tablet"){
+        display: none;
+    }
 }
 
 .navegacao--responsiva{
     display: none;
     position: relative;
+
+    @include responsividade("mobile"){
+        display: block;
+    }
+
+    @include responsividade("tablet"){
+        display: block;
+    }
 }
 
 .navegacao__botao--responsiva {
@@ -96,6 +105,10 @@ footer {
     height: 4rem;
     width: 4rem;
     border-radius: 0;
+
+    @include responsividade ("tablet"){
+        max-width: 100% !important;
+    }
 }
 
 .navegacao__listagem--responsiva {
@@ -125,6 +138,10 @@ footer {
     padding: 0.5rem 1rem;
     border: 0.2rem solid $cor-fonte-sec;
     border-radius: 0.5rem;
+
+    @include responsividade("mobile") {
+        width: 30vw;
+    }
 }
 
 .artigo {
@@ -133,6 +150,14 @@ footer {
     >img {
         max-width: 100%;
         height: 60vh;
+
+        @include responsividade("mobile") {
+            height: 40vh;
+        }
+
+        @include responsividade("tablet") {
+            height: 50vh;
+        }
     }
 }
 
@@ -164,17 +189,38 @@ footer {
     span {
         margin-bottom: 0;
     }
+
+    @include responsividade("mobile") {
+        left: 10%;
+    }
+
+    @include responsividade("tablet") {
+        left: 10%;
+    }
 }
 
 .listagem-artigos {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+
+    @include responsividade("mobile") {
+        grid-template-columns: 1fr;
+    }
+
+    @include responsividade("tablet") {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsividade("fullHD") {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .listagem-artigos__card {
     a {
         width: 100%;
+        max-width: 100%;
         padding: 2rem;
         height: 100%;
         display: flex;
@@ -198,6 +244,12 @@ footer {
 
     span {
         margin-bottom: 0;
+    }
+
+    @include responsividade("mobile") {
+        margin: 0 auto;
+        width: 80%;
+        height: fit-content;
     }
 }
 

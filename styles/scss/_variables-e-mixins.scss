@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 $cor-fundo-principal: #f6f6f6;
 $cor-fonte-principal: #232323;
 $cor-fonte-sec: #5b5b5b;
@@ -8,27 +11,35 @@ $cor-tag-responsividade: #1BB2BB;
 $fonte-titulos: 'Roboto Slab', serif;
 $fonte-tags: 'Space Mono', sans-serif;
 
+@mixin responsividade ($dispositivo) {
+    @if $dispositivo == "mobile" {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    } @else if $dispositivo == "tablet" {
+        @media screen and (768px <= width <= 1279px) {
+            @content;
+        }       
+    } @else if $dispositivo == "fullHD" {
+        @media screen and (min-width: 1920px) {
+            @content;
+        }
+    }  
+} 
+
 :root{
     font-family: 'Open Sans', sans-serif;
     font-size: 62.5%;
-}
 
-@media screen and (min-width: 1920px) {
-    :root{
+    @include responsividade("fullHD") {
         font-size: 68.75%;
     }
-}
 
-/* Tamanho de 1280px à 1919px é o tamanho original para o qual o site foi desenvolvido */
-
-@media screen and (min-width: 768px) and (max-width: 1279px) {
-    :root{
+    @include responsividade("tablet") {
         font-size: 56.25%;
     }
-}
 
-@media screen and (max-width: 767px) {
-    :root{
+    @include responsividade("mobile") {
         font-size: 50%;
     }
 }
