@@ -1,12 +1,10 @@
 header {
     padding: 2rem;
-    position: sticky;
+    @include sticky();
     top: 0;
     z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    @include flex(space-between, center);
+    @include box-shadow(0 3px 6px rgba(0,0,0,0.16));
     background: $cor-fundo-principal;
 }
 
@@ -23,9 +21,8 @@ a {
 main {
     margin: 5rem auto;
     width: 80vw;
-    display: flex;
+    @include flex(center);
     flex-direction: column;
-    justify-content: center;
     gap: 2rem;
 
     >h2{
@@ -40,10 +37,8 @@ img {
 
 footer {
     margin-bottom: 1rem;
-    display: flex;
+    @include flex(center, center);
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .artigo__tag--css-basico {
@@ -63,9 +58,8 @@ footer {
 }
 
 .navegacao {
-    display: flex;
+    @include flex(center);
     gap: 3rem;
-    justify-content: center;
     font-size: 1.6rem;
 
     a {
@@ -177,7 +171,7 @@ footer {
         text-align: left;
         background-color: $cor-fundo-principal;
         border-radius: 1.2rem;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 3px 3px rgba(0,0,0,0.1);
+        @include box-shadow(0 10px 20px rgba(0,0,0,0.1), 0 3px 3px rgba(0,0,0,0.1));
     
         h2 {
             font-family: $fonte-titulos;
@@ -223,9 +217,8 @@ footer {
         max-width: 100%;
         padding: 2rem;
         height: 100%;
-        display: flex;
+        @include flex(space-between);
         flex-direction: column;
-        justify-content: space-between;
         gap: 1rem;
         border-radius: 1.2rem;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 3px 3px rgba(0,0,0,0.1);
@@ -262,13 +255,11 @@ footer {
 }
 
 .artigo__info {
-    display: flex;
-    justify-content: space-between;
+    @include flex(space-between);
 }
 
 .artigo__info__autor {
-    display: flex;
-    align-items: center;
+    @include flex(normal, center);
     gap: 1rem;
 
     img {
@@ -290,8 +281,7 @@ footer {
 }
 
 .artigo__data {
-    display: flex;
-    align-items: center;
+    @include flex(normal, center);
     font-weight: 800;
     font-size: 1.2rem;
 }

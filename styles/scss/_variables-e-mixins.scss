@@ -27,10 +27,10 @@ $fonte-tags: 'Space Mono', sans-serif;
     }  
 } 
 
-@mixin flex ($alinhamento: normal) {
+@mixin flex ($justificado, $alinhado: normal) {
     display: flex;
-    justify-content: center;
-    align-items: $alinhamento;
+    justify-content: $justificado;
+    align-items: $alinhado;
 }
 
 @mixin sticky {
@@ -56,6 +56,14 @@ $fonte-tags: 'Space Mono', sans-serif;
     -o-transform: $transformacao;
 }
 
+@mixin box-shadow ($sombras...) {
+    box-shadow: $sombras;
+    -webkit-box-shadow: $sombras;
+    -moz-box-shadow: $sombras;
+    -ms-box-shadow: $sombras;
+    -o-box-shadow: $sombras;
+}
+
 @function corTag ($tag) {
     @if $tag == "css-basico" {
         @return $cor-tag-css-basico;
@@ -68,19 +76,31 @@ $fonte-tags: 'Space Mono', sans-serif;
     }
 }
 
+@function tamanhoFonte ($dispositivo) {
+    @if $dispositivo == "mobile" {
+        @return 50%;
+    } @else if $dispositivo == "tablet" {
+        @return 56.25%;
+    } @else if $dispositivo == "desktop" {
+        @return 62.5%;
+    } @else if $dispositivo == "fullHD" {
+        @return 68.75%;
+    }
+}
+
 :root{
     font-family: 'Open Sans', sans-serif;
-    font-size: 62.5%;
+    font-size: tamanhoFonte("desktop");
 
     @include responsividade("fullHD") {
-        font-size: 68.75%;
+        font-size: tamanhoFonte("fullHD");
     }
 
     @include responsividade("tablet") {
-        font-size: 56.25%;
+        font-size: tamanhoFonte("tablet");
     }
 
     @include responsividade("mobile") {
-        font-size: 50%;
+        font-size: tamanhoFonte("mobile");
     }
 }

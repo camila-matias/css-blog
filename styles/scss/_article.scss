@@ -70,17 +70,14 @@ code {
 }
 
 .conteudo__figuras {
-    display: flex;
+    @include flex (center,center);
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     gap: 3rem;
 }
 
 .conteudo__figuras--em-coluna {
-    display: flex;
+    @include flex(center);
     flex-direction: column;
-    justify-content: center;
     gap: 2rem;
 }
 
