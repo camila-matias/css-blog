@@ -48,6 +48,24 @@ $fonte-tags: 'Space Mono', sans-serif;
     -o-animation: $animacao;
 }
 
+@mixin keyframes ($nome) {
+    @keyframes #{$nome} {
+        @content;
+    }
+    
+    @-webkit-keyframes #{$nome} {
+        @content;
+    }
+
+    @-moz-keyframes #{$nome} {
+        @content;
+    }
+
+    @-o-keyframes #{$nome} {
+        @content;
+    }
+}
+
 @mixin transform ($transformacao) { 
     transform: $transformacao;
     -webkit-transform: $transformacao;
